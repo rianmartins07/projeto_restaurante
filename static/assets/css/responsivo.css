@@ -1,0 +1,507 @@
+@media screen and (max-width: 1280px){ 
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 35px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 170px;
+        height: 170px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 86px;
+        height: 73px;
+        top: 14px;
+    }
+
+    .sidebar nav ul li{
+        padding: 19px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 16px;
+    }
+
+    .sidebar nav .line-text{
+        width: 45px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 23px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 24px;
+        margin-bottom: -1px;
+    }
+
+    .exit-perfil a{
+        font-size: 24px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 12px 4px 8px 2px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 80px;
+        height: 55px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 30px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 140px;
+        height: 140px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 18px;
+        font-size: 18px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 14px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 76px;
+        height: 63px;
+        top: 12px;
+    }
+
+    .sidebar nav ul li{
+        padding: 18px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 14px;
+    }
+
+    .sidebar nav .line-text{
+        width: 40px;
+    }
+
+    .arrow-left h2, .arrow-right h2{
+        font-size: 16px;
+    }
+
+    .arrow-left h2:hover ,.arrow-right h2:hover{
+        font-size: 17px;
+    }
+
+    .arrow-left, .arrow-right{
+        margin-top: 340px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 20px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 21px;
+    }
+
+    .sidebar .exit-perfil{
+        margin: 15px;
+    }
+
+    /*---------------*/
+
+    .exit-perfil a{
+        font-size: 22px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 23px;
+        margin-right: -1px;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 11px 3px 7px 1px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 75px;
+        height: 50px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 75px;
+        height: 75px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /*LOGIN*/
+    .logo{
+        width: 175px;
+        height: 145px;
+        margin: 30px auto 0 auto;
+    }
+
+    .logo:hover{
+        width: 180px;
+        height: 150px;
+    }
+
+    .box-login{
+        max-width: 370px;
+        margin: 120px auto 0 auto;
+        padding: 80px 25px 35px 25px;
+        border-radius: 15px;
+    }
+    
+    .box-login .img-perfil{
+        border-bottom: 8px solid rgb(53 53 53);
+        font-size: 33px;
+        padding: 22px 32px 16px 32px;
+        position: absolute;
+        top: -60px;
+    }
+
+    .box-login form input[type=text]{
+        height: 45px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .box-login form input[type=submit]{
+        height: 45px;
+        line-height: 42px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .box-login form input[type=submit]:hover{
+        line-height: 35px;
+    }
+
+    .options-login{
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    
+    .options-login .esqueci-codigo a{
+        color: rgb(179 22 22);
+        font-size: 15px;
+        text-decoration: none;
+    }
+    
+    .options-login .manter-conectado span{
+        font-size: 15px;
+        margin-left: 2px;
+    }
+
+    .cpfIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 34.5%;
+        display: none;
+    }
+    
+    .codigoIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 54%;
+        display: none;
+    }
+    
+    .login-incorrect{
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+
+    .messageCPF{
+        position: absolute;
+        left: 12%;
+        top: 17.5%;
+        display: none;
+    }
+    
+    .messageCodigo{
+        position: absolute;
+        left: 12%;
+        top: 35.8%;
+        display: none;
+    }
+    
+    .message-input{
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .arrow-left{
+        display: none;
+    }
+
+    .arrow-right{
+        display: none;
+    }
+
+    /*---------------*/
+
+    header{
+        display: block;
+    }
+
+    .main .content{
+        width: 100%;
+    }
+
+    .exit-perfil a{
+        font-size: 21px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 22px;
+        margin-right: -1px;
+    }
+
+    .exit-perfil .logo-img{
+        margin-left: 17px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 85px;
+        height: 70px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 14px;
+        padding: 0 18px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 70px;
+        height: 70px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    header{
+        display: block;
+    }
+
+    .main .content{
+        width: 100%;
+    }
+
+    .exit-perfil a{
+        font-size: 21px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 22px;
+        margin-right: -1px;
+    }
+
+    .exit-perfil .logo-img{
+        margin-left: 17px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 80px;
+        height: 65px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 65px;
+        height: 65px;
+        margin-left: 15px;
+    }
+
+    .arrow-right{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px){
+    /*LOGIN*/
+    .logo{
+        width: 140px;
+        height: 110px;
+    }
+
+    .logo:hover{
+        width: 145px;
+        height: 115px;
+        margin: 30px auto -5px auto;
+    }
+
+    .box-login{
+        max-width: 300px;
+        margin: 120px auto 0 auto;
+        padding: 70px 20px 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .box-login .img-perfil{
+        border-bottom: 8px solid rgb(53 53 53);
+        font-size: 30px;
+        padding: 17px 27px 12px 27px;
+        position: absolute;
+        top: -60px;
+    }
+
+    .box-login form input[type=text]{
+        height: 40px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .box-login form input[type=submit]{
+        height: 40px;
+        line-height: 38px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .box-login form input[type=submit]:hover{
+        line-height: 35px;
+    }
+
+    .options-login{
+        justify-content: space-between;
+        margin-top: 3px;
+    }
+    
+    .options-login .esqueci-codigo a{
+        color: rgb(179 22 22);
+        font-size: 14px;
+        text-decoration: none;
+    }
+    
+    .options-login .manter-conectado span{
+        font-size: 14px;
+        margin-left: 2px;
+    }
+
+    .cpfIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 34%;
+        display: none;
+    }
+    
+    .codigoIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 54%;
+        display: none;
+    }
+    
+    .login-incorrect{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+
+    .messageCPF{
+        position: absolute;
+        left: 12%;
+        top: 17.3%;
+        display: none;
+    }
+    
+    .messageCodigo{
+        position: absolute;
+        left: 12%;
+        top: 36%;
+        display: none;
+    }
+    
+    .message-input{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+
+    .menu-perfil{
+        display: none;
+    }
+
+    .menu-perfil-mobile{
+        display: block;
+    }
+
+    .menu-perfil-mobile h2{
+        display: block;
+    }
+    
+    .menu-perfil-mobile nav{
+        display: none;
+    }
+
+    .menu-perfil-mobile nav ul li{
+        list-style-type: none;
+        padding: 15px 0;
+    }
+
+    .menu-perfil-mobile nav ul li a{
+        font-size: 13px;
+    }
+
+    .menu-perfil-mobile nav .line-text{
+        width: 60px;
+    }
+
+    .menu-perfil-mobile .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin: 25px auto 20px auto;
+    }
+}
