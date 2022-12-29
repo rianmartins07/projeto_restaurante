@@ -310,6 +310,11 @@ header .center{
     background-color: #fff;
     margin: 0 auto;
 }
+li{
+    list-style-type: none;
+    list-style: none;
+
+}
 
 .menu-perfil nav ul li a{
     text-decoration: none;
