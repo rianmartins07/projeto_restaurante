@@ -1,3 +1,21 @@
+@media screen and (max-width: 1470px){
+    .messageSelect{
+        position: absolute;
+        left: 55%;
+        top: 38%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .messageDate p, .messageSelect p{
+        font-size: 12px;
+    }
+
+    .messageDate{
+        left: 38%;
+    }
+}
+
 @media screen and (max-width: 1280px){ 
     .sidebar .avatar-perfil{
         text-align: center;
@@ -75,6 +93,21 @@
         width: 80px;
         height: 80px;
         margin-left: 15px;
+    }
+
+    .box h1{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 1170px){
+    .messageDate p, .messageSelect p{
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+
+    .messageDate{
+        left: 37%;
     }
 }
 
@@ -172,6 +205,47 @@
         width: 75px;
         height: 75px;
         margin-left: 15px;
+    }
+
+    .box h1{
+        font-size: 1.9rem;
+    }
+
+    #content .box{
+        width: 60%;
+        top: 50%;
+        padding: 50px 30px;
+    }
+
+    #content .box .statistics table{
+        margin: 30px auto 40px auto;
+    }
+    
+    #content .box .statistics table tr td{
+        padding: 5px 4px;
+        font-size: 0.8rem;
+        border: 1px solid #ccc;
+    }
+    
+    #content .box .statistics .time-course{
+        margin-top: 30px;
+    }
+    
+    #content .box .statistics .time-course span{
+        font-size: 18px;
+    }
+
+    #content .box-reports{
+        width: 80%;
+    }
+
+    .messageDate p, .messageSelect p{
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+
+    .messageDate{
+        left: 35%;
     }
 }
 
@@ -293,7 +367,7 @@
         display: block;
     }
 
-    .main .content{
+    .main #content{
         width: 100%;
     }
 
@@ -325,6 +399,28 @@
         height: 70px;
         margin-left: 15px;
     }
+
+    #content .box{
+        width: 80%;
+        top: 40%;
+    }
+
+    #content .box-reports{
+        margin-top: 5px;
+    }
+
+    .messageDate p, .messageSelect p{
+        font-size: 10px;
+        padding: 3px 7px;
+    }
+
+    .messageDate{
+        left: 42%;
+    }
+
+    .messageSelect{
+        top: 43%;
+    }
 }
 
 @media screen and (max-width: 690px){
@@ -332,7 +428,7 @@
         display: block;
     }
 
-    .main .content{
+    .main #content{
         width: 100%;
     }
 
@@ -367,6 +463,20 @@
 
     .arrow-right{
         display: none;
+    }
+
+    /*REPORTS*/
+
+    .box h1{
+        font-size: 1.8rem;
+    }
+
+    #content .box-reports{
+        width: 90%;
+    }
+
+    .messageSelect{
+        top: 37%;
     }
 }
 
@@ -503,5 +613,15 @@
         width: 80px;
         height: 80px;
         margin: 25px auto 20px auto;
+    }
+
+    .messageDate p, .messageSelect p{
+        font-size: 9px;
+        padding: 3px 7px;
+    }
+
+    .messageDate{
+        top:86%;
+        left: 35%;
     }
 }

@@ -251,6 +251,8 @@ header .center{
 
 .menu-perfil nav ul{
     display: flex;
+    position: relative;
+    top: 8px;
 }
 
 .menu-perfil nav ul li{
@@ -259,6 +261,7 @@ header .center{
 
 .menu-perfil-mobile{
     display: none;
+    z-index: 999;
 }
 
 .menu-perfil-mobile h2{
@@ -268,6 +271,7 @@ header .center{
     transform: translateY(-50%);
     cursor: pointer;
     display: none;
+    font-size: 23px;
 }
 
 .menu-perfil-mobile nav{
@@ -362,8 +366,9 @@ li{
     position: relative;
 }
 
-.main .content{
+.main #content{
     width: 75%;
+    position: relative;
 }
 
 .sidebar .exit-perfil{
@@ -410,9 +415,14 @@ li{
     text-align: center;
 }
 
+.sidebar nav ul{
+    width: 100%;
+}
+
 .sidebar nav ul li{
     padding: 20px 0;
     cursor: pointer;
+    list-style-type: none;
 }
 
 .sidebar nav ul li:hover{
@@ -458,4 +468,136 @@ li{
 .sidebar .exit-perfil a:hover{
     font-size: 29px;
     margin-bottom: -2px;
+}
+
+
+
+
+/*REPORTS*/
+
+#content .box{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    width:50%;
+    padding: 50px;
+    text-align: center;
+}
+
+#content .box-reports{
+    width:70%;
+}
+
+#content .box .title-reports{
+    margin-top: 20px;
+}
+
+#content .box select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
+#content .box .date-reports{
+    margin-top: 20px;
+}
+
+#content .box .date-reports div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    flex-wrap: wrap;
+}
+
+#content .box .date-reports div{
+    margin-bottom: 20px;
+}
+
+#content .box .date-reports input[type=date]{
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+    margin-left: 10px;
+}
+
+#content .box .view-report{
+    margin-top: 25px;
+}
+
+#content .box .date-reports div{
+    margin-top: 3px;
+}
+
+#content .box .date-reports div label{
+    margin-top: 5px;
+}
+
+#content .box .view-report a{
+    background-color: rgb(179 22 22);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#content .box .view-report a:hover{
+    background-color: rgb(167, 19, 19);
+}
+
+/*REPORT-SALES*/
+
+#content .box .statistics table{
+    width: 100%;
+    margin: 30px auto 40px auto;
+}
+
+#content .box .statistics table tr td{
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+#content .box .statistics .time-course{
+    margin-top: 30px;
+}
+
+#content .box .statistics .time-course span{
+    font-size: 18px;
+}
+
+.messageDate{
+    position: absolute;
+    left: 40%;
+    bottom: -3%;
+    z-index: 999;
+}
+
+.messageSelect{
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    z-index: 999;
+}
+
+.messageDate p, .messageSelect p{
+    display: none;
+    border: 1px solid rgb(179 22 22);
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-style: italic;
 }
