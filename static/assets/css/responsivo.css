@@ -109,6 +109,9 @@
     .messageDate{
         left: 37%;
     }
+    .col-sm-4 label{
+        font-size: small;
+    }
 }
 
 @media screen and (max-width: 980px){
@@ -247,6 +250,11 @@
     .messageDate{
         left: 35%;
     }
+
+    .priority-4{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -623,5 +631,9 @@
     .messageDate{
         top:86%;
         left: 35%;
+    }
+
+    .priority-3{
+        display: none;
     }
 }
