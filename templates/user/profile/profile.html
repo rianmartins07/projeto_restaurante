@@ -19,10 +19,10 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="../../../static/assets/js/placeOrder.js" defer></script>
+    
 
-    <title>Relatório do Período | LBPR System</title>
+    <title>Perfil | LBPR System</title>
 </head>
 
 <body>
@@ -39,16 +39,14 @@
             <div class="menu-perfil">
                 <nav>
                     <ul>
-                        <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li class="selected"><a href="../profile/profile.html" class="selected">Perfil</a></li>
+                        <li><a href="../tables-waiter/waiter-tables.html">Mesas</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil"></div>
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>GARÇOM</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,17 +56,13 @@
                     <div class="avatar-perfil"></div>
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>GARÇOM</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
-                        <li><a href="../profile/profile.html">Perfil</a></li>
+                        <li class="selected"><a href="../profile/profile.html" class="selected">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../tables-waiter/waiter-tables.html">Mesas</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -81,57 +75,58 @@
         <div id="content">
 
             <div class="box">
-                <h1>Relatório do Período</h1>
+                <h1>Perfil</h1>
 
-                <div class="statistics">
+                <div class="wraper-profile">
+                    <div class="profile-single">
+                        <p>Nome Completo:</p>
+                        <input type="text" value="Nome" disabled>
+                    </div><!--profile-single-->
 
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
+                    <div class="profile-single">
+                        <p>CPF:</p>
+                        <input type="text" value="CPF" disabled>
+                    </div><!--profile-single-->
 
-                    <table>
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;" colspan="3">Pratos mais vendidos</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>E-mail:</p>
+                        <input type="text" value="E-mail" disabled>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td>Prato</td>
-                            <td>Prato</td>
-                            <td>Prato</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>Cargo:</p>
+                        <input type="text" value="Cargo" disabled>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;" colspan="3">Quantas vezes foram pedidos</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>Telefone:</p>
+                        <input type="text" value="Telefone" disabled>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                        </tr>
-                    </table>
+                    <div class="profile-single">
+                        <p>Data de nascimento:</p>
+                        <input type="text" value="Data" disabled>
+                    </div><!--profile-single-->
 
-                    <table>
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;">Média do Feedback</td>
-                            <td style="background-color: rgb(179 22 22); color: #fff;">Lucro</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>Sexo:</p>
+                        <input type="text" value="Sexo" disabled>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>R$00,00</td>
-                        </tr>
-                    </table>
-                    
-                </div><!--statistics-->
+                    <div class="profile-single">
+                        <p>Endereço:</p>
+                        <input type="text" value="Endereço" disabled>
+                    </div><!--profile-single-->
+                </div><!--wraper-profile-->
                 
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
+                <div class="button-update-profile">
+                    <input id="button-update-profile" type="button" value="Alterar">
+                    <div class="messageUpdateProfile"><p>Somente administrador</p></div>
+                </div><!--button-update-profile-->
+
             </div><!--box-->
             
         </div><!--content-->
-
     </div><!--main-->
 
 </body>

@@ -19,10 +19,9 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="view-report-customers.html" defer></script>
 
-    <title>Relatório do Período | LBPR System</title>
+    <title>Mesas | LBPR System</title>
 </head>
 
 <body>
@@ -40,15 +39,15 @@
                 <nav>
                     <ul>
                         <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li class="selected"><a href="../tables-cook/cook-tables.html" class="selected">Mesas</a></li>
+                        <li><a href="../#">Cardápio</a></li>
+                        <li><a href="../#">Pedidos</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil"></div>
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>COZINHEIRO</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,17 +57,17 @@
                     <div class="avatar-perfil"></div>
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>COZINHEIRO</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
                         <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
+                        <li class="selected"><a href="../tables-cook/cook-tables.html" class="selected">Mesas</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
+                        <li><a href="../#">Cardápio</a></li>
                         <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../#">Pedidos</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -80,55 +79,33 @@
     <div class="main">
         <div id="content">
 
-            <div class="box">
-                <h1>Relatório do Período</h1>
+            <div class="pedidos-em-espera">
+                <h2>-- Mesas com pedidos em espera --</h2>
+                <div class="mesas-wraper esperando">
+                    <a class="mesa-single" href="#">1</a>
+                    <a class="mesa-single" href="#">2</a>
+                    <a class="mesa-single" href="#">3</a>
+                    <a class="mesa-single" href="#">4</a>
+                    <a class="mesa-single" href="#">5</a>
+                    <a class="mesa-single" href="#">6</a>
+                    <a class="mesa-single" href="#">7</a>
+                    <a class="mesa-single" href="#">8</a>
+                    <a class="mesa-single" href="#">9</a>
+                </div><!--mesas-wraper-->
+            </div><!--pedidos-em-espera-->
 
-                <div class="statistics">
-
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
-
-                    <table>
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;" colspan="3">Pratos mais vendidos</td>
-                        </tr>
-
-                        <tr>
-                            <td>Prato</td>
-                            <td>Prato</td>
-                            <td>Prato</td>
-                        </tr>
-
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;" colspan="3">Quantas vezes foram pedidos</td>
-                        </tr>
-
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                        </tr>
-                    </table>
-
-                    <table>
-                        <tr>
-                            <td style="background-color: rgb(179 22 22); color: #fff;">Média do Feedback</td>
-                            <td style="background-color: rgb(179 22 22); color: #fff;">Lucro</td>
-                        </tr>
-
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>R$00,00</td>
-                        </tr>
-                    </table>
-                    
-                </div><!--statistics-->
-                
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
-            </div><!--box-->
+            <div class="pedidos-entregue">
+                <h2>--- Mesas com pedidos entregues ---</h2>
+                <div class="mesas-wraper entregue">
+                    <a class="mesa-single" href="#">10</a>
+                    <a class="mesa-single" href="#">11</a>
+                    <a class="mesa-single" href="#">12</a>
+                    <a class="mesa-single" href="#">13</a>
+                    <a class="mesa-single" href="#">14</a>
+                    <a class="mesa-single" href="#">15</a>
+                    <a class="mesa-single" href="#">16</a>
+                </div><!--mesas-wraper-->
+            </div><!--pedidos-entregue-->
             
         </div><!--content-->
 
