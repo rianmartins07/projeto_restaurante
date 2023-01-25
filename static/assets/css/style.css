@@ -404,6 +404,7 @@ li{
     padding: 100px 80px;
     text-align: center;
     margin: 0 auto 70px auto;
+    position: relative;
 }
 
 #content .box-reports{
@@ -495,14 +496,14 @@ li{
 .messageDate{
     position: absolute;
     left: 50%;
-    bottom: 25%;
+    bottom: 11%;
     z-index: 999;
 }
 
 .messageSelect{
     position: absolute;
     left: 50%;
-    top: 45%;
+    bottom: 11%;
     z-index: 999;
 }
 

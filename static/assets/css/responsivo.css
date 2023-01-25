@@ -1,10 +1,96 @@
 
 @media screen and (max-width: 1280px){ 
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 35px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 170px;
+        height: 170px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 86px;
+        height: 73px;
+        top: 14px;
+    }
+
+    .sidebar nav ul li{
+        padding: 19px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 16px;
+    }
+
+    .sidebar nav .line-text{
+        width: 45px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 23px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 24px;
+        margin-bottom: -1px;
+    }
+
+    .exit-perfil a{
+        font-size: 24px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 12px 4px 8px 2px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 80px;
+        height: 55px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin-left: 15px;
+    }
+
     .box h1{
         font-size: 2.2rem;
     }
 
-    .messageDate{
+    .col-sm-4 label{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 30px auto;
         bottom: 26%;
     }
 
@@ -54,9 +140,9 @@
     }
 
     .menu-perfil .avatar-perfil{
-        width: 80px;
-        height: 80px;
-        margin-left: 18px;
+        width: 75px;
+        height: 75px;
+        margin-left: 15px;
     }
 
     .box h1{
@@ -91,11 +177,12 @@
 
     .messageDate{
         left: 50%;
-        bottom: 30%;
+        bottom: 11%;
     }
 
     .messageSelect{
-        top: 41%;
+        left: 50%;
+        bottom: 11%;
     }
 
     .mesas-wraper a.mesa-single{
@@ -134,6 +221,11 @@
         top: 57%;
         left: 47%;
     }
+
+    .priority-4{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -278,11 +370,12 @@
 
     .messageDate{
         left: 50%;
-        bottom: 32%;
+        bottom: 6%;
     }
 
     .messageSelect{
-        top: 38%;
+        left: 50%;
+        bottom: 6%;
     }
 
     .mesas-wraper a.mesa-single{
@@ -365,8 +458,13 @@
     }
 
     .messageDate{
-        left: 50%;
-        bottom: 25%;
+        left: 44%;
+        bottom: 6%;
+    }
+
+    .messageSelect{
+        left: 44%;
+        bottom: 6%;
     }
 }
 
@@ -490,14 +588,18 @@
     }
 
     .messageDate{
-        left: 50%;
-        bottom: 28%;
+        left: 47%;
+        bottom: 2%;
     }
 
     .messageSelect{
-        top: 36%;
+        left: 47%;
+        bottom: 2%;
     }
 
+    .priority-3{
+        display: none;
+    }
     .messageDate p, .messageSelect p{
         padding: 4px 8px;
         font-size: 10px;
@@ -639,6 +741,10 @@
     .button-update-profile .messageUpdateProfile p{
         padding: 3px 5px;
         font-size: 11px;
+    }
+
+    .priority-3{
+        display: none;
     }
     
 }
