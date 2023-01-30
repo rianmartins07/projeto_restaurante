@@ -19,6 +19,8 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
+    <script src="../../../static/assets/js/placeOrder.js" defer></script>
+    <script src="../../../static/assets/js/cancelOrder.js" defer></script>
     
 
     <title>Mesas em espera | LBPR System</title>
@@ -79,27 +81,72 @@
         </div><!--center-->
     </header>
 
-
     <div class="main">
         <div id="content">
 
-            <div class="pedidos-em-espera">
-                <h2>-- Mesas com pedidos em espera --</h2>
-                <div class="mesas-wraper esperando">
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="1">1</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="2">2</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="3">3</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="4">4</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="5">5</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="6">6</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="7">7</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="8">8</a>
-                    <a class="mesa-single" href="../back-orders/back-orders.html" id="9">9</a>
-                </div><!--mesas-wraper-->
-            </div><!--pedidos-em-espera-->
+            <div class="box">
+                <h1 class="nMesa"></h1>
+
+                <div class="name-waiter">
+                    <h2>Garçom: NOME</h2>
+                </div><!--name-waiter-->
+
+                <div class="commands">
+                    <table border="1">
+                        <tr class='legendCommands' style='background-color: rgb(179 22 22); color: #fff;'>
+                            <td>Nome</td>
+                            <td>Valor unitário</td>
+                            <td>Qtd.</td>
+                            <td colspan='2'>Valor total</td>
+                        </tr>
+
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
+
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
+
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
+
+                    </table>
+                </div><!--orders-placed-->
+
+                
+                <div class="buttons-commands">
+                    <input type="submit" class="cook-order red" value="Processar">
+                    <input type="submit" class="cook-order gray" value="Concluído">
+                    <input type="submit" class="cook-order red" id="cancelOrder" value="Cancelar" >
+                </div><!--buttons-commands-->
+
+            </div><!--box-->
+
+            <div class="cancel-order">
+                <div class="box-cancel-order">
+                    <div class="close-window"><h2><i class="fa-solid fa-circle-xmark"></i></h2></div>
+        
+                    <textarea placeholder="Qual a razão do cancelamento?"></textarea>
+        
+                    <div class="button-cancel">
+                        <input id="fechar" type="submit" value="Fechar">
+                        <input type="submit" value="Enviar">
+                    </div><!--button-cancel-->
+                </div><!--box-cancel-order-->
+            </div><!--cancel-order-->
             
         </div><!--content-->
-
     </div><!--main-->
 
 </body>

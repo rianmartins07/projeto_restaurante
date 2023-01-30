@@ -19,10 +19,9 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="view-report-customers.html" defer></script>
 
-    <title>Relatório de Clientes | LBPR System</title>
+    <title>Pedidos em andamento | LBPR System</title>
 </head>
 
 <body>
@@ -40,17 +39,17 @@
                 <nav>
                     <ul>
                         <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
+                        <li><a href="../restaurant-menu/restaurant-menu.html">Cardápio</a></li>
+                        <li class="selected"><a href="../orders-in-progress/orders-in-progress.html" class="selected">Pedidos</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil">
-                    <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                    <img src="../../../static/assets/images/avatar/cozinheiro.png" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>COZINHEIRO</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,21 +57,21 @@
                 <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
                 <nav>
                     <div class="avatar-perfil">
-                        <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                        <img src="../../../static/assets/images/avatar/cozinheiro.png" alt="avatar">
                     </div><!--avatar-perfil-->
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>COZINHEIRO</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
                         <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
+                        <li><a href="../restaurant-menu/restaurant-menu.html">Cardápio</a></li>
                         <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li class="selected"><a href="../orders-in-progress/orders-in-progress.html" class="selected">Pedidos</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -84,48 +83,18 @@
     <div class="main">
         <div id="content">
 
-            <div class="box">
-                <h1>Relatório de Clientes</h1>
-
-                <div class="statistics">
-
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
-
-                    <table>
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="4">Dias com mais clientes</td></tr>
-
-                        <tr>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                        </tr>
-
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                        </tr>
-
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="5">Média do Feedback</td></tr>
-
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                        </tr>
-
-                    </table>
-                </div><!--statistics-->
-                
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
-            </div><!--box-->
+            <div class="pedidos-entregue">
+                <h2>--- Mesas com pedidos entregues ---</h2>
+                <div class="mesas-wraper entregue">
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">10</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">11</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">12</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">13</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">14</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">15</a>
+                    <a class="mesa-single" href="../orders-delivered/orders-delivered.html">16</a>
+                </div><!--mesas-wraper-->
+            </div><!--pedidos-entregue-->
             
         </div><!--content-->
 

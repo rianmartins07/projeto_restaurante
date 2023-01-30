@@ -19,10 +19,9 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="view-report-customers.html" defer></script>
 
-    <title>Relatório de Clientes | LBPR System</title>
+    <title>Feedback | LBPR System</title>
 </head>
 
 <body>
@@ -40,17 +39,17 @@
                 <nav>
                     <ul>
                         <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
+                        <li class="selected"><a href="../restaurant-menu/restaurant-menu.html" class="selected">Cardápio</a></li>
+                        <li><a href="../#">Pedidos</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil">
-                    <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                    <img src="../../../static/assets/images/avatar/garçonete.png" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>GARÇONETE</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,21 +57,21 @@
                 <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
                 <nav>
                     <div class="avatar-perfil">
-                        <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                        <img src="../../../static/assets/images/avatar/garçonete.png" alt="avatar">
                     </div><!--avatar-perfil-->
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>GARÇONETE</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
                         <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
+                        <li class="selected"><a href="../restaurant-menu/restaurant-menu.html" class="selected">Cardápio</a></li>
                         <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../#">Pedidos</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -85,46 +84,38 @@
         <div id="content">
 
             <div class="box">
-                <h1>Relatório de Clientes</h1>
 
-                <div class="statistics">
+                <h1>Feedback</h1>
+                <h2 class="title-feedback">Pergunte aos clientes se aceitam responder um feedback sobre o que acharam do restaurante (Não obrigatório).</h2>
 
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
+                <div class="wraper-feedback">
+                    <div class="feedback-single">
+                        <input type="checkbox" name="mRuim" required><span>Muito ruim</span>
+                    </div><!--feedback-single-->
 
-                    <table>
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="4">Dias com mais clientes</td></tr>
+                    <div class="feedback-single">
+                        <input type="checkbox" name="ruim" required><span>Ruim</span>
+                    </div><!--feedback-single-->
 
-                        <tr>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                        </tr>
+                    <div class="feedback-single">
+                        <input type="checkbox" name="regular" required><span>Regular</span>
+                    </div><!--feedback-single-->
 
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                        </tr>
+                    <div class="feedback-single">
+                        <input type="checkbox" name="bom" required><span>Bom</span>
+                    </div><!--feedback-single-->
 
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="5">Média do Feedback</td></tr>
+                    <div class="feedback-single">
+                        <input type="checkbox" name="mBom" required><span>Muito bom</span>
+                    </div><!--feedback-single-->
+                </div><!--wraper-feedback-->
 
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                        </tr>
-
-                    </table>
-                </div><!--statistics-->
+                <div class="wraper-button-feedback">
+                    <input type="submit" style="background-color: rgb(53 53 53);" value="Não responder">
+                    <input type="submit" value="Enviar">
+                </div><!--wraper-button-feedback-->
                 
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
+
             </div><!--box-->
             
         </div><!--content-->

@@ -19,10 +19,9 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="view-report-customers.html" defer></script>
 
-    <title>Relatório de Clientes | LBPR System</title>
+    <title>Cadastrar prato | LBPR System</title>
 </head>
 
 <body>
@@ -40,17 +39,17 @@
                 <nav>
                     <ul>
                         <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
+                        <li class="selected"><a href="../restaurant-menu/restaurant-menu.html" class="selected">Cardápio</a></li>
+                        <li><a href="../orders-in-progress/orders-in-progress.html">Pedidos</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil">
-                    <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                    <img src="../../../static/assets/images/avatar/cozinheiro.png" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>COZINHEIRO</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,21 +57,21 @@
                 <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
                 <nav>
                     <div class="avatar-perfil">
-                        <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                        <img src="../../../static/assets/images/avatar/cozinheiro.png" alt="avatar">
                     </div><!--avatar-perfil-->
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>COZINHEIRO</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
                         <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
+                        <li><a href="../tables-cook/cook-tables.html">Mesas</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
+                        <li class="selected"><a href="../restaurant-menu/restaurant-menu.html" class="selected">Cardápio</a></li>
                         <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li><a href="../orders-in-progress/orders-in-progress.html">Pedidos</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -85,46 +84,45 @@
         <div id="content">
 
             <div class="box">
-                <h1>Relatório de Clientes</h1>
 
-                <div class="statistics">
+                <h1>Cadastrar prato</h1>
 
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
+                <div class="wraper-profile">
+                    <div class="profile-single">
+                        <p>Nome:</p>
+                        <input type="text" placeholder="Nome*" required>
+                    </div><!--profile-single-->
 
-                    <table>
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="4">Dias com mais clientes</td></tr>
+                    <div class="profile-single">
+                        <p>Valor:</p>
+                        <input type="text" placeholder="Valor*" required>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>Status:</p>
+                        <select required>
+                            <option value="#">Ativo</option>
+                            <option value="#">Inativo</option>
+                        </select>
+                    </div><!--profile-single-->
 
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                        </tr>
+                    <div class="profile-single">
+                        <p>Descrição:</p>
+                        <textarea placeholder="Descrição*" required></textarea>
+                    </div><!--profile-single-->
 
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="5">Média do Feedback</td></tr>
+                    <div class="profile-single">
+                        <p>Foto:</p>
+                        <input type="file" required>
+                    </div><!--profile-single-->
+                </div><!--wraper-profile-->
 
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                        </tr>
-
-                    </table>
-                </div><!--statistics-->
+                <div class="button-update-profile">
+                    <input id="button-update-profile" type="submit" value="Cadastrar">
+                    <div class="messageUpdateProfile"><p>Somente administrador</p></div>
+                </div><!--button-update-profile-->
                 
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
+
             </div><!--box-->
             
         </div><!--content-->

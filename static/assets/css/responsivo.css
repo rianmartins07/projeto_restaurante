@@ -63,6 +63,84 @@
     }
 
     .exit-perfil .logo-img img{
+        width: 105px;
+        height: 90px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin-left: 15px;
+    }
+
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 35px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 170px;
+        height: 170px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 86px;
+        height: 73px;
+        top: 14px;
+    }
+
+    .sidebar nav ul li{
+        padding: 19px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 16px;
+    }
+
+    .sidebar nav .line-text{
+        width: 45px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 23px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 24px;
+        margin-bottom: -1px;
+    }
+
+    .exit-perfil a{
+        font-size: 24px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 12px 4px 8px 2px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
         width: 80px;
         height: 55px;
     }
@@ -82,7 +160,13 @@
         font-size: 2.2rem;
     }
 
-    .messageDate{
+    .col-sm-4 label{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .sidebar .avatar-perfil{
         left: 37%;
     }
     .col-sm-4 label{
@@ -92,6 +176,8 @@
 
 @media screen and (max-width: 980px){
     .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 30px auto;
         text-align: center;
         margin: 110px auto 30px auto;
         bottom: 26%;
@@ -109,6 +195,58 @@
     .mesas-wraper a.atendida{
         background-color: rgb(179 22 22);
         border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    /*CARDAPIO*/
+
+    .list-menu-wraper{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .list-menu-single{
+        width: 100%;
+        margin: 10px 1%;
+        padding: 17px 25px;
+    }
+
+    .input-menu{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .list-menu-single h2{
+        font-size: 17px;
+    }
+    
+    .list-menu-single .img-menu{
+        width: 80px;
+        height: 80px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 35px;
+        height: 35px;
+        margin: 25px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 73%;
+        margin-right: 2%;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
     }
 }
 
@@ -153,7 +291,7 @@
     }
 
     #content .box{
-        padding: 80px 60px;
+        padding: 80px 40px;
     }
    
     #content .box .statistics table{
@@ -180,11 +318,12 @@
 
     .messageDate{
         left: 50%;
-        bottom: 30%;
+        bottom: 11%;
     }
 
     .messageSelect{
-        top: 41%;
+        left: 50%;
+        bottom: 11%;
     }
 
     .mesas-wraper a.mesa-single{
@@ -223,6 +362,11 @@
         top: 57%;
         left: 47%;
     }
+
+    .priority-4{
+        display: none;
+    }
+
 
     .priority-4{
         display: none;
@@ -367,16 +511,17 @@
 
     /*---------------*/
     #content .box{
-        padding: 70px 60px;
+        padding: 70px 30px;
     }
 
     .messageDate{
         left: 50%;
-        bottom: 32%;
+        bottom: 6%;
     }
 
     .messageSelect{
-        top: 38%;
+        left: 50%;
+        bottom: 6%;
     }
 
     .mesas-wraper a.mesa-single{
@@ -461,6 +606,11 @@
     .messageDate{
         left: 50%;
         bottom: 25%;
+    }
+
+    .messageSelect{
+        left: 44%;
+        bottom: 6%;
     }
 }
 
@@ -584,12 +734,13 @@
     }
 
     .messageDate{
-        left: 50%;
-        bottom: 28%;
+        left: 47%;
+        bottom: 2%;
     }
 
     .messageSelect{
-        top: 36%;
+        left: 47%;
+        bottom: 2%;
     }
 
     .messageDate{
@@ -601,6 +752,9 @@
         top: 36%;
     }
 
+    .priority-3{
+        display: none;
+    }
     .priority-3{
         display: none;
     }
@@ -728,7 +882,7 @@
         margin-right: 6px;
     }
 
-    .wraper-profile .profile-single input[type=text], .wraper-profile .profile-single p{
+    .wraper-profile .profile-single input[type=text], .wraper-profile .profile-single p, .profile-single input[type=file], .profile-single textarea,.profile-single select{
         font-size: 14px;
     }
 
@@ -742,7 +896,11 @@
         font-size: 14px;
     }
 
-    .button-update-profile .messageUpdateProfile p{
+    .messageEndOrder{
+        top: 85%;
+    }
+
+    .button-update-profile .messageUpdateProfile p, .messageEndOrder p{
         padding: 3px 5px;
         font-size: 11px;
     }
@@ -750,5 +908,110 @@
     .priority-3{
         display: none;
     }
+
+    /*CARDAPIO*/
+
+    .list-menu-single h2{
+        font-size: 16px;
+    }
     
+    .list-menu-single .img-menu{
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 30px;
+        height: 30px;
+        margin: 20px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 71%;
+        margin-right: 4%;
+        font-size: 14px;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
+        font-size: 13px;
+    }
+
+    .list-menu-single{
+        padding: 17px 13px;
+        margin: 10px 0;
+    }
+
+    .info-menu h2{
+        margin-left: 12px;
+    }
+    
+    .img-prato{
+        width: 80px;
+        height: 80px;
+        margin: 5px 0 15px 0;
+    }
+
+    .wraper-feedback .feedback-single{
+        font-size: 14px;
+    }
+
+    .wraper-feedback{
+        margin-top: 20px;
+    }
+
+    .wraper-button-feedback{
+        margin-top: 30px;
+    }
+    
+    .wraper-button-feedback input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    h2.title-feedback{
+        font-size: 16px;
+        margin: 17px 0;
+    }
+
+    .name-waiter h2{
+        font-size: 15px;
+        margin: 15px 0;
+        text-align: center
+    }
+    .close-window{
+        top: -7px;
+        right: -7px;
+    }
+    
+    .close-window h2{
+        font-size: 26px;
+    }
+
+    .box-cancel-order textarea{
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .button-cancel{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .button-cancel input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
 }

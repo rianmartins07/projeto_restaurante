@@ -19,10 +19,11 @@
     <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
-    <script src="../../../static/assets/js/reports.js" defer></script>
-    <script src="../../../static/assets/js/receiveDate.js" defer></script>
+    <script src="../../../static/assets/js/placeOrder.js" defer></script>
+    <script src="../../../static/assets/js/cancelOrder.js" defer></script>
+    
 
-    <title>Relatório de Clientes | LBPR System</title>
+    <title>Pedidos da mesa | LBPR System</title>
 </head>
 
 <body>
@@ -40,17 +41,15 @@
                 <nav>
                     <ul>
                         <li><a href="../profile/profile.html">Perfil</a></li>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <li  class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li class="selected"><a href="../tables-waiter/waiter-tables.html" class="selected">Mesas</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil">
-                    <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                    <img src="../../../static/assets/images/avatar/garcom.png" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h3>GARÇOM</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -58,21 +57,17 @@
                 <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
                 <nav>
                     <div class="avatar-perfil">
-                        <img src="../../../static/assets/images/avatar/administrador.png" alt="avatar">
+                        <img src="../../../static/assets/images/avatar/garcom.png" alt="avatar">
                     </div><!--avatar-perfil-->
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>ADMINISTRADOR</h3>
+                        <h3>GARÇOM</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
                         <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../list/list.html">Funcionários</a></li>
-                        <div class="line-text"></div>
-                        <li><a href="../create/create.html">Cadastro</a></li>
-                        <div class="line-text"></div>
-                        <li class="selected"><a href="../reports/reports.html"  class="selected">Relatórios</a></li>
+                        <li class="selected"><a href="../tables-waiter/waiter-tables.html" class="selected">Mesas</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -80,55 +75,58 @@
         </div><!--center-->
     </header>
 
-
     <div class="main">
         <div id="content">
 
             <div class="box">
-                <h1>Relatório de Clientes</h1>
+                <h1 class="nMesa"></h1>
 
-                <div class="statistics">
+                <div class="name-waiter">
+                    <h2>Garçom: NOME</h2>
+                </div><!--name-waiter-->
 
-                    <div class="time-course">
-                        <p>Período: <span></span> até <span></span></p>
-                    </div><!--time-course-->
-
-                    <table>
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="4">Dias com mais clientes</td></tr>
-
-                        <tr>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
-                            <td>Segunda (N)</td>
+                <div class="commands">
+                    <table border="1">
+                        <tr class='legendCommands' style='background-color: rgb(179 22 22); color: #fff;'>
+                            <td>Nome</td>
+                            <td>Valor unitário</td>
+                            <td>Qtd.</td>
+                            <td colspan='2'>Valor total</td>
                         </tr>
 
-                        <tr>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
-                            <td>Quantidade</td>
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
                         </tr>
 
-                        <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="5">Média do Feedback</td></tr>
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
 
-                        <tr>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
-                            <td>Ótimo</td>
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
                         </tr>
 
                     </table>
-                </div><!--statistics-->
-                
-                <div class="view-report">
-                    <a href="reports.html">Voltar</a>
-                </div><!--view-reports-->
+                </div><!--orders-placed-->
+
+                <div class="button-end">
+                    <input type="submit" value="Finalizar">
+                    <a id="update-order" href="../update-order.js/update-order.html">Alterar</a>
+                    <div class="messageEndOrder"><p>Somente garçom e operador de caixa</p></div>
+                </div><!--button-cancel-->
+
             </div><!--box-->
             
         </div><!--content-->
-
     </div><!--main-->
 
 </body>

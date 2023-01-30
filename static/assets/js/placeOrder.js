@@ -5,7 +5,7 @@ $(function(){
 
     var nMesa = localStorage.getItem("nMesa");
 
-    $("h1.nMesa").text("Pedidos da mesa " + nMesa);
+    $("h1.nMesa").text("Pedidos da mesa "/* + nMesa*/);
 
     var cont = 0;
     var cont2 = 0;
@@ -84,6 +84,11 @@ $(function(){
             localStorage.setItem("noticeTable", noticeTable);
             localStorage.setItem("idMesa", nMesa);
         }
+    });
+
+    $(".button-end input").click(() => {
+        var messageOrderEnd = $(".messageEndOrder");
+        showMessage(messageOrderEnd);
     });
 
     $(".button-update-profile input").click(() => {
