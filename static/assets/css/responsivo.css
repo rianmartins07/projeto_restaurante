@@ -63,8 +63,8 @@
     }
 
     .exit-perfil .logo-img img{
-        width: 80px;
-        height: 55px;
+        width: 105px;
+        height: 90px;
     }
 
     .menu-perfil nav ul li a{
@@ -106,6 +106,58 @@
     .mesas-wraper a.atendida{
         background-color: rgb(179 22 22);
         border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    /*CARDAPIO*/
+
+    .list-menu-wraper{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .list-menu-single{
+        width: 100%;
+        margin: 10px 1%;
+        padding: 17px 25px;
+    }
+
+    .input-menu{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .list-menu-single h2{
+        font-size: 17px;
+    }
+    
+    .list-menu-single .img-menu{
+        width: 80px;
+        height: 80px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 35px;
+        height: 35px;
+        margin: 25px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 73%;
+        margin-right: 2%;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
     }
 }
 
@@ -150,7 +202,7 @@
     }
 
     #content .box{
-        padding: 80px 60px;
+        padding: 80px 40px;
     }
    
     #content .box .statistics table{
@@ -365,7 +417,7 @@
 
     /*---------------*/
     #content .box{
-        padding: 70px 60px;
+        padding: 70px 30px;
     }
 
     .messageDate{
@@ -724,7 +776,7 @@
         margin-right: 6px;
     }
 
-    .wraper-profile .profile-single input[type=text], .wraper-profile .profile-single p{
+    .wraper-profile .profile-single input[type=text], .wraper-profile .profile-single p, .profile-single input[type=file], .profile-single textarea,.profile-single select{
         font-size: 14px;
     }
 
@@ -738,7 +790,11 @@
         font-size: 14px;
     }
 
-    .button-update-profile .messageUpdateProfile p{
+    .messageEndOrder{
+        top: 85%;
+    }
+
+    .button-update-profile .messageUpdateProfile p, .messageEndOrder p{
         padding: 3px 5px;
         font-size: 11px;
     }
@@ -746,5 +802,110 @@
     .priority-3{
         display: none;
     }
+
+    /*CARDAPIO*/
+
+    .list-menu-single h2{
+        font-size: 16px;
+    }
     
+    .list-menu-single .img-menu{
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 30px;
+        height: 30px;
+        margin: 20px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 71%;
+        margin-right: 4%;
+        font-size: 14px;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
+        font-size: 13px;
+    }
+
+    .list-menu-single{
+        padding: 17px 13px;
+        margin: 10px 0;
+    }
+
+    .info-menu h2{
+        margin-left: 12px;
+    }
+    
+    .img-prato{
+        width: 80px;
+        height: 80px;
+        margin: 5px 0 15px 0;
+    }
+
+    .wraper-feedback .feedback-single{
+        font-size: 14px;
+    }
+
+    .wraper-feedback{
+        margin-top: 20px;
+    }
+
+    .wraper-button-feedback{
+        margin-top: 30px;
+    }
+    
+    .wraper-button-feedback input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    h2.title-feedback{
+        font-size: 16px;
+        margin: 17px 0;
+    }
+
+    .name-waiter h2{
+        font-size: 15px;
+        margin: 15px 0;
+        text-align: center
+    }
+    .close-window{
+        top: -7px;
+        right: -7px;
+    }
+    
+    .close-window h2{
+        font-size: 26px;
+    }
+
+    .box-cancel-order textarea{
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .button-cancel{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .button-cancel input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
 }
