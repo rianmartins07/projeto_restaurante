@@ -20,9 +20,10 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
     <script src="../../../static/assets/js/transitionScreen.js" defer></script>
     <script src="../../../static/assets/js/placeOrder.js" defer></script>
+    <script src="../../../static/assets/js/cancelOrder.js" defer></script>
     
 
-    <title>Perfil | LBPR System</title>
+    <title>Pedidos da mesa | LBPR System</title>
 </head>
 
 <body>
@@ -39,16 +40,17 @@
             <div class="menu-perfil">
                 <nav>
                     <ul>
-                        <li class="selected"><a href="../profile/profile.html" class="selected">Perfil</a></li>
-                        <li><a href="../tables-waiter/waiter-tables.html">Mesas</a></li>
+                        <li><a href="../profile/profile.html">Perfil</a></li>
+                        <li class="selected"><a href="../tables-operator/operator-tables.html" class="selected">Mesas</a></li>
+                        <li><a href="../#">Monitoramento</a></li>
                     </ul>
                 </nav>
                 <div class="avatar-perfil">
-                    <img src="../../../static/assets/images/avatar/garcom.png" alt="avatar">
+                    <img src="../../../static/assets/images/avatar/operadora.png" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
                     <h2>NOME</h2>
-                    <h3>GARÇOM</h3>
+                    <h3>OPERADOR DE CAIXA</h3>
                 </div><!--info-perfil-->
             </div><!--menu-perfil-->
 
@@ -56,17 +58,19 @@
                 <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
                 <nav>
                     <div class="avatar-perfil">
-                        <img src="../../../static/assets/images/avatar/garcom.png" alt="avatar">
+                        <img src="../../../static/assets/images/avatar/operadora.png" alt="avatar">
                     </div><!--avatar-perfil-->
                     <div class="info-perfil">
                         <h2>NOME</h2>
-                        <h3>GARÇOM</h3>
+                        <h3>OPERADOR DE CAIXA</h3>
                     </div><!--info-perfil-->
                     <ul>
                         <div class="line-text"></div>
-                        <li class="selected"><a href="../profile/profile.html" class="selected">Perfil</a></li>
+                        <li><a href="../profile/profile.html">Perfil</a></li>
                         <div class="line-text"></div>
-                        <li><a href="../tables-waiter/waiter-tables.html">Mesas</a></li>
+                        <li class="selected"><a href="../tables-operator/operator-tables.html" class="selected">Mesas</a></li>
+                        <div class="line-text"></div>
+                        <li><a href="../#">Monitoramento</a></li>
                     </ul>
                 </nav>
             </div><!--menu-perfil-mobile-->
@@ -74,59 +78,58 @@
         </div><!--center-->
     </header>
 
-
     <div class="main">
         <div id="content">
 
             <div class="box">
-                <h1>Perfil</h1>
+                <h1 class="nMesa"></h1>
 
-                <div class="wraper-profile">
-                    <div class="profile-single">
-                        <p>Nome Completo:</p>
-                        <input type="text" value="Nome" disabled>
-                    </div><!--profile-single-->
+                <div class="name-waiter">
+                    <h2>Garçom: NOME</h2>
+                </div><!--name-waiter-->
 
-                    <div class="profile-single">
-                        <p>CPF:</p>
-                        <input type="text" value="CPF" disabled>
-                    </div><!--profile-single-->
+                <div class="commands">
+                    <table border="1">
+                        <tr class='legendCommands' style='background-color: rgb(179 22 22); color: #fff;'>
+                            <td>Nome</td>
+                            <td>Valor unitário</td>
+                            <td>Qtd.</td>
+                            <td colspan='2'>Valor total</td>
+                        </tr>
 
-                    <div class="profile-single">
-                        <p>E-mail:</p>
-                        <input type="text" value="E-mail" disabled>
-                    </div><!--profile-single-->
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
 
-                    <div class="profile-single">
-                        <p>Cargo:</p>
-                        <input type="text" value="Cargo" disabled>
-                    </div><!--profile-single-->
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
 
-                    <div class="profile-single">
-                        <p>Telefone:</p>
-                        <input type="text" value="Telefone" disabled>
-                    </div><!--profile-single-->
+                        <tr class='pedido'>
+                            <td>Nome</td>
+                            <td>Valor</td>
+                            <td>Qtd</td>
+                            <td class='valueOrderSingle'>Valor unitário</td>
+                        </tr>
 
-                    <div class="profile-single">
-                        <p>Data de nascimento:</p>
-                        <input type="text" value="Data" disabled>
-                    </div><!--profile-single-->
+                    </table>
+                </div><!--orders-placed-->
 
-                    <div class="profile-single">
-                        <p>Sexo:</p>
-                        <input type="text" value="Sexo" disabled>
-                    </div><!--profile-single-->
+                <div class="button-end">
+                    <input type="submit" value="Finalizar">
+                    <button class="btn btn-secondary" >Voltar</button>
+                    <div class="messageEndOrder"><p>Somente garçom e operador de caixa</p></div>
+                </div><!--button-cancel-->
 
-                    <div class="profile-single">
-                        <p>Endereço:</p>
-                        <input type="text" value="Endereço" disabled>
-                    </div><!--profile-single-->
-                </div><!--wraper-profile-->
                 
-                <div class="button-update-profile">
-                    <input id="button-update-profile" type="submit" value="Alterar">
-                    <div class="messageUpdateProfile"><p>Somente administrador</p></div>
-                </div><!--button-update-profile-->
+                    
+                
 
             </div><!--box-->
             
