@@ -1,0 +1,22 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% bootstrap_messages %}
+
+    <link rel="stylesheet" href="{% static 'assets/css/core/responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/core/style.css' %}">
+
+    <link rel="icon" href="{% static 'assets/images/icon.ico' %}">
+
+    <script src="{% static 'assets/js/libs/font-awesome.js' %}"></script>
+    <script src="{% static 'assets/js/libs/jquery-3.6.3.js' %}"></script>
+    <script src="{% static 'assets/js/core/user/transitionScreen.js' %}" defer></script>
+    
+    <title>Cadastro | LBPR System</title>
+</head>

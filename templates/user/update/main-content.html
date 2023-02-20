@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="container">
+  <div class="container-fluid">
+    <div class="card p-4">
+      <div class="card-title">
+        <h1>Editar usuário</h1>
+      </div>
+      <div class="card-body">
+        {% block form %}
+          {% include 'user/components/form.html' %}
+        {% endblock %}
+        <div class="row mt-4">
+          <div class="col-sm-12 d-flex align-center justify-content-end">
+            <button type="submit" class="btn btn-danger btn-lg">Editar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+{% load static %}
+<div class="container-fluid ">
+    <div class="card p-4 ">
+        <h1 class="card-title text-uppercase">Listagem de funcionários</h1>
+        <div class="card p-4">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="row">
+                            <div class="col">
+                                <label for="professions">Filtre por cargo</label>
+                            </div>
+                            <div class="col">
+                                <label for="search_name">Pesquise por nome ou usuário</label>
+                            </div>
+                            <div class="col d-flex justify-content-end flex-column align-items-lg-end ">
+                                <label for="img">Novo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select name="" id="professions" class="form-select">
+                                    <option value="">---</option>
+                                    <option value="">Administrador</option>
+                                    <option value="">Cozinheiro</option>
+                                    <option value="">Garçom</option>
+                                    <option value="">Caixa</option>
+                                    <option value="">Higienizador</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input type="search" class="form-control" placeholder="Procurar"
+                                    id="search_name">
+                            </div>
+                            <div class="col">
+                                <div class="d-flex justify-content-end flex-column align-items-lg-end">
+                                    <a href="../create/create.html">
+                                        <img src="{% static 'assets/images/mais.png' %}" alt=""
+                                            style="height: 40px; width: 40px;" id="img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <card class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped border shadow p-3 mb-5 bg-body rounded">
+                        <thead style="background-color: rgb(179, 22, 22);">
+                            <tr class="text-white">
+                                <th scope="col" class="priority-1">Nome</th>
+                                <th scope="col" class="priority-3">Telefone</th>
+                                <th scope="col" class="priority-4">Email</th>
+                                <th scope="col" class="priority-2">Cargo</th>
+                                <th scope="col" class="priority-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="colab-content">
+                            <tr>
+                                <td class="priority-1">Rian32323</td>
+                                <td class="priority-3">43999579836</td>
+                                <td class="priority-4">rianmartins@live.com</td>
+                                <td class="priority-2">Administrador</td>
+                                <td class="d-flex justify-content-end priority-1">
+                                    <div class="btn-group">
+                                        <a href="/home/user/update/">
+                                            <img src="../../../static/assets/images/3dots.ico"
+                                                style="width: 20px !important ; height: 20px impr !important;"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+
+{% block head %}{% endblock head%}
+
+<body>
+    {% block header_fixed %}{% endblock header_fixed %}
+    <div class="main">
+        <div id="content" class="content d-flex align-items-center">
+            <!-- content @s -->
+            {% block content %}{% endblock content %}
+            <!-- content @e -->
+
+        </div><!--content-->
+
+    </div><!--main-->
+
+    {% block script %}{% endblock script %}
+
+</body>
+
+</html>

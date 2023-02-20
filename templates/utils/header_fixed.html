@@ -1,0 +1,56 @@
+{% load static %}
+<header class='mb-3'>
+    <div class="center">
+
+
+
+        <div class="exit-perfil">
+            <a href="../../../templates/login/index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+            <div class="logo-img">
+                <img src="{% static 'assets/images/logoSemFundo.png' %}" alt="logo">
+            </div>
+        </div><!--exit-perfil-->
+
+        <div class="menu-perfil">
+            <nav>
+                <ul>
+                    <li><a href="/home/user/update/">Perfil</a></li>
+                    <li><a href="/home/user/list/">Funcionários</a></li>
+                    <li><a href="/home/user/create/">Cadastro</a></li>
+                    <li><a href="/home/user/reports/">Relatórios</a></li>
+                </ul>
+            </nav>
+            <div class="avatar-perfil">
+                <img src="{% static 'assets/images/avatar/administrador.png' %}" alt="avatar">
+            </div><!--avatar-perfil-->
+            <div class="info-perfil">
+                <h2>NOME</h2>
+                <h3>ADMINISTRADOR</h3>
+            </div><!--info-perfil-->
+        </div><!--menu-perfil-->
+
+        <div class="menu-perfil-mobile">
+            <h2 id="icon-menu"><i class="fa-solid fa-bars"></i></h2>
+            <nav>
+                <div class="avatar-perfil">
+                    <img src="{% static 'assets/images/avatar/administrador.png' %}" alt="avatar">
+                </div><!--avatar-perfil-->
+                <div class="info-perfil">
+                    <h2>NOME</h2>
+                    <h3>ADMINISTRADOR</h3>
+                </div><!--info-perfil-->
+                <ul>
+                    <div class="line-text"></div>
+                    <li><a href="/home/user/update/">Perfil</a></li>
+                    <div class="line-text"></div>
+                    <li><a href="/home/user/list/">Funcionários</a></li>
+                    <div class="line-text"></div>
+                    <li><a href="/home/user/create/">Cadastro</a></li>
+                    <div class="line-text"></div>
+                    <li><a href="/home/user/reports/">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div><!--menu-perfil-mobile-->
+
+    </div><!--center-->
+</header>

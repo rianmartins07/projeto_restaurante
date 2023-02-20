@@ -1,0 +1,47 @@
+{% load static %}
+<div class="box">
+    <h1>Relatórios</h1>
+
+    <label class="title-reports" for="reports">Escolha um relatório:</label>
+    <div>
+        <select id="reports" name="reports">
+            <option value="vazio" selected style="text-align: center;">|----- Selecione -----|</option>
+            <option value="vendas">Vendas</option>
+            <option value="pedidos">Pedidos</option>
+            <option value="clientes">Clientes</option>
+            <option value="tempo">Tempo de permanência</option>
+            <option value="periodo">Período</option>
+        </select>
+    </div>
+
+    <div class="date-reports">
+        <p>Escolha um período:</p>
+
+        <div>
+            <div class="date-ini">
+                <label for="date-ini">Início: </label>
+                <input type="date" name="date-ini" required>
+            </div>
+
+            <div class="date-fim">
+                <label for="date-fim">Fim: </label>
+                <input type="date" name="date-fim" required>
+            </div>
+        </div>
+
+    </div><!--date-reports-->
+    
+    <div class="view-report">
+        <a id="view-report" href="">Visualizar</a>
+    </div><!--view-reports-->
+
+    <div id="messageSelect" class="messageSelect">
+        <p>Escolha um relatório</p>
+    </div><!--messageDate-->
+
+    <div id="messageDate" class="messageDate">
+        <p>Escolha uma data inicial e final corretamente</p>
+        
+    </div><!--messageDate-->
+    
+</div><!--box-->
