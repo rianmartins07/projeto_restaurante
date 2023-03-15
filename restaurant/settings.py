@@ -129,3 +129,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 PROJECT_ROOT = os.path.dirname(__file__)
 sys.path.insert(1, os.path.join(PROJECT_ROOT, '../core'))
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'restaurant'),
+        'USER': os.environ.get('DB_USER', 'rianmartins07'),
+        'PASSWORD': os.environ.get('DB_PASS', 'Rianmartins0703!'),
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}

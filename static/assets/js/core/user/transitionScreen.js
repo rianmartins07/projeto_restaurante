@@ -10,4 +10,3 @@ $(function(){
     
 });
 
-console.log('testw')

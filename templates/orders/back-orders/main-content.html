@@ -1,0 +1,69 @@
+<div class="main">
+    <div id="content">
+
+        <div class="box">
+            <h1 class="nMesa"></h1>
+
+            <div class="name-waiter">
+                <h2>Garçom: NOME</h2>
+            </div><!--name-waiter-->
+
+            <div class="commands">
+                <table border="1">
+                    <tr class='legendCommands' style='background-color: rgb(179 22 22); color: #fff;'>
+                        <td>Nome</td>
+                        <td>Valor unitário</td>
+                        <td>Qtd.</td>
+                        <td colspan='2'>Valor total</td>
+                    </tr>
+
+                    <tr class='pedido'>
+                        <td>Nome</td>
+                        <td>Valor</td>
+                        <td>Qtd</td>
+                        <td class='valueOrderSingle'>Valor unitário</td>
+                    </tr>
+
+                    <tr class='pedido'>
+                        <td>Nome</td>
+                        <td>Valor</td>
+                        <td>Qtd</td>
+                        <td class='valueOrderSingle'>Valor unitário</td>
+                    </tr>
+
+                    <tr class='pedido'>
+                        <td>Nome</td>
+                        <td>Valor</td>
+                        <td>Qtd</td>
+                        <td class='valueOrderSingle'>Valor unitário</td>
+                    </tr>
+
+                </table>
+            </div><!--orders-placed-->
+
+
+            <div class="buttons-commands">
+                <input type="submit" class="cook-order red" value="Processar">
+                <input type="submit" class="cook-order gray" value="Concluído">
+                <input type="submit" class="cook-order red" id="cancelOrder" value="Cancelar">
+            </div><!--buttons-commands-->
+
+        </div><!--box-->
+
+        <div class="cancel-order">
+            <div class="box-cancel-order">
+                <div class="close-window">
+                    <h2><i class="fa-solid fa-circle-xmark"></i></h2>
+                </div>
+
+                <textarea placeholder="Qual a razão do cancelamento?"></textarea>
+
+                <div class="button-cancel">
+                    <input id="fechar" type="submit" value="Fechar">
+                    <input type="submit" value="Enviar">
+                </div><!--button-cancel-->
+            </div><!--box-cancel-order-->
+        </div><!--cancel-order-->
+
+    </div><!--content-->
+</div><!--main-->
