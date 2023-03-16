@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <!---Conjunto-de-Caracteres--->
-        <meta charset="UTF-8">
-        <!---Edge--->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!---Responsivo--->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!---CSS--->
-        <link rel="stylesheet" href="../../static/assets/css/style.css">
-        <link rel="stylesheet" href="../../static/assets/css/responsivo.css">
-        <!---Favicon--->
-        <link rel="icon" href="../../static/assets/images/icon.ico">
-        <!--JS-->
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
-        <script src="../../static/assets/js/validarFormLogin.js" defer></script>
-        <!---FontAwesome--->
-        <script src="https://kit.fontawesome.com/8798ebed14.js" crossorigin="anonymous"></script>
-        <!---Titulo--->
-        <title>Login | LBPR System</title>
-    </head>
+{% extends 'base.html' %}
+{% load static %}
 
-</html>
+{% block head %}
+    {% include 'utils/head.html' %}
+{% endblock head %}
+
+{% block header_fixed %}
+    {% include 'utils/header_fixed.html' %}
+{% endblock header_fixed%}
+
+{% block content %}
+    {% include 'registration/main-content.html' %}
+{% endblock content %}
+
+{% block script %}
+
+{% endblock script %}

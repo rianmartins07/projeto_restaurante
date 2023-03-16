@@ -76,7 +76,7 @@ body{
 }
 
 
-.box-login form input[type=text]{
+.box-login form input[type=text], input[type=password] {
     width: 100%;
     height: 55px;
     border-radius: 30px;
