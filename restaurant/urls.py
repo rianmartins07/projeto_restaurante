@@ -19,6 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('account/', include('django.contrib.auth.urls')),
-    path(r'home/user/', include('core.user.dash.urls')),
-    path(r'home/menu/', include('core.menu.dash.urls'))
+    path(r'home/user/', include('core.user.dash.urls'),name='user'),
+    path(r'home/menu/', include('core.menu.dash.urls'), name='menu')
 ]

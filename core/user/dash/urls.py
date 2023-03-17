@@ -3,6 +3,8 @@ from django.urls import path, include
 
 from core.user.dash.views import *
 
+app_name='user'
+
 urlpatterns = [
     re_path(r'create/', create_user, name='create'),
     re_path(r'update/', update_user, name='update'),

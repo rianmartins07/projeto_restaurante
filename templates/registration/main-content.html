@@ -7,7 +7,8 @@
         <h2><i class="fa-solid fa-user"></i></h2>
     </div><!--img-perfil-->
 
-    <form action="#">
+    <form method='POST' action="{% url 'login' %}">
+        {% csrf_token %}
         <div class="w100">
             {{ form.username }}
         </div><!--w100-->
@@ -29,14 +30,12 @@
 
         <!---Mensagens--->
 
-        <div class="cpfIncorrect login-incorrect">
-            <p>Digite seu CPF corretamente</p>
+        {% if form.erros %}
+        <div class="cpfIncorrect login-incorrect codigoIncorrect">
+            <p>Digite seu dados corretamente!</p>
         </div><!--cpfIncorrect-->
-
-        <div class="codigoIncorrect login-incorrect">
-            <p>Digite seu código corretamente</p>
-        </div><!--cpfIncorrect-->
-
+        
+        {% endif %}
         <!--<div class="messageCPF message-input">
                 <p>Digite apenas números</p>
             </div><messageCPF
