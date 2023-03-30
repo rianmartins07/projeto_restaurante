@@ -1,52 +1,54 @@
 
 
-<!---Formulário-de-Login--->
-<div class="box-login">
+<!---Formulário-de-Login-->
+<main class='loginBox'>
+    <div class="box-login">
 
-    <div class="img-perfil">
-        <h2><i class="fa-solid fa-user"></i></h2>
-    </div><!--img-perfil-->
+        <div class="img-perfil">
+            <h2><i class="fa-solid fa-user"></i></h2>
+        </div><!--img-perfil-->
 
-    <form action="#">
-        <div class="w100">
-            {{ form.username }}
-        </div><!--w100-->
+        <form action="#">
+            <div class="w100">
+                {{ form.username }}
+            </div><!--w100-->
 
-        <div class="w100">
-            {{ form.password }}
-        </div><!--w100-->
+            <div class="w100">
+                {{ form.password }}
+            </div><!--w100-->
 
-        <div class="w100 options-login">
-            <div class="esqueci-codigo">
-                <a href="#">Esqueci meu código</a>
-            </div><!--esqueci-codigo-->
-        </div><!--w100-->
+            <div class="w100 options-login">
+                <div class="esqueci-codigo">
+                    <a href="#">Esqueci meu código</a>
+                </div><!--esqueci-codigo-->
+            </div><!--w100-->
 
-        <div class="w100">
-            <input type="submit" value="login"/>
-            <input type="hidden" name="next" value="{{ next }}" />
-        </div><!--w100-->
+            <div class="w100">
+                <input type="submit" value="login"/>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div><!--w100-->
 
-        <!---Mensagens--->
+            <!---Mensagens--->
 
-        <div class="cpfIncorrect login-incorrect">
-            <p>Digite seu CPF corretamente</p>
-        </div><!--cpfIncorrect-->
+            <div class="cpfIncorrect login-incorrect">
+                <p>Digite seu CPF corretamente</p>
+            </div><!--cpfIncorrect-->
 
-        <div class="codigoIncorrect login-incorrect">
-            <p>Digite seu código corretamente</p>
-        </div><!--cpfIncorrect-->
+            <div class="codigoIncorrect login-incorrect">
+                <p>Digite seu código corretamente</p>
+            </div><!--cpfIncorrect-->
 
-        <!--<div class="messageCPF message-input">
-                <p>Digite apenas números</p>
-            </div><messageCPF
+            <!--<div class="messageCPF message-input">
+                    <p>Digite apenas números</p>
+                </div><messageCPF
 
-            <div class="messageCodigo message-input">
-                <p>Apenas números e letras</p>
-            </div>messageCPF-->
-    </form>
+                <div class="messageCodigo message-input">
+                    <p>Apenas números e letras</p>
+                </div>messageCPF-->
+        </form>
 
-</div><!--box-login-->
+    </div><!--box-login-->
+</main>
 
 <div class="esqueciSenha">
     <div class="boxSenha">
