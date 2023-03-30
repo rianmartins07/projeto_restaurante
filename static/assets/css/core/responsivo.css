@@ -1025,4 +1025,44 @@
         font-size: 14px;
         margin: 0 10px;
     }
+
+    .boxSenha{
+        padding: 30px 20px;
+        max-width: 400px;
+        border-radius: 7px;
+        border: 2px solid #ccc;
+    }
+    
+    .iconClose{
+        right: -10px;
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    
+    .boxSenha input[type=text]{
+        border-radius: 15px;
+        height: 35px;
+        font-size: 13px;
+        padding-left: 8px;
+    }
+    
+    .boxSenha input[type=submit]{
+        border-radius: 20px;
+        height: 35px;
+        max-width: 130px;
+        font-size: 13px;
+        border-bottom: 3px solid rgb(121, 13, 13) !important;
+        margin-top: 20px;
+    }
+    
+    .boxSenha input[type=submit]:hover{
+        background-color: rgb(255, 255, 255);
+        border-bottom: 3px solid rgb(121, 13, 13) !important;
+        color: rgb(179 22 22);
+        border: 1px solid rgb(179 22 22);
+    }
+    
 }
