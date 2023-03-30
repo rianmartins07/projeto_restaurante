@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'bootstrap5',
     'rest_framework',
     'user',
@@ -117,6 +118,7 @@ USE_I18N = True
 USE_TZ = True
 
 LOGIN_REDIRECT_URL = reverse_lazy('user:update')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

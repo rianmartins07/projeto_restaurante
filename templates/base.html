@@ -5,6 +5,7 @@
 {% block head %}{% endblock head%}
 
 <body>
+    {% csrf_token %}
     {% block header_fixed %}{% endblock header_fixed %}
     <div class="main">
         <div id="content" class="content d-flex align-items-center">
@@ -16,6 +17,8 @@
 
     </div><!--main-->
 
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     {% block script %}{% endblock script %}
 
 </body>

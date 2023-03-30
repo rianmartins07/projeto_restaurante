@@ -2,60 +2,56 @@
   <div class="row gy-4">
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="user">Usuário</label>
-        <input type="text" name="" id="user" class="form-control" />
+        <label for="{{ form.user.auto_id }}">Usuário</label>
+        {{ form.user }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" name="" id="name" class="form-control" />
+        <label for="{{ form.nome.auto_id }}">Nome</label>
+        {{ form.nome }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="cpf">CPF</label>
-        <input type="text" name="" id="cpf" class="form-control" />
+        <label for="{{ form.cpf.auto_id }}">CPF</label>
+        {{ form.cpf }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="" id="email" class="form-control" />
+        <label for="{{ form.email.auto_id}}">Email</label>
+        {{ form.email }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="cpf">Cargo</label>
+        <label for="professions">Cargo</label>
         <select name="" id="professions" class="form-control">
           <option value="">Administrador</option>
           <option value="">Cozinheiro(a)</option>
           <option value="">Garçom</option>
-          <option value="">Caixa</option>
+          <option value="">Operador de caixa</option>
           <option value="">Higienizador</option>
         </select>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="smartphone">Telefone</label>
-        <input type="tel" name="" id="smartphone" class="form-control" />
+        <label for="{{ form.celular.auto_id }}">Telefone</label>
+        {{ form.celular }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="dtnasc">Data de nascimento</label>
-        <input type="date" name="" id="dtnasc" class="form-control" />
+        <label for="{{ form.dtnasc.auto_id }}">Data de nascimento</label>
+        {{ form.dtnasc }}
       </div>
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="sex">Sexo</label>
-        <select name="" id="sex" class="form-control">
-          <option value="">Masculino</option>
-          <option value="">Feminino</option>
-          <option value="">Prefiro não dizer</option>
-        </select>
+        <label for="{{ form.sexo.auto_id }}">Sexo</label>
+        {{ form.sexo }}
       </div>
     </div>
   </div>
