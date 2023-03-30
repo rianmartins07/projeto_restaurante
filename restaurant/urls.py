@@ -15,10 +15,34 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
+from django.contrib.auth.decorators import login_required
+
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+
+
+urlpatterns_API = [
+    path('api/user/', include('core.user.api.urls')),
+]
+
+schema_view = get_schema_view(
+    openapi.Info(
+
+        title="LBPR System",
+
+        default_version='v1',
+
+        description="Test description",
+    ),
+    patterns=urlpatterns_API,
+    public=True,
+)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'api/', login_required(schema_view.with_ui('swagger', cache_timeout=0)), name='schema-swagger-ui' ),
+    path('admin/', login_required(admin.site.urls)),
     path ('account/', include('django.contrib.auth.urls')),
-    path(r'home/user/', include('core.user.dash.urls')),
-    path(r'home/menu/', include('core.menu.dash.urls'))
-]
+    path(r'home/user/', include('core.user.dash.urls'),name='user'),
+    path(r'home/menu/', include('core.menu.dash.urls'), name='menu')
+] + urlpatterns_API

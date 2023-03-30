@@ -1,13 +1,15 @@
 from django.urls import re_path
 from django.urls import path, include
 
-from core.user.dash.views import *
+from user.dash.views import *
+
+app_name='user'
 
 urlpatterns = [
-    re_path(r'create/', create_user, name='create'),
-    re_path(r'update/', update_user, name='update'),
-    re_path(r'list/', list_user, name='update'),
-    re_path(r'feedback/', feedback_user, name='update'),
+    re_path(r'create/$', CreateUserView.as_view(), name='create'),
+    re_path(r'(?P<pk>[0-9]+)/update/', UpdateUser.as_view(), name='update'),
+    re_path(r'list/', list_user, name='list'),
+    re_path(r'feedback/', feedback_user, name='feedback'),
     re_path(r'reports/$', reports_user, name='reports'),
     re_path(r'reports/customers/', reports_customers_user, name='customers'),
     re_path(r'reports/requests/', reports_requests_user, name='requests'),
