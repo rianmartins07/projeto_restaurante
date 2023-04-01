@@ -117,7 +117,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL = reverse_lazy('user:update')
+LOGIN_REDIRECT_URL = reverse_lazy('user:list')
 LOGOUT_REDIRECT_URL = reverse_lazy('login')
 
 # Static files (CSS, JavaScript, Images)
