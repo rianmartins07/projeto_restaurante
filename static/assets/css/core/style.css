@@ -75,13 +75,19 @@ body{
     border-bottom: 11px solid rgb(53 53 53);
     display: inline-block;
     color: #fff;
-    font-size: 40px;
     border-radius: 50%;
-    padding: 25px 35px 15px 35px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     left: 50%;
     top: -70px;
     transform: translateX(-50%);
+}
+.img-perfil h2{
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -93,10 +99,11 @@ body{
     margin-bottom: 17px;
     font-size: 17px;
     padding-left: 12px;
+    transition: .2s ease-in-out;
     outline: 0;
 }
 
-.box-login form input[type=text]:focus{
+.box-login form input[type=text]:focus, .box-login form input[type=password]:focus{
     border: 1px solid rgb(179 22 22);
     background-color: rgb(255, 251, 251);
 }
@@ -104,12 +111,12 @@ body{
 .box-login form input[type=submit]{
     width: 100%;
     height: 50px;
-    line-height: 50px;
+    line-height: 45px;
     border: 2px solid rgb(179 22 22);
     border-radius: 25px;
     border: 0;
     background-color: rgb(179 22 22);
-    border-bottom: 5px solid rgb(53 53 53);
+    border-bottom: 5px solid rgb(133, 12, 12);
     margin-top: 25px;
     font-size: 17px;
     color: #fff;
@@ -121,7 +128,7 @@ body{
     border-top: 1px solid rgb(179 22 22);
     border-right: 1px solid rgb(179 22 22);
     border-left: 1px solid rgb(179 22 22);
-    border-bottom: 4px solid rgb(179 22 22);
+    border-bottom: 4px solid rgb(155, 16, 16);
     background-color: rgb(255, 255, 255);
     color: rgb(179 22 22);
     line-height: 45px;
@@ -495,20 +502,23 @@ li{
 }
 
 .main #content{
-    width: 100%;
     padding: 0 10%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 /*REPORTS*/
 
-#content .box{
+
+.box{
     background-color: #fff;
     border: 1px solid #ccc;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
     width:100%;
-    max-width: 1270px;
-    padding: 100px 40px;
+    max-width: 1150px;
+    padding: 100px 50px;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -853,8 +863,8 @@ td.btnRemoveOrder{
 }
 
 .wraper-profile .profile-single{
-    width: 48%;
-    margin-right: 2%;
+    width: 45%;
+    margin-right: 5%;
     text-align: left;
     margin-top: 15px;
 }
@@ -897,6 +907,10 @@ td.btnRemoveOrder{
     font-size: 16px;
     font-weight: lighter;
     border: 0;
+}
+
+.button-update-profile input[type=submit]:hover{
+    background-color: rgb(171, 18, 18);
 }
 
 .messageUpdateProfile{
