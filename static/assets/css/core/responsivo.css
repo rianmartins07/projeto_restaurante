@@ -376,15 +376,17 @@
 
 @media screen and (max-width: 768px){
     /*LOGIN*/
-    .logo{
-        width: 175px;
-        height: 145px;
-        margin: 30px auto 0 auto;
-    }
 
-    .logo:hover{
-        width: 180px;
-        height: 150px;
+    .box-login .img-perfil{
+        border-bottom: 11px solid rgb(53 53 53);
+        width: 105px;
+        height: 105px;
+        top: -55px;
+        transform: translateX(-50%);
+    }
+    
+    .img-perfil h2{
+        font-size: 40px;
     }
 
     .box-login{
@@ -394,15 +396,7 @@
         border-radius: 15px;
     }
     
-    .box-login .img-perfil{
-        border-bottom: 8px solid rgb(53 53 53);
-        font-size: 33px;
-        padding: 22px 32px 16px 32px;
-        position: absolute;
-        top: -60px;
-    }
-
-    .box-login form input[type=text]{
+    .box-login form input[type=text],.box-login form input[type=password]{
         height: 45px;
         margin-bottom: 15px;
         font-size: 15px;
@@ -428,6 +422,7 @@
     .options-login .esqueci-codigo a{
         color: rgb(179 22 22);
         font-size: 15px;
+        text-align: center;
         text-decoration: none;
     }
     
@@ -617,14 +612,8 @@
 @media screen and (max-width: 580px){
     /*LOGIN*/
     .logo{
-        width: 140px;
-        height: 110px;
-    }
-
-    .logo:hover{
-        width: 145px;
-        height: 115px;
-        margin: 30px auto -5px auto;
+        width: 110px;
+        height: 90px;
     }
 
     .box-login{
@@ -634,15 +623,7 @@
         border-radius: 15px;
     }
     
-    .box-login .img-perfil{
-        border-bottom: 8px solid rgb(53 53 53);
-        font-size: 30px;
-        padding: 17px 27px 12px 27px;
-        position: absolute;
-        top: -60px;
-    }
-
-    .box-login form input[type=text]{
+    .box-login form input[type=text],.box-login form input[type=password]{
         height: 40px;
         margin-bottom: 15px;
         font-size: 15px;
@@ -669,6 +650,8 @@
         color: rgb(179 22 22);
         font-size: 14px;
         text-decoration: none;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .options-login .manter-conectado span{
@@ -1065,4 +1048,16 @@
         border: 1px solid rgb(179 22 22);
     }
     
+    .box-login .img-perfil{
+        border-bottom: 10px solid rgb(53 53 53);
+        width: 95px;
+        height: 95px;
+        top: -55px;
+        transform: translateX(-50%);
+    }
+    
+    .img-perfil h2{
+        font-size: 35px;
+        top: 52%;
+    }
 }
