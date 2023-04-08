@@ -6,7 +6,7 @@ from user.dash.views import *
 app_name='user'
 
 urlpatterns = [
-    re_path(r'create/$', CreateUserView.as_view(), name='create'),
+    re_path(r'create/$', CreateUserView.as_view(), name='user_create'),
     re_path(r'(?P<pk>[0-9]+)/update/', UpdateUser.as_view(), name='update'),
     re_path(r'list/', list_user, name='list'),
     re_path(r'feedback/', feedback_user, name='feedback'),
