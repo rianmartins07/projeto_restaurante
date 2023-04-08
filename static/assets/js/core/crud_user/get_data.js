@@ -1,5 +1,5 @@
  
- function get_data(){
+ function getData(){
     user = $('#id_user').val();
     nome = $('#id_nome').val();
     cpf = $('#id_cpf').val();

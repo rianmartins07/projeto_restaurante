@@ -3,20 +3,24 @@ from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.views.generic import CreateView, UpdateView
 
-@login_required(login_url=reverse_lazy('login'))
-def create_menu(request):
-    template_name = loader.get_template('menu/create/index.html')
-    context = dict()
 
-    return HttpResponse(template_name.render(context, request))
+from menu.models import Menu
+from menu.dash.forms import MenuForm
 
-@login_required(login_url=reverse_lazy('login'))
-def update_menu(request):
-    template_name = loader.get_template('menu/update/index.html')
-    context = dict()
 
-    return HttpResponse(template_name.render(context, request))
+class CreateMenuView(LoginRequiredMixin, CreateView):
+    model = Menu
+    form_class = MenuForm
+    template_name = 'menu/create/index.html'
+    
+class UpdateMenuView(LoginRequiredMixin, UpdateView):
+    model = Menu
+    form_class = MenuForm
+    template_name = 'menu/update/index.html'
+
+
 
 @login_required(login_url=reverse_lazy('login'))
 def dish_menu(request):

@@ -1,13 +1,13 @@
 
 
-$('#create_user').click(function (e) {
+$('#button-update-profile').click(function (e) {
 
     let data = new FormData();
     data = getData();
 
 
     var settings = {
-        "url": 'http://127.0.0.1:8000/api/user/user/',
+        "url": 'http://127.0.0.1:8000/api/menu/info/',
         "method": "POST",
         "timeout": 0,
         "headers" : {
@@ -17,7 +17,7 @@ $('#create_user').click(function (e) {
         "contentType": false,
         "mimeType": "multipart/form-data",
         "data": data,
-    };
+    };  
     
     
     

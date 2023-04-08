@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import RedirectView
 from django.contrib.auth.decorators import login_required
+from django.conf.urls.static import static
+from django.conf import settings
 
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
@@ -24,6 +26,7 @@ from drf_yasg.views import get_schema_view
 
 urlpatterns_API = [
     path('api/user/', include('core.user.api.urls')),
+    path('api/menu/', include('core.menu.api.urls')),
 ]
 
 schema_view = get_schema_view(
@@ -42,7 +45,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path(r'api/', login_required(schema_view.with_ui('swagger', cache_timeout=0)), name='schema-swagger-ui' ),
     path('admin/', login_required(admin.site.urls)),
-    path ('account/', include('django.contrib.auth.urls')),
+    path ('accounts/', include('django.contrib.auth.urls')),
     path(r'home/user/', include('core.user.dash.urls'),name='user'),
     path(r'home/menu/', include('core.menu.dash.urls'), name='menu')
-] + urlpatterns_API
+] + urlpatterns_API + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
