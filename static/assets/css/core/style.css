@@ -33,20 +33,15 @@ body{
 }
 
 .logo{
-    background-image: url('../images/logo.png');
+    background-image: url('../../images/logo.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 210px;
-    height: 170px;
-    margin: 30px auto 0 auto;
+    width: 150px;
+    height: 110px;
+    margin: 20px auto 0 auto;
 }
 
-.logo:hover{
-    width: 215px;
-    height: 175px;
-    margin: 30px auto -5px auto;
-}
 
 .loginBox{
     width: 100%;
@@ -83,6 +78,7 @@ body{
     top: -70px;
     transform: translateX(-50%);
 }
+
 .img-perfil h2{
     font-size: 50px;
     position: relative;
@@ -135,8 +131,6 @@ body{
 }
 
 .options-login{
-    display: flex;
-    justify-content: space-around;
     margin-top: 10px;
 }
 
@@ -144,12 +138,9 @@ body{
     color: rgb(179 22 22);
     font-size: 17px;
     text-decoration: none;
+    text-align: center;
 }
 
-.options-login .manter-conectado span{
-    font-size: 17px;
-    margin-left: 2px;
-}
 
 .options-login .esqueci-codigo a:hover{
     color: rgb(120, 11, 11);

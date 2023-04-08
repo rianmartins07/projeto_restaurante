@@ -87,3 +87,10 @@ def  reports_time_user(request):
     context = dict()
 
     return HttpResponse(template_name.render(context, request))
+
+@login_required(login_url=reverse_lazy('login'))
+def  user_update(request):
+    template_name = loader.get_template('user/update/index.html')
+    context = dict()
+
+    return HttpResponse(template_name.render(context, request))
