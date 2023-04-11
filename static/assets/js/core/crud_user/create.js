@@ -7,7 +7,7 @@ $('#create_user').click(function (e) {
 
 
     var settings = {
-        "url": 'http://127.0.0.1:8000/api/user/user/',
+        "url": 'http://127.0.0.1:8000/api/user/info/',
         "method": "POST",
         "timeout": 0,
         "headers" : {

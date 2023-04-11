@@ -17,4 +17,13 @@ class User(models.Model):
     class Meta:
         managed = True
         app_label = 'user'
-        
+    
+    def clean(self):
+        # Remove caracteres não numéricos do campo CPF
+        self.cpf = ''.join(filter(str.isdigit, self.cpf))
+        # Atualiza o valor do campo CPF no objeto do modelo
+        self.cpf = self.cpf.replace('.', '').replace('-', '')
+
+    def save(self, *args, **kwargs):
+        self.clean()  # Chama o método clean() para validar e limpar o campo CPF
+        super(User, self).save(*args, **kwargs)

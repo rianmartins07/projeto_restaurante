@@ -74,7 +74,9 @@ class UserForm(forms.ModelForm):
     )
     
 
-
+    def clean(self):
+        self.cpf = ''.join(filter(str.isdigit, self.cpf))
+        
     class Meta:
         model = User
         fields = '__all__'
