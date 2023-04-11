@@ -4,7 +4,7 @@ from pycpfcnpj import cpfcnpj
 
 
 from user.models import User
-from user.choices import sexo
+from user.choices import Sexo, Role
 
 
 class UserForm(forms.ModelForm):
@@ -46,7 +46,16 @@ class UserForm(forms.ModelForm):
     
     sexo = forms.MultipleChoiceField(
         required=True,
-        choices=sexo.choices,
+        choices=Sexo.choices,
+        widget=forms.Select(
+        attrs={
+            'class': 'form-control',
+        }
+        )
+    )
+    role = forms.MultipleChoiceField(
+        required=True,
+        choices=Role.choices,
         widget=forms.Select(
         attrs={
             'class': 'form-control',

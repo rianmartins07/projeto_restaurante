@@ -26,13 +26,8 @@
     </div>
     <div class="col-sm-6">
       <div class="form-group">
-        <label for="professions">Cargo</label>
-        <select name="" id="professions" class="form-control">
-          <option value="">Administrador</option>
-          <option value="">Cozinheiro</option>
-          <option value="">Garçom</option>
-          <option value="">Operador de caixa</option>
-        </select>
+        <label for="{{ form.role.auto_id }}">Cargo</label>
+        {{ form.role }}
       </div>
     </div>
     <div class="col-sm-6">
@@ -53,5 +48,6 @@
         {{ form.sexo }}
       </div>
     </div>
+
   </div>
 </form>

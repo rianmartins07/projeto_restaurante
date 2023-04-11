@@ -33,7 +33,7 @@ function buildUserList(obj){
                 <td class="priority-1">${obj.nome}</td>
                 <td class="priority-3">${obj.numero_celular}</td>
                 <td class="priority-4">${obj.email}</td>
-                <td class="priority-2">${obj.cargo}</td>
+                <td class="priority-2">${obj.role}</td>
                 <td class="d-flex justify-content-end priority-1">
                     <div class="btn-group">
                         <a href="/home/user/update/">

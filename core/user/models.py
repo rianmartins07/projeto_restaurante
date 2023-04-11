@@ -1,5 +1,5 @@
 from django.db import models
-from .choices import sexo
+from .choices import Sexo, Role
 # Create your models here.
 
 
@@ -9,8 +9,8 @@ class User(models.Model):
     nome = models.CharField(max_length=81, verbose_name='nome')
     cpf = models.CharField(max_length=11, verbose_name='cpf')
     email = models.EmailField('endereco de email', unique=True)
-
-    sexo = models.CharField(max_length=20, choices=sexo.choices)
+    role = models.CharField(max_length=30, choices=Role.choices)
+    sexo = models.CharField(max_length=20, choices=Sexo.choices)
     data_nascimento = models.DateField(verbose_name='data de nascimento')
     numero_celular = models.CharField(max_length=15, verbose_name='numero de celular')
     
