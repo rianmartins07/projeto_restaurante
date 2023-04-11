@@ -5,35 +5,30 @@
 
             <h1>Cadastrar prato</h1>
             
-                <div class="row">
-                    <div class="col-sm-6">
+                <div class="row mt-5">
+                    <div class="col-sm-6 mb-3">
                         <div class="form-group">
-                            <label for="{{ form.nome.auto_id }}">Nome</label>
                             {{ form.nome }}
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 mb-3">
                         <div class="form-group">
-                            <label for="{{ form.valor.auto_id }}">Valor</label>
                             {{ form.valor }}
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="{{ form.descricao.auto_id }}">Descrição</label>
                             {{ form.descricao }}
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="custom-control custom-switch">
-                            <label class="custom-control-label" for="{{ form.status.auto_id }}">Ativo?</label>
+                        <div class="form-group">
                             {{ form.status }}
                         </div>
                     </div>
 
                     <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="{{ form.foto.auto_id }}">Foto</label>
+                        <div class="form-group mt-3">
                             {{ form.foto }}
                         </div>
                     </div>

@@ -30,13 +30,12 @@ function buildMenuList(obj){
     html = `
     
         <a href="../${obj.id}/update/" class="list-menu-single">
-            <div class="info-menu">
-                
-            <img src="${obj.foto}" alt="img">
-            <div class="img-menu"></div>
+            <div class="info-menu">  
+                <img src='${obj.foto}' alt="img">
+                <!--<div class="img-menu"></div>-->
                 <h2>${obj.nome} - R$ ${obj.valor}</h2>
             </div><!--info-menu-->
-            <h2>Status</h2>
+            <h2>${obj.status}</h2>
         </a><!--list-menu-single-->
     
     

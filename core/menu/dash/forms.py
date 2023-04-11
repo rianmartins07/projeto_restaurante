@@ -1,6 +1,7 @@
 from django import forms
 
 from menu.models import Menu
+from core.menu.choices import status
 
 
 class MenuForm(forms.ModelForm):
@@ -8,7 +9,8 @@ class MenuForm(forms.ModelForm):
         required=True,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'Digite o nome...'
             }
         )
     )
@@ -17,7 +19,8 @@ class MenuForm(forms.ModelForm):
         required=True,
         widget=forms.NumberInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'Digite o valor...'
             }
         )
     )
@@ -26,14 +29,16 @@ class MenuForm(forms.ModelForm):
         required=True,
         widget=forms.TextInput(
             attrs={
-                'class': 'form-control'
+                'class': 'form-control',
+                'placeholder': 'Digite a descrição...'
             }   
         )
     )
 
-    status = forms.BooleanField(
+    status = forms.MultipleChoiceField(
         required=True,
-        widget=forms.CheckboxInput(
+        choices=status.choices,
+        widget=forms.Select(
             attrs={
                 'class' : 'form-control'
             }
