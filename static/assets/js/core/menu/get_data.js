@@ -7,6 +7,8 @@ function getData(){
     let status = $('#id_status:checked').val()
     let foto = $('#id_foto')[0].files[0];
 
+    status = 1
+
     data.append('nome', nome)
     data.append('valor', valor)
     data.append('descricao', descricao)
