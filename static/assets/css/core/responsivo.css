@@ -63,8 +63,8 @@
     }
 
     .exit-perfil .logo-img img{
-        width: 105px;
-        height: 90px;
+        width: 105px !important;
+        height: 90px !important;
     }
 
     .menu-perfil nav ul li a{

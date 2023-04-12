@@ -4,7 +4,7 @@ function getData(){
     let nome = $('#id_nome').val();
     let valor = $('#id_valor').val();
     let descricao = $('#id_descricao').val();
-    let status = $('#id_status:checked').val()
+    let status = $('#id_status:selected').val()
     let foto = $('#id_foto')[0].files[0];
     if (foto){
         data.append('foto', foto)
