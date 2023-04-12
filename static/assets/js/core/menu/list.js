@@ -67,7 +67,7 @@ function buildMenuList(obj){
             <!--<div class="img-menu"></div>-->
             <h2>${obj.nome} - R$ ${obj.valor}</h2>
         </div><!--info-menu-->
-            <h2>${obj.status}</h2>
+            <h2>${obj.status == 'Ativo' ? '<h2 class="text-success">Ativo</h2>' : '<h2 class="text-danger">Inativo</h2>'}</h2>
         </a><!--list-menu-single-->
     
     `

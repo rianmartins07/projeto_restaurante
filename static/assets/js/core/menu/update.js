@@ -24,7 +24,7 @@ $('#button-update-profile').click(function (e) {
     };  
     
     
-    console.log(settings)
+  
 
     $.ajax(settings).done(function(response){
         Swal.fire({

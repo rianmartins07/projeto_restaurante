@@ -8,11 +8,11 @@ class CustomMenu(models.Model):
     valor = models.DecimalField(decimal_places=2, max_digits=10, verbose_name='valor do prato')
     descricao = models.TextField(verbose_name='descrição do prato')
     foto = models.ImageField(verbose_name='foto do prato')
-    status = models.BooleanField(verbose_name='ativo ou inativo')
+    status = models.CharField(verbose_name='ativo ou inativo', max_length=10)
     
     class Meta:
         managed = True
-        app_label = 'CustomMenu'
+        app_label = 'menu'
 
 class FilterMenu (filters.FilterSet):
     nome__icontains = filters.CharFilter(field_name='nome', lookup_expr='icontains')
