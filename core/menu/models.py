@@ -1,5 +1,5 @@
 from django.db import models
-
+import django_filters as filters
 # Create your models here.
 
 class Menu(models.Model):
@@ -13,3 +13,10 @@ class Menu(models.Model):
     class Meta:
         managed = True
         app_label = 'menu'
+
+class FilterMenu (filters.FilterSet):
+    nome__icontains = filters.CharFilter(field_name='nome', lookup_expr='icontains')
+    
+    class Meta:
+        model = Menu
+        fields = ['nome']

@@ -1,13 +1,17 @@
 from django.db import models
+import django_filters as filters
+
 from .choices import Sexo, Role
 # Create your models here.
+
+
 
 
 class User(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.CharField(max_length=81, verbose_name='user')
     nome = models.CharField(max_length=81, verbose_name='nome')
-    cpf = models.CharField(max_length=11, verbose_name='cpf')
+    cpf = models.CharField(max_length=11, verbose_name='cpf', unique=True)
     email = models.EmailField('endereco de email', unique=True)
     role = models.CharField(max_length=30, choices=Role.choices)
     sexo = models.CharField(max_length=20, choices=Sexo.choices)
@@ -27,3 +31,14 @@ class User(models.Model):
     def save(self, *args, **kwargs):
         self.clean()  # Chama o método clean() para validar e limpar o campo CPF
         super(User, self).save(*args, **kwargs)
+        
+        
+class UserFilter(filters.FilterSet):
+    nome__icontains = filters.CharFilter(field_name='nome', lookup_expr='icontains')
+    numero_celular__icontains = filters.CharFilter(field_name='numero_celular', lookup_expr='icontains')
+    email__icontains = filters.CharFilter(field_name='email', lookup_expr='icontains')
+    role__icontains = filters.CharFilter(field_name='role', lookup_expr='icontains')
+
+    class Meta:
+        model = User
+        fields = ['nome', 'numero_celular', 'email', 'role']
