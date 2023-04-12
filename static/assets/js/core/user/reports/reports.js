@@ -4,15 +4,15 @@ $(function(){
         var report = ($(this).val());
 
         if(report == 'vendas'){
-            $("#view-report").attr("href", "view-report-sales.html");
+            $("#view-report").attr("href", location.protocol + "//" + location.host + '/home/user/reports/sales/');
         } else if(report == 'pedidos'){
-            $("#view-report").attr("href", "view-report-requests.html");
+            $("#view-report").attr("href", location.protocol + "//" + location.host + '/home/user/reports/requests/');
         } else if(report == 'clientes'){
-            $("#view-report").attr("href", "view-report-customers.html");
+            $("#view-report").attr("href", location.protocol + "//" + location.host + '/home/user/reports/customers/');
         } else if(report == 'tempo'){
-            $("#view-report").attr("href", "view-report-time.html");
+            $("#view-report").attr("href", location.protocol + "//" + location.host + '/home/user/reports/time/');
         } else if(report == 'periodo'){
-            $("#view-report").attr("href", "view-report-time-course.html");
+            $("#view-report").attr("href", location.protocol + "//" + location.host + '/home/user/reports/time_course/');
         }
     });
 

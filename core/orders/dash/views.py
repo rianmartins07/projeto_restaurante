@@ -51,5 +51,4 @@ def cook_table (request):
 
     return HttpResponse(template_name.render(context, request))
 
-from django.urls import get_resolver
 
