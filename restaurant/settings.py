@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'bootstrap5',
     'rest_framework',
     'user',
-    'menu'
+    'menu',
+    'cashier',
 ]
 
 MIDDLEWARE = [
