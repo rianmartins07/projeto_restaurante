@@ -31,7 +31,7 @@ function getListObjectFromApi(filter) {
     }
     $.ajax(settings).done(function (response) {
         $('#list_user').html('');
-        console.log(response)
+        
         for (i in response) {
             buildUserList(response[i])
         }
@@ -43,23 +43,32 @@ function getListObjectFromApi(filter) {
 
 
 function buildUserList(obj) {
-    html = `
     
-            <tr>
-                <td class="priority-1">${obj.nome}</td>
-                <td class="priority-3">${obj.numero_celular}</td>
-                <td class="priority-4">${obj.email}</td>
-                <td class="priority-2">${obj.role}</td>
-                <td class="d-flex justify-content-end priority-1">
-                    <div class="btn-group">
-                        <a href="/home/user/update/">
-                            <img src="../../../static/assets/images/3dots.ico"
-                                style="width: 20px !important ; height: 20px impr !important;"
-                                alt="">
-                        </a>
-                    </div>
-                </td>
-            </tr>
+    html = `
+    <tr>
+    <td class="priority-1">${obj.nome}</td>
+    <td class="priority-3">${obj.numero_celular}</td>
+    <td class="priority-4">${obj.email}</td>
+    <td class="priority-2">${obj.role}</td>
+    <td class="d-flex justify-content-end priority-1">
+        <div class="btn-group">
+            <button type="button" class="btn btn-icon btn-trigger "  style="background-color: transparent !important" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <em class="fas fa-ellipsis-h"></em>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="${obj.id}/update/">
+                    <em class="fas fa-edit"></em><span>Editar</span>
+                </a>
+                <a class="dropdown-item" href="#" onclick="deleteUser(${obj.id})">
+                    <em class="fas fa-trash"></em><span>Excluir</span>
+                </a>
+
+            </div>
+        </div>
+        
+        
+        </td>
+    </tr>
     `
 
     appendList(html)
@@ -70,6 +79,46 @@ function appendList(html) {
     $('#list_user').append(html);
 }
 
+
+function deleteUser(id) {
+    let settings = {
+        "url": location.protocol + "//" + location.host + '/api/user/info/' + id + '/',
+        "method": "DELETE",
+        "timeout": 0,
+        "headers": {
+            "X-CSRFToken": getCookie('csrftoken')
+        },
+    };
+
+
+
+    Swal.fire({
+        title: 'Voce quer realmente exluir?',
+        showDenyButton: true,
+
+        confirmButtonText: 'Sim!',
+        confirmButtonColor: '#b31616',
+        cancelButtonColor: '#b31616',
+        denyButtonText: `Não`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax(settings).done(function (){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: `Excluido com sucesso`,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#b31616',
+                    timer: 3000
+                });
+                getListObjectFromApi();
+            })
+        } else if (result.isDenied) {
+
+        }
+      })
+
+}
 
 formSearch.addEventListener('keyup', function () {
     let optionSearch = formSearch.querySelector('#optionSearch');

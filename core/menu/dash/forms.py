@@ -46,14 +46,17 @@ class MenuForm(forms.ModelForm):
     )
 
     foto = forms.ImageField(
-        required=True,
         widget=forms.FileInput(
             attrs={
                 'class' : 'form-control-file'
             }
         )
     )
-    
+    def __init__ (self, *args, **kwargs):
+        super(MenuForm, self).__init__(*args, **kwargs)
+        
+        if self.instance.pk:
+            self.fields['foto'].required = False
     class Meta:
         model = Menu
         fields = '__all__'

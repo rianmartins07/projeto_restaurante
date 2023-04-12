@@ -9,11 +9,13 @@
                     Cadastrar prato
                 </h1>
                 {% else %}
-                <h1>
-                    Editar prato
-                </h1>
-                <img class="img-menu" src="#" alt="img">
-                {% endif %}
+                <div>
+                    <h1 class="pb-5">
+                        Editar prato
+                    </h1>
+                    <img class="img-menu" src="{{ form.instance.foto.url }}" alt="img">
+                </div>
+                    {% endif %}
             
 
             

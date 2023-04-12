@@ -28,6 +28,7 @@ class UpdateMenuView(LoginRequiredMixin, UpdateView):
 
 
 
+
 @login_required(login_url=reverse_lazy('login'))
 def dish_menu(request):
     template_name = loader.get_template('menu/dish/index.html')

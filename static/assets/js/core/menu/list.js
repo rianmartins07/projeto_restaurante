@@ -1,4 +1,5 @@
 
+var filter = {}
 
 $(function(){
     var settings = {
@@ -79,13 +80,15 @@ function appendList(html){
     $('#list_menu').append(html);
 }
 
+var formSearch = document.getElementById('formSearch')
+
 formSearch.addEventListener('keyup', function () {
     let optionSearch = formSearch.querySelector('#optionSearch');
     optionSearch = 'nome'
 
     let search = formSearch.querySelector('#search').value;
 
-    let last_offset = filter["offset"]
+    
     if (search) {
 
         filter["offset"] = 0
@@ -98,9 +101,9 @@ formSearch.addEventListener('keyup', function () {
         }
 
         getListObjectFromApi(newfilter);
-        filter["offset"] = last_offset
+        
     } else {
-        filter["offset"] = last_offset
+        
         getListObjectFromApi();
     }
 });

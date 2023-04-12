@@ -5,12 +5,13 @@ $('#button-update-profile').click(function (e) {
     let data = new FormData();
     data = getData();
 
+    
     form_valid = isFormValid()
     if (!form_valid){
         return
     }
     var settings = {
-        "url": 'http://127.0.0.1:8000/api/menu/info/',
+        "url": 'http://127.0.0.1:8000/api/menu/info/' + data.get('id') + '/',
         "method": "PATCH",
         "timeout": 0,
         "headers" : {
@@ -23,7 +24,7 @@ $('#button-update-profile').click(function (e) {
     };  
     
     
-    
+    console.log(settings)
 
     $.ajax(settings).done(function(response){
         Swal.fire({
