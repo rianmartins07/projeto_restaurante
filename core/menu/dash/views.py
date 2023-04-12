@@ -15,6 +15,12 @@ class CreateMenuView(LoginRequiredMixin, CreateView):
     form_class = MenuForm
     template_name = 'menu/create/index.html'
     
+    def get_context_data(self, **kwargs):
+        context = super(CreateMenuView, self).get_context_data(**kwargs)
+        context['is_create'] = True
+        
+        return context
+    
 class UpdateMenuView(LoginRequiredMixin, UpdateView):
     model = Menu
     form_class = MenuForm

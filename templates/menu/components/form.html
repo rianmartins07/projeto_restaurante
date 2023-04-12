@@ -3,7 +3,13 @@
 
         <div class="box">
 
-            <h1>Cadastrar prato</h1>
+            <h1>
+                {% if is_create %}
+                Cadastrar prato
+                {% else %}
+                Editar prato
+                {% endif %}
+            </h1>
             
                 <div class="row mt-5">
                     <div class="col-sm-6 mb-3">
@@ -38,7 +44,7 @@
             
 
             <div class="button-update-profile">
-                <input id="button-update-profile" type="submit" value="Cadastrar">
+                <input id="button-update-profile" type="submit" value="{% if is_create %} Cadastrar {% else %} Editar {% endif %}">
                 <div class="messageUpdateProfile">
                     <p>Somente administrador</p>
                 </div>
