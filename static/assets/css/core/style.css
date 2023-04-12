@@ -234,13 +234,20 @@ body{
     right: -12px;
     top: -12px;
     background-color: rgb(179 22 22);
+    border-bottom: 3px solid rgb(155, 18, 18);
     color: #fff;
     width: 22px;
     height: 22px;
-    line-height: 22px;
+    line-height: 20px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+}
+
+p.userP, p.senhaP{
+    text-align: left !important;
+    margin-bottom: 5px;
+    margin-left: 4px;
 }
 
 .boxSenha input[type=text]{
@@ -982,6 +989,10 @@ td.btnRemoveOrder{
     color: #fff;
 }
 
+.search-menu .input-menu input[type=submit]:hover{
+    background-color: rgb(167, 22, 22);
+}
+
 .search-menu .create-menu{
     display: flex;
     align-items: center;
@@ -994,6 +1005,14 @@ td.btnRemoveOrder{
     margin: 0 0 0 40px;
 }
 
+img.img-menu{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 30px;
+}
 
 .list-menu-wraper{
     width: 100%;

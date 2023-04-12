@@ -40,8 +40,7 @@ function buildMenuList(obj){
     
     
     `
-
-    
+      
     appendList(html)
 }
 
