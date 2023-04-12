@@ -4,13 +4,13 @@
         <div class="card p-4">
             <div class="form-group">
                 <div class="row">
-                    <div class="col-sm-12 ">
+                    <div class="col-sm-12" id="formSearch">
                         <div class="row">
                             <div class="col">
-                                <label for="professions">Filtre por cargo</label>
+                                <label for="optionSearch">Filtre por:</label>
                             </div>
                             <div class="col">
-                                <label for="search_name">Pesquise por nome ou usuário</label>
+                                <label for="search">Pesquise por nome ou usuário</label>
                             </div>
                             <div class="col d-flex justify-content-end flex-column align-items-lg-end ">
                                 <label for="img">Novo</label>
@@ -18,17 +18,16 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <select name="" id="professions" class="form-control">
-                                    <option value="">---</option>
-                                    <option value="">Administrador</option>
-                                    <option value="">Cozinheiro</option>
-                                    <option value="">Garçom</option>
-                                    <option value="">Operador de Caixa</option>
+                                <select name="" id="optionSearch" class="form-control">
+                                    <option value="nome">Nome</option>
+                                    <option value="numero_celular">Telefone</option>
+                                    <option value="email">Email</option>
+                                    <option value="role">Cargo</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <input type="search" class="form-control" placeholder="Procurar"
-                                    id="search_name">
+                                    id="search">
                             </div>
                             <div class="col">
                                 <div class="d-flex justify-content-end flex-column align-items-lg-end">

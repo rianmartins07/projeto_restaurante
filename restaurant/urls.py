@@ -45,7 +45,8 @@ schema_view = get_schema_view(
 urlpatterns = [
     path(r'api/', login_required(schema_view.with_ui('swagger', cache_timeout=0)), name='schema-swagger-ui' ),
     path('admin/', login_required(admin.site.urls)),
-    path ('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path(r'home/user/', include('core.user.dash.urls'),name='user'),
-    path(r'home/menu/', include('core.menu.dash.urls'), name='menu')
+    path(r'home/menu/', include('core.menu.dash.urls'), name='menu'),
+    path(r'home/cashier/', include('core.cashier.dash.urls'), name='cashier')
 ] + urlpatterns_API + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

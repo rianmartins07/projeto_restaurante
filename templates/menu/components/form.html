@@ -3,9 +3,21 @@
 
         <div class="box">
 
-            <img class="img-menu" src="#" alt="img">
+            
+                {% if is_create %}
+                <h1>
+                    Cadastrar prato
+                </h1>
+                {% else %}
+                <div>
+                    <h1 class="pb-5">
+                        Editar prato
+                    </h1>
+                    <img class="img-menu" src="{{ form.instance.foto.url }}" alt="img">
+                </div>
+                    {% endif %}
+            
 
-            <h1>Cadastrar prato</h1>
             
                 <div class="row mt-5">
                     <div class="col-sm-6 mb-3">
@@ -40,7 +52,7 @@
             
 
             <div class="button-update-profile">
-                <input id="button-update-profile" type="submit" value="Cadastrar">
+                <input id="button-update-profile" type="submit" value="{% if is_create %} Cadastrar {% else %} Editar {% endif %}">
                 <div class="messageUpdateProfile">
                     <p>Somente administrador</p>
                 </div>
