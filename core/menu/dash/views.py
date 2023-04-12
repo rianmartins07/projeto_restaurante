@@ -6,12 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import CreateView, UpdateView
 
 
-from menu.models import Menu
+from menu.models import CustomMenu
 from menu.dash.forms import MenuForm
 
 
 class CreateMenuView(LoginRequiredMixin, CreateView):
-    model = Menu
+    model = CustomMenu
     form_class = MenuForm
     template_name = 'menu/create/index.html'
     
@@ -22,7 +22,7 @@ class CreateMenuView(LoginRequiredMixin, CreateView):
         return context
     
 class UpdateMenuView(LoginRequiredMixin, UpdateView):
-    model = Menu
+    model = CustomMenu
     form_class = MenuForm
     template_name = 'menu/update/index.html'
 

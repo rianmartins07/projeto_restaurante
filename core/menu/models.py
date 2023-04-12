@@ -2,7 +2,7 @@ from django.db import models
 import django_filters as filters
 # Create your models here.
 
-class Menu(models.Model):
+class CustomMenu(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=255, verbose_name='nome do prato')
     valor = models.DecimalField(decimal_places=2, max_digits=10, verbose_name='valor do prato')
@@ -12,11 +12,11 @@ class Menu(models.Model):
     
     class Meta:
         managed = True
-        app_label = 'menu'
+        app_label = 'CustomMenu'
 
 class FilterMenu (filters.FilterSet):
     nome__icontains = filters.CharFilter(field_name='nome', lookup_expr='icontains')
     
     class Meta:
-        model = Menu
+        model = CustomMenu
         fields = ['nome']

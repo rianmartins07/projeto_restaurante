@@ -48,5 +48,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path(r'home/user/', include('core.user.dash.urls'),name='user'),
     path(r'home/menu/', include('core.menu.dash.urls'), name='menu'),
-    path(r'home/cashier/', include('core.cashier.dash.urls'), name='cashier')
+    path(r'home/cashier/', include('core.cashier.dash.urls'), name='cashier'),
+    path(r'home/orders/', include('core.orders.dash.urls'), name='orders'),
 ] + urlpatterns_API + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

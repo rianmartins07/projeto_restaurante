@@ -2,7 +2,7 @@ from django.db.models import fields
 from rest_framework import serializers
 
 
-from menu.models import Menu
+from menu.models import CustomMenu
 
 
 class menuSerializer(serializers.ModelSerializer):
@@ -18,6 +18,6 @@ class menuSerializer(serializers.ModelSerializer):
 
     class Meta:
         app_label= 'menu'
-        model = Menu
+        model = CustomMenu
         fields = '__all__'
         

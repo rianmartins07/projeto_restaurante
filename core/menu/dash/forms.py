@@ -1,6 +1,6 @@
 from django import forms
 
-from menu.models import Menu
+from menu.models import CustomMenu
 from core.menu.choices import status
 
 
@@ -58,5 +58,5 @@ class MenuForm(forms.ModelForm):
         if self.instance.pk:
             self.fields['foto'].required = False
     class Meta:
-        model = Menu
+        model = CustomMenu
         fields = '__all__'
