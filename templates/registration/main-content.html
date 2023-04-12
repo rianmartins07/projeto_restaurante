@@ -11,10 +11,12 @@
     <form method='POST' action="{% url 'login' %}">
         {% csrf_token %}
         <div class="w100">
+            <p class="userP">Digite seu usuário:</p>
             {{ form.username }}
         </div><!--w100-->
 
             <div class="w100">
+                <p class="senhaP">Digite sua senha:</p>
                 {{ form.password }}
             </div><!--w100-->
 

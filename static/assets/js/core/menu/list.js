@@ -70,8 +70,7 @@ function buildMenuList(obj){
         </a><!--list-menu-single-->
     
     `
-
-    
+      
     appendList(html)
 }
 
