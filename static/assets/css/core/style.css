@@ -662,13 +662,10 @@ li{
     text-decoration: none;
 }
 
-.pedidos-em-espera,.pedidos-entregue{
-    padding: 25px 0;
-}
 
 .pedidos-em-espera h2,.pedidos-entregue h2{
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 27px;
 }
 
@@ -835,6 +832,15 @@ li{
     left: 47%;
     display: none;
 }
+
+.mesas-wraper-cozinha{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: column !important;
+}
+
 
 .messageOrder p, .messageOrderAll p{
     border: 1px solid rgb(179 22 22);
