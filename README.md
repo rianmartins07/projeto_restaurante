@@ -19,9 +19,9 @@ http://127.0.0.1:8000/home/menu/chaveprimaria/update/
 http://127.0.0.1:8000/home/menu/dish/ # NAO USAR
 http://127.0.0.1:8000/home/menu/list/
 
-http://127.0.0.1:8000/home/cashier/overview/
-http://127.0.0.1:8000/home/cashier/requests/
-http://127.0.0.1:8000/home/cashier/tables_operator/
+http://127.0.0.1:8000/home/waiter/overview/
+http://127.0.0.1:8000/home/waiter/requests/
+http://127.0.0.1:8000/home/waiter/tables_operator/
 
 http://127.0.0.1:8000/home/orders/create/
 http://127.0.0.1:8000/home/orders/list/cook/

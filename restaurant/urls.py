@@ -27,6 +27,7 @@ from drf_yasg.views import get_schema_view
 urlpatterns_API = [
     path('api/user/', include('core.user.api.urls')),
     path('api/menu/', include('core.menu.api.urls')),
+    path('api/waiter/', include('core.waiter.api.urls')),
 ]
 
 schema_view = get_schema_view(
@@ -48,6 +49,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path(r'home/user/', include('core.user.dash.urls'),name='user'),
     path(r'home/menu/', include('core.menu.dash.urls'), name='menu'),
-    path(r'home/cashier/', include('core.cashier.dash.urls'), name='cashier'),
+    path(r'home/waiter/', include('core.waiter.dash.urls'), name='waiter'),
     path(r'home/orders/', include('core.orders.dash.urls'), name='orders'),
 ] + urlpatterns_API + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

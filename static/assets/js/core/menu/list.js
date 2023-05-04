@@ -2,23 +2,7 @@
 var filter = {}
 
 $(function(){
-    var settings = {
-        "url": 'http://127.0.0.1:8000/api/menu/info/',
-        "method": "GET",
-        "timeout": 0,
-        "headers" : {
-            "X-CSRFToken": getCookie('csrftoken')
-        },
-    };  
-    
-    
-    
-    
-    $.ajax(settings).done(function(response){
-        for (i in response){
-            buildMenuList(response[i])
-        }
-    })
+    getListObjectFromApi()
 })
 
 

@@ -8,7 +8,7 @@
     {% csrf_token %}
     {% block header_fixed %}{% endblock header_fixed %}
     <div class="main">
-        <div id="content" class="content d-flex align-items-center">
+        <div id="content" class="content d-flex align-items-center justify-content-center">
             <!-- content @s -->
             {% block content %}{% endblock content %}
             <!-- content @e -->
@@ -16,7 +16,7 @@
         </div><!--content-->
 
     </div><!--main-->
-
+    {% block modal %}{% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     {% block script %}{% endblock script %}

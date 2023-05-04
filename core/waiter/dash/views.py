@@ -6,7 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView
 from django.contrib import messages
 
-
+from waiter.models import Table
+from .forms import TableForm
 
 @login_required(login_url=reverse_lazy('login'))
 def overview (request):
@@ -22,9 +23,13 @@ def requests (request):
 
     return HttpResponse(template_name.render(context, request))
 
-@login_required(login_url=reverse_lazy('login'))
-def tables_operator (request):
-    template_name = loader.get_template('operator/tables-operator/index.html')
-    context = dict()
 
-    return HttpResponse(template_name.render(context, request))
+class CreateTable (LoginRequiredMixin, CreateView):
+    form_class = TableForm
+    model = Table
+    template_name = 'operator/tables-operator/index.html'
+
+class UpdateTable(LoginRequiredMixin, UpdateView):
+    form_class=TableForm
+    model = Table
+    template_name = 'orders/create/index.html'
