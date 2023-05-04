@@ -5,7 +5,7 @@ $(function(){
 
     var nMesa = localStorage.getItem("nMesa");
 
-    $("h1.nMesa").text("Pedidos da mesa "/* + nMesa*/);
+    //$("h1.nMesa").text("Pedidos da mesa "/* + nMesa*/);
 
     var cont = 0;
     var cont2 = 0;
