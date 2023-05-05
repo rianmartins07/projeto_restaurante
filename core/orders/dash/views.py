@@ -6,15 +6,25 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView
 from django.contrib import messages
 
+from waiter.models import Table
 from orders.models import Orders
 
 
-@login_required(login_url=reverse_lazy('login'))
-def orders_create (request):
-    template_name = loader.get_template('orders/create/index.html')
-    context = dict()
+class CreateOrder (LoginRequiredMixin, CreateView):
+    fields = '__all__'
+    model = Orders
+    template_name = 'orders/create/index.html'
+    
 
-    return HttpResponse(template_name.render(context, request))
+    def get_context_data(self, **kwargs):
+        context = super(CreateOrder, self).get_context_data(**kwargs)
+        id = int(self.request.path.split('/')[3])
+        obj = Table.objects.get(pk=id)
+        context['table_id'] = obj.table_number
+        context['responsible'] = Table.objects.get(pk=id).responsible_name
+        
+        return context
+
 
 @login_required(login_url=reverse_lazy('login'))
 def list_cook (request):

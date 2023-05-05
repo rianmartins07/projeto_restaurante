@@ -1,9 +1,16 @@
 <div class="box">
-    <h1 class="nMesa">Pedidos da mesa <span>n</span></h1>
-    <h5 style="margin-top: 20px;">Cliente Responsável: <span>nome</span></h4>
+    <h1 class="nMesa">Pedidos da mesa <span>{{ table_id }}</span></h1>
+    <h5 style="margin-top: 20px;">Cliente Responsável: <span>{{ responsible }}</span></h4>
 
     <div class="search-order">
-        <input type="search" name="search-order" id="search-order" placeholder="Pesquise o pedido" required>
+        <select name="" id="menu" class="form-select">
+            <option value="arroz">ARROZ</option>
+            <option value="arroz">ARROZ</option>
+            <option value="arroz">ARROZ</option>
+            <option value="arroz">ARROZ</option>
+            <option value="arroz">ARROZ</option>
+        </select>
+                
         <input type="number" name="qtd-order" id="qtd-order" placeholder="Qtd.">
         <input type="button" name="take-order" id="take-order" value="Anotar">
 
