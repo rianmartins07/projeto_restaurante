@@ -1,3 +1,5 @@
+var filter = {}
+
 $(function () {
     getListObjectFromApi()
 })
@@ -21,6 +23,7 @@ function getListObjectFromApi(filter = '') {
                 "X-CSRFToken": getCookie('csrftoken')
             },
         };
+        console.log(settings.url);
     }
 
     $.ajax(settings).done(function (response) {
@@ -38,3 +41,31 @@ function buildTableList(obj){
         $("#list_tables").append(html);
     
 }
+
+
+
+formSearch.addEventListener('keyup', function () {
+    let optionSearch = formSearch.querySelector('#optionSearch');
+    optionSearch = 'table_number'
+
+    let search = document.querySelector('#search').value;
+
+    
+    if (search) {
+
+        filter["offset"] = 0
+        var newfilter = {};
+
+        let filter_search = optionSearch + '__icontains';
+
+        if (search) {
+            newfilter[filter_search] = search;
+        }
+
+        getListObjectFromApi(newfilter);
+        
+    } else {
+        
+        getListObjectFromApi();
+    }
+});

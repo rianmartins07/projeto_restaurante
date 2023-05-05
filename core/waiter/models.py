@@ -1,4 +1,5 @@
 from django.db import models
+import django_filters as filters
 
 # Create your models here.
 class Table(models.Model):
@@ -9,3 +10,9 @@ class Table(models.Model):
         managed = True
         app_label = 'waiter'
 
+class FilterTable (filters.FilterSet):
+    table_number__icontains = filters.CharFilter(field_name='table_number', lookup_expr='icontains')
+    
+    class Meta:
+        model = Table
+        fields = ['table_number']
