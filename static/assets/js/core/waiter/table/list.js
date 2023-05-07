@@ -34,7 +34,7 @@ function getListObjectFromApi(filter = '') {
     })
 }
 function buildTableList(obj){
-    html = `<a class="mesa-single" href="update/${obj.id}">${obj.table_number}</a>`
+    html = `<a class="mesa-single" href="${location.protocol}//${location.host}/home/orders/${obj.id}/create/">${obj.table_number}</a>`
         $("#list_tables").append(html);
     
 }
