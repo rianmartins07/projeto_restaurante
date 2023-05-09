@@ -7,6 +7,7 @@ class Table(models.Model):
     responsible_name = models.CharField(max_length=81, verbose_name='nome do responsavel da mesa')
     table_number = models.CharField(max_length=81, verbose_name='numero que vai na mesa')
     class Meta:
+        db_table = 'table_tables'
         managed = True
         app_label = 'waiter'
 

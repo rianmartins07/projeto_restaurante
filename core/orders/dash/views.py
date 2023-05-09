@@ -8,6 +8,7 @@ from django.contrib import messages
 
 from waiter.models import Table
 from orders.models import Orders
+from menu.models import CustomMenu
 
 
 class CreateOrder (LoginRequiredMixin, CreateView):
@@ -20,8 +21,11 @@ class CreateOrder (LoginRequiredMixin, CreateView):
         context = super(CreateOrder, self).get_context_data(**kwargs)
         id = int(self.request.path.split('/')[3])
         obj = Table.objects.get(pk=id)
+        menu = CustomMenu.objects.all()
+        context['menu'] = menu
         context['table_id'] = obj.table_number
         context['responsible'] = Table.objects.get(pk=id).responsible_name
+        
         
         return context
 

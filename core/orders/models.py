@@ -18,7 +18,7 @@ class Orders(models.Model):
     table_id = models.ForeignKey(Table, on_delete=models.CASCADE)
     
     class Meta:
-        db_table = 'orders'
+        db_table = 'table_orders'
         managed = True
         app_label = 'core'
 

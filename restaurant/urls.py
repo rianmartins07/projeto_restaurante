@@ -28,6 +28,7 @@ urlpatterns_API = [
     path('api/user/', include('core.user.api.urls')),
     path('api/menu/', include('core.menu.api.urls')),
     path('api/waiter/', include('core.waiter.api.urls')),
+    path('api/orders/', include('core.orders.api.urls')),
 ]
 
 schema_view = get_schema_view(
