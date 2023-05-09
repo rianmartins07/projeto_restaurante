@@ -20,3 +20,4 @@ class FilterMenu (filters.FilterSet):
     class Meta:
         model = CustomMenu
         fields = ['nome']
+        db_table = 'table_menu'

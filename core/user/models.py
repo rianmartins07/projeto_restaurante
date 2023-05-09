@@ -19,6 +19,7 @@ class User(models.Model):
     numero_celular = models.CharField(max_length=15, verbose_name='numero de celular')
     
     class Meta:
+        db_table = 'table_user'
         managed = True
         app_label = 'user'
     
