@@ -1,9 +1,9 @@
 $(function(){
 
-    var noticeTable = 0;
+    //var noticeTable = 0;
     var i = 0;
 
-    var nMesa = localStorage.getItem("nMesa");
+    //var nMesa = localStorage.getItem("nMesa");
 
     //$("h1.nMesa").text("Pedidos da mesa "/* + nMesa*/);
 
@@ -12,7 +12,7 @@ $(function(){
 
     var commands = $(".content-commands");
 
-    $(".mesa-single").click((e) => {
+    /*$(".mesa-single").click((e) => {
         e.stopPropagation();
         $('.place-waiter').fadeIn(100);
     });
@@ -25,11 +25,11 @@ $(function(){
 
     $('.place-waiter .box').click(function(e){
         e.stopPropagation();
-    });
+    });*/
 
     $("input[name=take-order]").click(() => {
 
-        var nameOrder = $("input[name=search-order]").val();
+        var nameOrder = $("#menu").val();
         var qtdOrder = $("input[name=qtd-order]").val();
 
         if(nameOrder == "" || qtdOrder == "" || parseFloat(qtdOrder) <= 0){
@@ -78,12 +78,12 @@ $(function(){
             var messageOrderAll = $(".messageOrderAll");
             showMessage(messageOrderAll);
         }
-        else{
+        /*else{
             window.location.href = "../tables-waiter/waiter-tables.html";
             noticeTable++;
             localStorage.setItem("noticeTable", noticeTable);
             localStorage.setItem("idMesa", nMesa);
-        }
+        }*/
     });
 
     $(".button-end input").click(() => {
