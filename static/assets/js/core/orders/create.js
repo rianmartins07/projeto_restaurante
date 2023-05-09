@@ -1,1 +1,1 @@
-$("#menu").select2()
+$("#menu").select2();
