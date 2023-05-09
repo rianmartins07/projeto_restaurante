@@ -1184,11 +1184,19 @@ h2.title-feedback{
     background-color: rgb(47, 47, 47);
 }
 
+.pedido input{
+    width: 90%;
+    border: 1px solid #ccc;
+    outline: 0;
+    height: 30px;
+    margin: 0 5px;
+    padding-left: 8px;
+}
 
 /*CANCELAR PEDIDO*/
 
 .cancel-order{
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -1251,7 +1259,7 @@ h2.title-feedback{
     background-color: rgb(179 22 22);
 }
 
-.button-cancel input[type=submit]:hover, .button-end input[type=submit]:hover{
+.button-cancel input[type=submit]:hover, .button-end input[type=submit]:hover, #update-order:hover{
     background-color: rgb(154 17 17);
 }
 

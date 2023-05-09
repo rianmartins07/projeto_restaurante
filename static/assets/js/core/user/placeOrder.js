@@ -86,11 +86,6 @@ $(function(){
         }*/
     });
 
-    $(".button-end input").click(() => {
-        var messageOrderEnd = $(".messageEndOrder");
-        showMessage(messageOrderEnd);
-    });
-
     $(".button-update-profile input").click(() => {
         var messageUpdateProfile = $(".messageUpdateProfile");
         showMessage(messageUpdateProfile);
