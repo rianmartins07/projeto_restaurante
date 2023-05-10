@@ -23,6 +23,7 @@ class CreateOrder (LoginRequiredMixin, CreateView):
         obj = Table.objects.get(pk=id)
         menu = CustomMenu.objects.all()
         context['menu'] = menu
+        
         context['table_id'] = obj.table_number
         context['responsible'] = Table.objects.get(pk=id).responsible_name
         

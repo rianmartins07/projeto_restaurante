@@ -3,12 +3,12 @@
     <h5 style="margin-top: 20px;">Cliente Responsável: <span>{{ responsible }}</span></h4>
 
     <div class="search-order">
-        <select name="" id="menu" class="form-select select-order">
+        <select name="" id="menu_select" class="form-select select-order">
             <option>Selecione um pedido</option>
-            <option value="arroz">1 - Arroz</option>
-            <option value="feijao">2 - Feijão</option>
-            <option value="frango-assado">3 - Frango Assado</option>
-            <option value="strogonoff">4 - Strogonoff</option>
+            {% for menu in menu%}
+            <option id="{{menu.id}}" price="{{menu.valor}}">{{menu.id}} - {{menu.nome}}</option>
+               
+            {% endfor %}
         </select>
                 
         <input type="number" name="qtd-order" id="qtd-order" placeholder="Qtd.">
