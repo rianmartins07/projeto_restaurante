@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView
-from django.contrib import messages
+from django.db.models import F
 
 from waiter.models import Table
 from orders.models import Orders
@@ -22,11 +22,16 @@ class CreateOrder (LoginRequiredMixin, CreateView):
         id = int(self.request.path.split('/')[3])
         obj = Table.objects.get(pk=id)
         menu = CustomMenu.objects.all()
+        
+        orders_by_table = Orders.objects.filter(table_id=id).select_related('dish').annotate(
+            total_value=F('dish__valor')*F('quantity')
+        )
+
         context['menu'] = menu
-        
-        context['table_id'] = obj.table_number
+        context['table_id'] = obj.id
+        context['table_number'] = obj.table_number
         context['responsible'] = Table.objects.get(pk=id).responsible_name
-        
+        context['orders_by_table'] = orders_by_table if orders_by_table else None
         
         return context
 

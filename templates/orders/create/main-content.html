@@ -1,32 +1,65 @@
 <div class="box">
-    <h1 class="nMesa">Pedidos da mesa <span>{{ table_id }}</span></h1>
+    <h1 class="nMesa">Pedidos da mesa <span>{{ table_number }}</span></h1>
     <h5 style="margin-top: 20px;">Cliente Responsável: <span>{{ responsible }}</span></h4>
 
-    <div class="search-order">
-        <select name="" id="menu_select" class="form-select select-order">
-            <option>Selecione um pedido</option>
-            {% for menu in menu%}
-            <option id="{{menu.id}}" price="{{menu.valor}}">{{menu.id}} - {{menu.nome}}</option>
-               
-            {% endfor %}
-        </select>
-                
-        <input type="number" name="qtd-order" id="qtd-order" placeholder="Qtd.">
-        <input type="button" name="take-order" id="take-order" value="Anotar">
+        <div class="search-order">
+            <select name="" id="menu_select" class="form-select select-order">
+                <option>Selecione um pedido</option>
+                {% for menu in menu%}
+                <option id="{{menu.id}}" table="{{table_id}}" price="{{menu.valor}}">{{menu.id}} - {{menu.nome}}
+                </option>
 
-        <div class="messageOrder"><p>Preencha os dados por favor</p></div>
-    </div><!--search-order-->
+                {% endfor %}
+            </select>
 
-    <div id="commands" class="commands">
-        <table id="content-commands" class="content-commands"></table><!--content-commands-->
-    </div><!--commands-->
+            <input type="number" name="qtd-order" id="qtd-order" placeholder="Qtd.">
+            <input type="button" name="take-order" id="take-order" value="Anotar">
 
-    <!--<div class="amount-of-people">
+            <div class="messageOrder">
+                <p>Preencha os dados por favor</p>
+            </div>
+        </div><!--search-order-->
+
+        <div id="commands" class="commands">
+            <table id="content-commands" class="content-commands"></table><!--content-commands-->
+        </div><!--commands-->
+
+        <!--<div class="amount-of-people">
         <input type="number" id="qtd-people" placeholder="Qtd. de pessoas">
     </div>--amount-of-people-->
 
-    <div class="buttons-commands">
-        <a name="submit-commands" id="submit-commands" href="#">Enviar</a>
-        <div class="messageOrderAll"><p>Preencha os dados por favor</p></div>
-    </div><!--buttons-commands-->
+        <div class="buttons-commands">
+            <a name="submit-commands" id="submit-commands" onclick="createOrder()" href="#">Enviar</a>
+            <div class="messageOrderAll">
+                <p>Preencha os dados por favor</p>
+            </div>
+        </div><!--buttons-commands-->
+
+        {% if orders_by_table != None %}
+        <div class="row mt-5 justify-content-center">
+            <h5>Pedidos Realizados</h5>
+            <div class="col-sm-12">
+                <table id="command-requests" class="content-commands table-sm table-bordered w-100">
+                    <tr class="legendCommands" style="background-color: rgb(179 22 22); color: #fff;">
+                        <td>Nome</td>
+                        <td>Valor unitário</td>
+                        <td>Qtd.</td>
+                        <td>Status</td>
+                        <td colspan="2">Valor total</td>
+                    </tr>
+                    {% for order in orders_by_table %}
+                    <tr class="pedido" id="6" table="3" quantity="1">
+                        <td>{{order.dish.nome}}</td>
+                        <td>R${{order.dish.valor}}</td>
+                        <td>{{order.quantity}}</td>
+                        <td>{{order.status}}</td>
+                        <td class="valueOrderSingle">R${{order.total_value}}</td>
+                        <td class="btnRemoveOrder"><i class="fa-solid fa-trash-can"></i></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+            </div>
+        </div>
+        {% endif %}
 </div><!--box-->
