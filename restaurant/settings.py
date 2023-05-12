@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'bootstrap5',
     'rest_framework',
+    'rest_framework_bulk',
     'user',
     'menu',
     'waiter',

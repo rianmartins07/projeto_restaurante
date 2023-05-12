@@ -10,7 +10,7 @@ from orders.models import Orders
 from .serializers import OrdersSerializers
 
 class CrudOrders(BulkModelViewSet):
-    permission_classes = (IsAuthenticated, )
     queryset = Orders.objects.all()
     serializer_class = OrdersSerializers
     model = Orders
+    

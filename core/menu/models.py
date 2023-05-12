@@ -13,6 +13,7 @@ class CustomMenu(models.Model):
     class Meta:
         managed = True
         app_label = 'menu'
+        db_table = 'table_menu'
 
 class FilterMenu (filters.FilterSet):
     nome__icontains = filters.CharFilter(field_name='nome', lookup_expr='icontains')
@@ -20,4 +21,4 @@ class FilterMenu (filters.FilterSet):
     class Meta:
         model = CustomMenu
         fields = ['nome']
-        db_table = 'table_menu'
+        
