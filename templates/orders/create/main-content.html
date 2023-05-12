@@ -37,8 +37,8 @@
 
         {% if orders_by_table != None %}
         <div class="row mt-5 justify-content-center">
-            <h5>Pedidos Realizados</h5>
-            <div class="col-sm-12">
+            <h5  style="margin-top: 20px;">Pedidos Realizados</h5>
+            <div style="margin-top: 20px;" class="col-sm-12">
                 <table id="command-requests" class="content-commands table-sm table-bordered w-100">
                     <tr class="legendCommands" style="background-color: rgb(179 22 22); color: #fff;">
                         <td>Nome</td>
@@ -50,17 +50,17 @@
                     {% for order in orders_by_table %}
                     <tr class="pedido" id="6" table="3" quantity="1">
                         <td>
-                            <select name="" id="" class="form-select select-order">
+                            <select style="width: 90%;" name="" id="" class="form-select select-order">
                                 <option>{{order.dish.nome}}</option>
                                 {% for menu in menu%}
                                 <option id="{{menu.id}}" table="{{table_id}}" price="{{menu.valor}}">{{menu.id}} - {{menu.nome}}
                                 {% endfor %}
                             </select>
                         </td>
-                        <td><input type='text' value='R${{order.dish.valor}}' /></td>
-                        <td><input type='number' value='{{order.quantity}}' /></td>
-                        <td><input type='text' value='{{order.status}}' /></td>
-                        <td class="valueOrderSingle"><input type='text' value='R${{order.total_value}}' /></td>
+                        <td>R$ <input style="width: 80%;" class='update-dish' type='text' value='{{order.dish.valor}}' /></td>
+                        <td style="width: 10%"><input type='number' value='{{order.quantity}}' /></td>
+                        <td>{{order.status}}</td>
+                        <td class="valueOrderSingle">R$ <input style="width: 80%;" type='text' value='{{order.total_value}}' /></td>
                         <td class="btnRemoveOrder"><i class="fa-solid fa-trash-can"></i></td>
                     </tr>
                     {% endfor %}

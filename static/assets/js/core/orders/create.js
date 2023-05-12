@@ -118,7 +118,7 @@ function getData() {
                 "dish":`${$(element).attr("id")}`,
                 "quantity": `${$(element).attr("quantity")}`,
                 "table": `${$(element).attr("table")}`,
-                "waiter": 48,
+                "waiter": 4,
             }
             JSON.push(obj)
 

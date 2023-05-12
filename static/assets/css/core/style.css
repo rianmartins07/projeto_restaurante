@@ -815,6 +815,10 @@ li{
     margin: 0 7px;
 }
 
+.buttons-menu-view input:hover{
+    background-color: rgb(158, 20, 20);
+}
+
 .delete-table{
     background-color: rgb(179 22 22);
     color: #fff;
@@ -826,6 +830,10 @@ li{
     font-weight: lighter;
     border: 0;
     margin: 0 0 0 8px;
+}
+
+.delete-table:hover{
+    background-color: rgb(158, 19, 19);
 }
 
 .buttons-commands a#update-order{
@@ -1192,6 +1200,20 @@ h2.title-feedback{
     font-weight: lighter;
     border: 0;
     margin: 0 10px;
+}
+
+.delete-table-wraper{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.delete-table-wraper select{
+    width: 100px;
+    height: 45px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
 }
 
 .cook-order:hover{
