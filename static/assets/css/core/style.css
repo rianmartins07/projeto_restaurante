@@ -531,6 +531,7 @@ li{
 }
 
 #content .box select{
+    width: 30%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -720,13 +721,11 @@ li{
 
 .search-order input[type=number]{
     width: 10%;
-    height: 29px;
+    height: 40px;
     border: 1px solid rgb(157, 156, 156);
     border-radius: 5px;
     padding-left: 8px;
     outline: 0;
-    position: relative;
-    top: 1px;
     font-size: 15px;
 }
 
@@ -745,7 +744,7 @@ li{
     background-color: rgb(179 22 22);
     color: #fff;
     width: 15%;
-    height: 29px;
+    height: 40px;
     text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
@@ -1184,11 +1183,13 @@ h2.title-feedback{
     background-color: rgb(47, 47, 47);
 }
 
+
+
 .pedido input{
     width: 90%;
     border: 1px solid #ccc;
     outline: 0;
-    height: 30px;
+    height: 40px;
     margin: 0 5px;
     padding-left: 8px;
 }
