@@ -49,17 +49,28 @@
                     </tr>
                     {% for order in orders_by_table %}
                     <tr class="pedido" id="6" table="3" quantity="1">
-                        <td>{{order.dish.nome}}</td>
-                        <td>R${{order.dish.valor}}</td>
-                        <td>{{order.quantity}}</td>
-                        <td>{{order.status}}</td>
-                        <td class="valueOrderSingle">R${{order.total_value}}</td>
+                        <td>
+                            <select name="" id="" class="form-select select-order">
+                                <option>{{order.dish.nome}}</option>
+                                {% for menu in menu%}
+                                <option id="{{menu.id}}" table="{{table_id}}" price="{{menu.valor}}">{{menu.id}} - {{menu.nome}}
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td><input type='text' value='R${{order.dish.valor}}' /></td>
+                        <td><input type='number' value='{{order.quantity}}' /></td>
+                        <td><input type='text' value='{{order.status}}' /></td>
+                        <td class="valueOrderSingle"><input type='text' value='R${{order.total_value}}' /></td>
                         <td class="btnRemoveOrder"><i class="fa-solid fa-trash-can"></i></td>
                     </tr>
                     {% endfor %}
                 </table>
-
             </div>
+
+            <div class="buttons-menu-view">
+                <input type='button' value="Alterar" />
+                <input type='button' value="Finalizar" />
+            </div><!--buttons-commands-->
         </div>
         {% endif %}
 </div><!--box-->
