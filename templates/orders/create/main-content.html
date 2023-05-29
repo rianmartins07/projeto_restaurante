@@ -1,7 +1,7 @@
 <div class="box">
     <h1 class="nMesa">Pedidos da mesa <span>{{ table_number }}</span></h1>
     <h5 style="margin-top: 20px;">Cliente Responsável: <span>{{ responsible }}</span></h4>
-
+    <input type="hidden" id="waiter_id" value="{{request.user.id}}">
         <div class="search-order">
             <select name="" id="menu_select" class="form-select select-order">
                 <option>Selecione um pedido</option>
@@ -48,13 +48,18 @@
                         <td colspan="2">Valor total</td>
                     </tr>
                     {% for order in orders_by_table %}
-                    <tr class="pedido" id="6" table="3" quantity="1">
+                    
+                    <tr class="pedido" id_order="{{order.pk}}" table="{{order.dish.pk}}" quantity="1">
                         <td>{{order.dish.nome}}</td>
                         <td>R${{order.dish.valor}}</td>
                         <td>{{order.quantity}}</td>
-                        <td>{{order.status}}</td>
+                        <td status_id="{{order.pk}}">{{order.status}}</td>
                         <td class="valueOrderSingle">R${{order.total_value}}</td>
-                        <td class="btnRemoveOrder"><i class="fa-solid fa-trash-can"></i></td>
+                        <td class="deleteOrder"><a onclick="deleteOrder('{{order.pk}}')">
+                            
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
                     </tr>
                     {% endfor %}
                 </table>

@@ -1,14 +1,16 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from pycpfcnpj import cpfcnpj
+from django.contrib.auth.models import Group
 
 
 from user.models import User
-from user.choices import Sexo, Role
+from user.choices import Sexo
 
 
 class UserForm(forms.ModelForm):
-    nome = forms.CharField(
+
+    first_name = forms.CharField(
         required=True,
         widget=forms.TextInput(
             attrs={
@@ -17,7 +19,7 @@ class UserForm(forms.ModelForm):
         )
     )
 
-    user = forms.CharField(
+    last_name = forms.CharField(
         required=True,
         widget=forms.TextInput(
             attrs={
@@ -53,17 +55,8 @@ class UserForm(forms.ModelForm):
         }
         )
     )
-    role = forms.MultipleChoiceField(
-        required=True,
-        choices=Role.choices,
-        widget=forms.Select(
-        attrs={
-            'class': 'form-control',
-        }
-        )
-    )
-
-    dtnasc = forms.DateField(
+    
+    data_nascimento = forms.DateField(
         required=True,
         widget=forms.DateInput(
             attrs={
@@ -73,7 +66,7 @@ class UserForm(forms.ModelForm):
         )
     )
 
-    celular = forms.CharField(
+    numero_celular = forms.CharField(
         required=True,
         widget=forms.TextInput(
             attrs={

@@ -18,15 +18,6 @@ class OrdersForm(forms.ModelForm):
         )
     )
     
-    quantity = forms.IntegerField(
-        required=True,
-        widget=forms.NumberInput(
-            attrs={
-                'class': 'form-control'
-            }
-        )
-    )
-    
     class Meta:
         model = Orders
         fields = '__all__'

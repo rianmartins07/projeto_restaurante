@@ -1,13 +1,34 @@
+from typing import Any, Dict
+from django import http
+from django.http.response import HttpResponse
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.views.generic import CreateView, UpdateView
-from django.contrib import messages
+from django.core.exceptions import PermissionDenied
 
 from waiter.models import Table
 from .forms import TableForm
+
+class CreateTable (LoginRequiredMixin, PermissionRequiredMixin, CreateView):
+    permission_required = 'waiter.add_table'
+    form_class = TableForm
+    model = Table
+    template_name = 'operator/tables-operator/index.html'
+    
+    def get_context_data(self, **kwargs):
+       
+        return super().get_context_data(**kwargs)
+
+class UpdateTable(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+    permission_required='waiter.change_table'
+    form_class=TableForm
+    model = Table
+    template_name = 'orders/create/index.html'
+
+
 
 @login_required(login_url=reverse_lazy('login'))
 def overview (request):
@@ -24,12 +45,3 @@ def requests (request):
     return HttpResponse(template_name.render(context, request))
 
 
-class CreateTable (LoginRequiredMixin, CreateView):
-    form_class = TableForm
-    model = Table
-    template_name = 'operator/tables-operator/index.html'
-
-class UpdateTable(LoginRequiredMixin, UpdateView):
-    form_class=TableForm
-    model = Table
-    template_name = 'orders/create/index.html'

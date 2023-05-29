@@ -34,6 +34,7 @@ function getListObjectFromApi(filter) {
         
         for (i in response) {
             buildUserList(response[i])
+            console.log(response[i])
         }
 
 
@@ -46,10 +47,10 @@ function buildUserList(obj) {
     
     html = `
     <tr>
-    <td class="priority-1">${obj.nome}</td>
+    <td class="priority-1">${obj.full_name}</td>
     <td class="priority-3">${obj.numero_celular}</td>
     <td class="priority-4">${obj.email}</td>
-    <td class="priority-2">${obj.role}</td>
+    <td class="priority-2">${obj.group_name}</td>
     <td class="d-flex justify-content-end priority-1">
         <div class="btn-group">
             <button type="button" class="btn btn-icon btn-trigger "  style="background-color: transparent !important" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,7 +90,6 @@ function deleteUser(id) {
             "X-CSRFToken": getCookie('csrftoken')
         },
     };
-
 
 
     Swal.fire({

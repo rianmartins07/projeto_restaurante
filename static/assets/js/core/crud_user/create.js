@@ -22,7 +22,15 @@ $('#create_user').click(function (e) {
         "data": data,
     };
     
-    
+    Swal.fire({
+        title: `Aguarde!`,
+        html: `Criando Usuario!`,
+        allowOutsideClick: false,
+        
+        onBeforeOpen: () => {
+            Swal.showLoading()
+        }
+    });
     
 
     $.ajax(settings).done(function(response){

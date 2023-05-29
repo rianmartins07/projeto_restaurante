@@ -1,7 +1,10 @@
 {% load static %}
+
+{% if user.is_authenticated %}
+{% for group in user.groups.all %}
+{% with grupo_usuario=group %}
 <header class='pb-3'>
     <div class="center">
-
 
 
         <div class="exit-perfil">
@@ -14,31 +17,66 @@
         <div class="menu-perfil">
             <nav>
                 <ul>
-                    <div class="line-text"></div>
-                    <li><a href="/home/user/list/">Funcionários</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/user/create/">Cadastro</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/user/reports/">Relatórios</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/user/49/update">Perfil</a></li>
-                    <div class="line-text"></div>
 
-                    <!-- <li><a href="/home/orders/list/requests_inprogress/">Mesas</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/menu/list/">Cardápio</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/waiter/overview/">Pedidos</a></li>
-                    <div class="line-text"></div>
-                    <li><a href="/home/waiter/tables_operator/">Todas as mesas</a></li> -->
+                            {% if grupo_usuario.name == 'Administrador' %}
+                            
+                            <div class="line-text"></div>
+                            <li><a href="/home/user/list/">Funcionários</a></li>
+                            <div class="line-text"></div>
+                            <li><a href="/home/user/create/">Cadastro</a></li>
+                            <div class="line-text"></div>
+                            <li><a href="/home/user/reports/">Relatórios</a></li>
+                            <div class="line-text"></div>
+                            {% endif %}
+                            {% if grupo_usuario.name == 'Garcom' %}
+                            <!-- <li><a href="/home/menu/list/"></a></li>
+                            <div class="line-text"></div> -->
+                            <li><a href="/home/waiter/tables_operator/">Mesas</a></li>
+                            <!-- <div class="line-text"></div>
+                            <li><a href="/home/waiter/tables_operator/">Todas as mesas</a></li> -->
+                            {% endif %}
+                            {% if grupo_usuario.name == 'Cozinha' %}
+                            <li><a href="/home/menu/list/">Cardápio</a></li>
+                            <div class="line-text"></div>
+                            <li><a href="/home/orders/list/requests_inprogress/">Mesas</a></li>
+                            <div class="line-text"></div>
+                            {% endif %}
+
+                           
+
+                            
+                            <li><a href="/home/user/{{request.user.id}}/update">Perfil</a></li>
+                            <div class="line-text"></div>
+                            
+                            
+                            
+                    
                 </ul>
             </nav>
             <div class="avatar-perfil">
-                <img src="{% static 'assets/images/avatar/administrador.png' %}" alt="avatar">
+                {% if grupo_usuario.name == 'Administrador' and request.user.sexo == 'Masculino' %}
+                    <img src="{% static 'assets/images/avatar/administrador.png' %}" alt="avatar">
+                {% endif %}
+                {% if grupo_usuario.name == 'Administrador' and request.user.sexo == 'Feminino' %}
+                    <img src="{% static 'assets/images/avatar/administradora.png' %}" alt="avatar">
+                {% endif %}
+                {% if grupo_usuario.name == 'Cozinha' and request.user.sexo == 'Masculino' %}
+                    <img src="{% static 'assets/images/avatar/cozinheiro.png' %}" alt="avatar">
+                {% endif %}
+                {% if grupo_usuario.name == 'Cozinha' and request.user.sexo == 'Feminino' %}
+                    <img src="{% static 'assets/images/avatar/cozinheira.png' %}" alt="avatar">
+                {%endif%}
+                {% if grupo_usuario.name == 'Garcom' and request.user.sexo == 'Masculino' %}
+                    <img src="{% static 'assets/images/avatar/garcom.png' %}" alt="avatar">
+                {%endif%}
+                {% if grupo_usuario.name == 'Garcom' and request.user.sexo == 'Feminino' %}
+                    <img src="{% static 'assets/images/avatar/garçonete.png' %}" alt="avatar">
+                {%endif%}
+
             </div><!--avatar-perfil-->
             <div class="info-perfil">
-                <h2 style="text-transform: uppercase;">{{ request.user.username }}</h2>
-                <h3>ADMINISTRADOR</h3>
+                <h2 style="text-transform: uppercase;">{{ request.user }}</h2>
+                <h3>{{grupo_usuario|upper}}</h3>
             </div><!--info-perfil-->
         </div><!--menu-perfil-->
 
@@ -49,8 +87,8 @@
                     <img src="{% static 'assets/images/avatar/administrador.png' %}" alt="avatar">
                 </div><!--avatar-perfil-->
                 <div class="info-perfil">
-                    <h2 style="text-transform: uppercase;">{{ request.user.username }}</h2>
-                    <h3>ADMINISTRADOR</h3>
+                    <h2 style="text-transform: uppercase;">{{ request.user }}</h2>
+                    <h3>{{grupo_usuario}}</h3>
                 </div><!--info-perfil-->
                 <ul>
                     <div class="line-text"></div>
@@ -72,6 +110,8 @@
                 </ul>
             </nav>
         </div><!--menu-perfil-mobile-->
-
     </div><!--center-->
 </header>
+{% endwith %}
+{% endfor %}
+{% endif %}

@@ -51,10 +51,10 @@ $(function () {
             var valueTotal = valueOrder * qtdOrder;
             let id = $("#menu_select :selected").attr('id')
             let table = $("#menu_select :selected").attr('table')
-
-
+            let waiter = $("#waiter_id").val();
+            
             i++;
-            commands.append("<tr class='pedido' id=" + id + " table="+table+"  quantity="+ qtdOrder+"><td>" + nameOrder + "</td><td>R$" + valueOrder.toFixed(2) + "</td><td>" + qtdOrder + "</td><td class='valueOrderSingle'>R$" + valueTotal.toFixed(2) + "</td><td class='btnRemoveOrder'><i class='fa-solid fa-trash-can'></i></td></tr>");
+            commands.append("<tr class='pedido' id=" + id + " table="+table+" waiter="+waiter+" quantity="+ qtdOrder+"><td>" + nameOrder + "</td><td>R$" + valueOrder.toFixed(2) + "</td><td>" + qtdOrder + "</td><td class='valueOrderSingle'>R$" + valueTotal.toFixed(2) + "</td><td class='btnRemoveOrder'><i class='fa-solid fa-trash-can'></i></td></tr>");
 
             $("td.btnRemoveOrder").click(function () {
 
@@ -118,7 +118,7 @@ function getData() {
                 "dish":`${$(element).attr("id")}`,
                 "quantity": `${$(element).attr("quantity")}`,
                 "table": `${$(element).attr("table")}`,
-                "waiter": 48,
+                "waiter": `${$(element).attr("waiter")}`,
             }
             JSON.push(obj)
 

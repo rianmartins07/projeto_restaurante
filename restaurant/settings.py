@@ -115,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+AUTH_USER_MODEL = 'user.User'
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -156,3 +156,10 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST' ,cast=str)
+EMAIL_PORT = config('EMAIL_PORT', cast=str)
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', cast=str)
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', cast=str)
