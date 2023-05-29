@@ -37,8 +37,8 @@
 
         {% if orders_by_table != None %}
         <div class="row mt-5 justify-content-center">
-            <h5>Pedidos Realizados</h5>
-            <div class="col-sm-12">
+            <h5  style="margin-top: 20px;">Pedidos Realizados</h5>
+            <div style="margin-top: 20px;" class="col-sm-12">
                 <table id="command-requests" class="content-commands table-sm table-bordered w-100">
                     <tr class="legendCommands" style="background-color: rgb(179 22 22); color: #fff;">
                         <td>Nome</td>
@@ -63,8 +63,12 @@
                     </tr>
                     {% endfor %}
                 </table>
-
             </div>
+
+            <div class="buttons-menu-view">
+                <input type='button' value="Alterar" />
+                <input type='button' value="Finalizar" />
+            </div><!--buttons-commands-->
         </div>
         {% endif %}
 </div><!--box-->

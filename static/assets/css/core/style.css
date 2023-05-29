@@ -531,6 +531,7 @@ li{
 }
 
 #content .box select{
+    width: 30%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -720,13 +721,11 @@ li{
 
 .search-order input[type=number]{
     width: 10%;
-    height: 29px;
+    height: 40px;
     border: 1px solid rgb(157, 156, 156);
     border-radius: 5px;
     padding-left: 8px;
     outline: 0;
-    position: relative;
-    top: 1px;
     font-size: 15px;
 }
 
@@ -745,7 +744,7 @@ li{
     background-color: rgb(179 22 22);
     color: #fff;
     width: 15%;
-    height: 29px;
+    height: 40px;
     text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
@@ -795,6 +794,46 @@ li{
     font-weight: lighter;
     border: 0;
     margin-right: 10px;
+}
+
+.buttons-menu-view{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons-menu-view input{
+    background-color: rgb(179 22 22);
+    color: #fff;
+    padding: 10px 20px !important;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: lighter;
+    border: 0;
+    margin: 0 7px;
+}
+
+.buttons-menu-view input:hover{
+    background-color: rgb(158, 20, 20);
+}
+
+.delete-table{
+    background-color: rgb(179 22 22);
+    color: #fff;
+    padding: 10px 20px !important;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: lighter;
+    border: 0;
+    margin: 0 0 0 8px;
+}
+
+.delete-table:hover{
+    background-color: rgb(158, 19, 19);
 }
 
 .buttons-commands a#update-order{
@@ -1163,6 +1202,20 @@ h2.title-feedback{
     margin: 0 10px;
 }
 
+.delete-table-wraper{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.delete-table-wraper select{
+    width: 100px;
+    height: 45px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+}
+
 .cook-order:hover{
     color: #fff;
     text-decoration: none;
@@ -1184,11 +1237,13 @@ h2.title-feedback{
     background-color: rgb(47, 47, 47);
 }
 
+
+
 .pedido input{
     width: 90%;
     border: 1px solid #ccc;
     outline: 0;
-    height: 30px;
+    height: 40px;
     margin: 0 5px;
     padding-left: 8px;
 }

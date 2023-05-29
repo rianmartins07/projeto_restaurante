@@ -93,12 +93,12 @@ function deleteUser(id) {
 
 
     Swal.fire({
-        title: 'Voce quer realmente exluir?',
+        title: 'Voce quer realmente excluir?',
         showDenyButton: true,
 
-        confirmButtonText: 'Sim!',
-        confirmButtonColor: '#b31616',
-        cancelButtonColor: '#b31616',
+        confirmButtonText: 'Sim',
+        confirmButtonColor: 'rgb(179,22,22)',
+        cancelButtonColor: 'rgb(179,22,22)',
         denyButtonText: `Não`,
       }).then((result) => {
         if (result.isConfirmed) {

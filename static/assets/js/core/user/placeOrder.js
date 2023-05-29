@@ -51,9 +51,9 @@ $(function(){
             i++;
             commands.append("<tr class='pedido'><td>"+nameOrder+"</td><td>R$"+valueOrder.toFixed(2)+"</td><td>"+qtdOrder+"</td><td class='valueOrderSingle'>R$"+valueTotal.toFixed(2)+"</td><td class='btnRemoveOrder'><i class='fa-solid fa-trash-can'></i></td></tr>");
 
-            $("td.btnRemoveOrder").click(function(){ 
+            $(".pedido td.btnRemoveOrder").click(function(){ 
 
-                $(this).closest('.pedido').remove();
+                $(this).closest('tr.pedido').remove();
 
                 var qtdTd = document.querySelectorAll("tr.pedido");
 
