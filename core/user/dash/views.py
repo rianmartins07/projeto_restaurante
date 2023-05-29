@@ -19,11 +19,14 @@ class UpdateUser(LoginRequiredMixin,PermissionRequiredMixin, UpdateView):
     form_class = UserForm
     template_name = 'user/update/index.html'
     
+    
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        
+        context['is_administrador'] = self.request.user.groups.first().name == 'Administrador'
         context['current_user'] = self.request.user
+        print(context['is_administrador'])
         return context
+
 
 class CreateUserView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = User
@@ -31,13 +34,6 @@ class CreateUserView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     form_class = UserForm
     template_name = 'user/create/index.html'
     
-    
-    
-    def form_valid(self, form):
-        # Criptografa a senha antes de salvar o usuário
-        form.instance.password = make_password(form.cleaned_data['password'])
-        return super().form_valid(form)
-
 
 @login_required(login_url=reverse_lazy('login'))
 def list_user (request):

@@ -23,9 +23,9 @@
       <div class="form-group">
         <label for="{{ form.groups.auto_id }}">Cargo</label>
         <div class="input-group">
-          <select name="{{ form.groups.html_name }}"
+          <select name="{{ form.groups.html_name }}" 
                     id="{{ form.groups.auto_id }}"
-                    class="form-control"  {% if request.user.groups.all.first != 'Administrador' %}disabled{% endif %}
+                    class="form-control"  {% if not is_administrador %}disabled{% endif %}
                     {% for key, value in form.groups.field.widget.attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
                 {% for choice in form.groups.field.choices %}
                     <option value="{{ choice.0 }}"

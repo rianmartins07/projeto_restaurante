@@ -26,7 +26,7 @@ $('#create_user').click(function (e) {
         title: `Aguarde!`,
         html: `Criando Usuario!`,
         allowOutsideClick: false,
-        
+        confirmButton:false,
         onBeforeOpen: () => {
             Swal.showLoading()
         }
