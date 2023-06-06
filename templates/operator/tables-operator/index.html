@@ -3,6 +3,7 @@
 
 {% block head %}
     {% include 'utils/head.html' %}
+    
 {% endblock head %}
 
 {% block header_fixed %}
@@ -15,33 +16,34 @@
 
 {% block modal %}
 <div class="modal fade" id="create_table" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Criar mesa</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Nome responsável:</label>
-              {{ form.responsible_name }}
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="col-form-label">Numero da mesa:</label>
-              {{ form.tale_number }}
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          <button type="button" onclick="createTable()" class="btn btn-danger">Criar</button>
-        </div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Criar mesa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nome responsável:</label>
+            {{ form.responsible_name }}
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Numero da mesa:</label>
+            {{ form.tale_number }}
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" onclick="createTable()" class="btn btn-danger">Criar</button>
       </div>
     </div>
   </div>
+</div>
+<body>
 {% endblock %}
 
 {% block script %}

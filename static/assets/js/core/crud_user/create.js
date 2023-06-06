@@ -23,15 +23,18 @@ $('#create_user').click(function (e) {
     };
     
     Swal.fire({
-        title: `Aguarde!`,
-        html: `Criando Usuario!`,
-        allowOutsideClick: false,
-        confirmButton:false,
+        title: 'Carregando...',
+        allowOutsideClick: false, // Impede o usuário de clicar fora do modal
+        showCancelButton: false,
+        showConfirmButton: false,
         onBeforeOpen: () => {
-            Swal.showLoading()
+          Swal.showLoading();
+          Swal.getConfirmButton().setAttribute('disabled', '');
+        },
+        preConfirm: () => {
+          return new Promise(() => {});
         }
-    });
-    
+      });
 
     $.ajax(settings).done(function(response){
         Swal.fire({

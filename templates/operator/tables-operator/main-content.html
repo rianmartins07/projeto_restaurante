@@ -26,9 +26,15 @@
         </div><!--search-menu-->
     </div>
     <div class="col-sm-12">
+        
         <div class="delete-table-wraper">
-            <select><option>Mesa 1</option></select>
-            <input class="delete-table" type='button' value='Excluir'>
+            <select id="select-table">
+                {% for table in tables %}
+                <option id="{{table.id}}">Mesa {{table.table_number}}</option>
+                {%endfor%}
+                
+            </select>
+            <input class="delete-table" type='button' value='Excluir' onclick="deleteTable()">
         <div>
 
         <div class="mesas-wraper mt-5" id="list_tables">

@@ -1,6 +1,8 @@
-function deleteOrder(id){
+function deleteTable () {
+    let id = $('#select-table :selected').attr('id');
+    console.log(id)
     var settings = {
-        "url": `${location.protocol}//${location.host}/api/orders/${id}`,
+        "url": `${location.protocol}//${location.host}/api/waiter/table/${id}/`,
         "method": "DELETE",
         "timeout": 0,
         "headers" : {
@@ -9,8 +11,7 @@ function deleteOrder(id){
         }
 
     };  
-    console.log($('[status_id='+id+']').text())
-    if($('[status_id='+id+']').text() == 'PEDIDO NA COZINHA') {
+
     Swal.fire({
         title: 'Voce quer realmente exluir?',
         showDenyButton: true,
@@ -21,6 +22,8 @@ function deleteOrder(id){
       }).then((result) => {
         if (result.isConfirmed) {
             $.ajax(settings).done(function (){
+                $(`#select-table #${id}`).remove();
+                $(`[table_id=${id}]`).remove();
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
@@ -29,24 +32,23 @@ function deleteOrder(id){
                     confirmButtonColor: '#b31616',
                     timer: 3000
                 });
-                $(`[id_order=${id}]`).remove();
-            })
+               
+            }).fail(function (response) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: `Erro!`,
+                    text: JSON.parse(response.responseText).error,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#b31616',
+                    timer: 3000
+                });
+              })
             
             
         } else if (result.isDenied) {
 
         }
       })
-}else{
-    Swal.fire({
-        position: 'center',
-        icon: 'Error!',
-        title: `Pedido esta preparando ou pronto!`,
-        showConfirmButton: true,
-        confirmButtonColor: '#b31616',
-        timer: 3000
-    });
 }
-
   
-}

@@ -19,8 +19,11 @@ class CreateTable (LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     template_name = 'operator/tables-operator/index.html'
     
     def get_context_data(self, **kwargs):
-       
-        return super().get_context_data(**kwargs)
+        context = super(CreateTable, self).get_context_data(**kwargs)
+        tables = Table.objects.all()
+        context['tables'] = tables
+        return context
+        
 
 class UpdateTable(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     permission_required='waiter.change_table'

@@ -14,6 +14,12 @@ function getCookie(name) {
     return cookieValue;
 }
 
+function StringTOFloat(str) {
+    str = 'eete1231'
+    str.replace(/\D/g, "");
+    
+}
+
 function isFormValid() {
     var formValid = true;
     $('input,textarea,select').filter('[required]:visible').each(function(){

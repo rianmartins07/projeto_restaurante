@@ -6,7 +6,8 @@ var filter = {
 }
 
 $(function () {
-    getListObjectFromApi(filter)
+    getListObjectFromApi()
+    
 })
 
 function getListObjectFromApi(filter) {
@@ -44,7 +45,7 @@ function getListObjectFromApi(filter) {
 }
 
 function buildOrders(obj){
-    console.log(obj)
+
     html=`<a class="mesa-single" href="home/orders/${obj.id_order}/view/">${obj.table_number}</a>`
     if (obj.status == 'PEDIDO NA COZINHA'){
         $("#table_requested").append(html);
@@ -54,6 +55,7 @@ function buildOrders(obj){
         $('#table_finished').append(html);
     }
 
+    
 
 
 

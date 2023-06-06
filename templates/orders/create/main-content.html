@@ -1,3 +1,4 @@
+
 <div class="box">
     <h1 class="nMesa">Pedidos da mesa <span>{{ table_number }}</span></h1>
     <h5 style="margin-top: 20px;">Cliente Responsável: <span>{{ responsible }}</span></h4>
@@ -49,12 +50,12 @@
                     </tr>
                     {% for order in orders_by_table %}
                     
-                    <tr class="pedido" id_order="{{order.pk}}" table="{{order.dish.pk}}" quantity="1">
+                    <tr class="pedido" id_order="{{order.pk}}" table="{{order.dish.pk}}" quantity="1" total_value="{{order.total_value}}">
                         <td>{{order.dish.nome}}</td>
                         <td>R${{order.dish.valor}}</td>
                         <td>{{order.quantity}}</td>
                         <td status_id="{{order.pk}}">{{order.status}}</td>
-                        <td class="valueOrderSingle">R${{order.total_value}}</td>
+                        <td class="valueOrderSingle" >R${{order.total_value}}</td>
                         <td class="deleteOrder"><a onclick="deleteOrder('{{order.pk}}')">
                             
                             <i class="fa-solid fa-trash-can"></i>
@@ -62,12 +63,20 @@
                     </td>
                     </tr>
                     {% endfor %}
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" class="text-right"  >TOTAL</th>
+                            <th colspan="2" id="table_total"></th>
+                        </tr>
+
+                    </tfoot>
                 </table>
             </div>
-
             <div class="buttons-menu-view">
-                <input type='button' value="Alterar" />
-                <input type='button' value="Finalizar" />
+                <input type='button' onclick="finishTable('{{table_id}}')" value="Excluir mesa"/>
+            </div><!--buttons-commands-->    
+            <div class="buttons-menu-view">
+                <input type='button' onclick="finishTable('{{table_id}}')" value="Finalizar"/>
             </div><!--buttons-commands-->
         </div>
         {% endif %}

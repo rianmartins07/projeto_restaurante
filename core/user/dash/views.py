@@ -24,7 +24,7 @@ class UpdateUser(LoginRequiredMixin,PermissionRequiredMixin, UpdateView):
         context = super().get_context_data(*args, **kwargs)
         context['is_administrador'] = self.request.user.groups.first().name == 'Administrador'
         context['current_user'] = self.request.user
-        print(context['is_administrador'])
+        
         return context
 
 
@@ -34,6 +34,10 @@ class CreateUserView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     form_class = UserForm
     template_name = 'user/create/index.html'
     
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context['is_administrador'] = self.request.user.groups.first().name == 'Administrador'
+        return context
 
 @login_required(login_url=reverse_lazy('login'))
 def list_user (request):

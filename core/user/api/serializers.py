@@ -7,7 +7,7 @@ from user.models import *
 
 class userSerializer (serializers.ModelSerializer):
     email = serializers.EmailField(read_only=True)
-    cpf = serializers.EmailField(read_only=True)
+    cpf = serializers.CharField(read_only=True)
     full_name = serializers.SerializerMethodField()
     group_name = serializers.SerializerMethodField()
     

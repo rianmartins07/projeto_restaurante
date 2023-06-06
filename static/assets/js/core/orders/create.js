@@ -54,7 +54,16 @@ $(function () {
             let waiter = $("#waiter_id").val();
             
             i++;
-            commands.append("<tr class='pedido' id=" + id + " table="+table+" waiter="+waiter+" quantity="+ qtdOrder+"><td>" + nameOrder + "</td><td>R$" + valueOrder.toFixed(2) + "</td><td>" + qtdOrder + "</td><td class='valueOrderSingle'>R$" + valueTotal.toFixed(2) + "</td><td class='btnRemoveOrder'><i class='fa-solid fa-trash-can'></i></td></tr>");
+            commands.append(`
+                <tr class='pedido' id="${id}" table="${table}" waiter="${waiter}" quantity="${qtdOrder}">
+                    <td>${nameOrder}</td>
+                    <td>R$${valueOrder.toFixed(2)}</td>
+                    <td>${qtdOrder}</td>
+                    <td class='valueOrderSingle'>R$${valueTotal.toFixed(2)}</td>
+                    <td class='btnRemoveOrder'><i class='fa-solid fa-trash-can'></i></td>
+                </tr>
+                `);
+
 
             $("td.btnRemoveOrder").click(function () {
 
@@ -169,3 +178,17 @@ function createOrder(){
     });
 }
 $("#menu").select2();
+
+$(function () {
+    let total_table = 0
+    if ($('#command-requests tr').hasClass('pedido')){
+        
+        $("#command-requests .pedido").each(function (index, element) {
+        string_value = $(element).attr('total_value')
+           total_table += parseFloat(string_value);
+           
+        });
+    }
+    $('#table_total').html('R$ '+total_table.toFixed(2));
+})
+

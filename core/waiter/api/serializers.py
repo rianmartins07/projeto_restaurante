@@ -3,9 +3,8 @@ from rest_framework import serializers
 
 from waiter.models import Table
 
-class TableSerializers (serializers.ModelSerializer):
-    
+class TableSerializers(serializers.ModelSerializer):
     class Meta:
-        fields = '__all__'
         model = Table
+        fields = '__all__'
         app_label = 'waiter'

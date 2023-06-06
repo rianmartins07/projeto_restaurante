@@ -6,6 +6,7 @@ class Table(models.Model):
     id = models.AutoField(primary_key=True)
     responsible_name = models.CharField(max_length=81, verbose_name='nome do responsavel da mesa')
     table_number = models.CharField(max_length=81, verbose_name='numero que vai na mesa')
+    finished = models.BooleanField(verbose_name='Se a mesa esta finalizada ou não', default=False)
     class Meta:
         db_table = 'table_tables'
         managed = True

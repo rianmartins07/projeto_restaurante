@@ -36,6 +36,7 @@ function processOrder(id) {
             });
             response = JSON.parse(response)
             $('#status_order').html(response.status);
+            
         })
     }
 }
@@ -78,6 +79,7 @@ function finishOrder(id) {
             });
             response = JSON.parse(response)
             $('#status_order').html(response.status);
+            
         })
     }
 
@@ -136,6 +138,7 @@ function cancelOrder(id) {
             });
             response = JSON.parse(response)
             $('#status_order').html(response.status);
+            
         })
     }
 

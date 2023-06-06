@@ -3,8 +3,7 @@
 
 
 {% block head %}{% endblock head%}
-
-<body>
+{% block modal %}{% endblock %}
     {% csrf_token %}
     {% block header_fixed %}{% endblock header_fixed %}
     <div class="main">
@@ -16,13 +15,14 @@
         </div><!--content-->
 
     </div><!--main-->
-    {% block modal %}{% endblock %}
+
 
     
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     {% block script %}{% endblock script %}
+
 
 </body>
 
