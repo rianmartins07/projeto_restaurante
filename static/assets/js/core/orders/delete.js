@@ -9,7 +9,7 @@ function deleteOrder(id){
         }
 
     };  
-    console.log($('[status_id='+id+']').text())
+    
     if($('[status_id='+id+']').text() == 'PEDIDO NA COZINHA') {
     Swal.fire({
         title: 'Voce quer realmente exluir?',

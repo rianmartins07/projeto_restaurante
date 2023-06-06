@@ -136,6 +136,7 @@ function getData() {
         return JSON
 }
 
+
 function createOrder(){
     data = getData()
     
@@ -177,7 +178,9 @@ function createOrder(){
         });
     });
 }
-$("#menu").select2();
+
+  $("#menu_select").select2()
+  
 
 $(function () {
     let total_table = 0
