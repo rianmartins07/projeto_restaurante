@@ -3,32 +3,41 @@
 
     <div class="statistics">
 
-        <div class="time-course">
-            <p>Período: <span></span> até <span></span></p>
-        </div><!--time-course-->
 
-        <table>
-            <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="5">Dias com mais vendas</td></tr>
+
+        <table class="table table-responsive">
+            <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="1000%">Todos os Pedidos</td></tr>
 
             <tr>
-                <td>dd/mm (Segunda)</td>
-                <td>dd/mm (Segunda)</td>
-                <td>dd/mm (Segunda)</td>
-                <td>dd/mm (Segunda)</td>
-                <td>dd/mm (Segunda)</td>
+                <th>ID DO PEDIDO</th>
+                <th>PRATO</td>
+                <th>VALOR UNITÁRIO</th>
+                <th>QUANTIDADE</th>
+                <th>VALOR TOTAL PEDIDO</th>
+                <th>NUMERO DA MESA</th>
+                <th>NOME RESPONSÁVEL</th>
+                <th>HORARIO PEDIDO</th>
+                <th>NOME FUNCIONÁRIO</th>
             </tr>
 
-            <tr style="background-color: rgb(230 230 230);">
-                <td>Valor: R$00,00</td>
-                <td>Valor: R$00,00</td>
-                <td>Valor: R$00,00</td>
-                <td>Valor: R$00,00</td>
-                <td>Valor: R$00,00</td>
-            </tr>
+            {% for order in orders%}
+                <tr>
+                    <td>{{order.id_order}}</td>
+                    <td>{{order.dish.nome}}</td>
+                    <td>{{order.dish.valor}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>{{order.total_value}}</td>
+                    <td>{{order.table.table_number}}</td>
+                    <td>{{order.table.responsible_name}}</td>
+                    <td>{{order.datetime|date:"d/m/Y"}}</td>
+                    <td>{{order.waiter.get_full_name}}</td>
+                    
+                </tr>
+            {% endfor %}
         </table>
 
         <table>
-            <tr><td style="background-color: rgb(179 22 22); color: #fff;">Valor total vendido nesse periodo</td></tr>
+            <tr><td style="background-color: rgb(179 22 22); color: #fff;">Valor total vendido</td></tr>
             <tr><td>R$00,00</td></tr>
         </table>
     </div><!--statistics-->
