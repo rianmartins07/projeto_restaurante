@@ -5,7 +5,7 @@
 
 
 
-        <table class="table table-responsive">
+        <table class="table table-responsive table-bordered table-striped" style="max-height: 400px !important;">
             <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="1000%">Todos os Pedidos</td></tr>
 
             <tr>
@@ -24,9 +24,9 @@
                 <tr>
                     <td>{{order.id_order}}</td>
                     <td>{{order.dish.nome}}</td>
-                    <td>{{order.dish.valor}}</td>
+                    <td>R$ {{order.dish.valor}}</td>
                     <td>{{order.quantity}}</td>
-                    <td>{{order.total_value}}</td>
+                    <td>R$ {{order.total_value}}</td>
                     <td>{{order.table.table_number}}</td>
                     <td>{{order.table.responsible_name}}</td>
                     <td>{{order.datetime|date:"d/m/Y"}}</td>
@@ -38,7 +38,7 @@
 
         <table>
             <tr><td style="background-color: rgb(179 22 22); color: #fff;">Valor total vendido</td></tr>
-            <tr><td>R$00,00</td></tr>
+            <tr><td>R$ {{total_amount}}</td></tr>
         </table>
     </div><!--statistics-->
     

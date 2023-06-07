@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.views.generic import CreateView, UpdateView
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import PermissionDenied
-from django.db.models import F, ExpressionWrapper, DecimalField
+from django.db.models import F, ExpressionWrapper, DecimalField, Sum
 
 from .forms import UserForm
 from user.models import User
@@ -92,6 +92,11 @@ def reports_sales_user (request):
     context['orders'] = Orders.objects.all().select_related('dish').annotate(
             total_value=F('dish__valor')*F('quantity')
         )
+    total_amount = Orders.objects.all().select_related('dish').aggregate(
+        total_amount = ExpressionWrapper(Sum(F('quantity') * F('dish__valor')), output_field=DecimalField())
+    )['total_amount']
+    
+    context['total_amount'] = total_amount
     return HttpResponse(template_name.render(context, request))
 
 @login_required(login_url=reverse_lazy('login'))
