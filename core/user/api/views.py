@@ -7,6 +7,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.forms import UserChangeForm
 from django.http import QueryDict
 
+
 from user.models import User, UserFilter
 from .serializers import userSerializer
 
@@ -31,28 +32,33 @@ class CrudUser(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         if request.method == 'POST':
-            cpf = request.data.get('cpf')
-            email = request.data.get('email')
-            id = request.data.get('groups')
-            first_name = request.data.get('first_name')
-            last_name = request.data.get('last_name')
-            sexo = request.data.get('sexo')
-            numero_celular = request.data.get('numero_celular')
-            
-            
-            if not Group.objects.get(id=id):
-                raise serializer.ValidationError('Escolha um cargo!')
-            user = User.objects.create_user(cpf=cpf, email=email, first_name=first_name,last_name=last_name, sexo=sexo, numero_celular=numero_celular)
-            group = Group.objects.get(id=id)
-            group.user_set.add(user)
-            
-            permissions_by_group = group.permissions.all()
-            for permission in permissions_by_group:
-                user.user_permissions.add(permission)
+            role = list(request.user.groups.all())[0].name
+            if role == 'Administrador':
+                cpf = request.data.get('cpf')
+                email = request.data.get('email')
+                id = request.data.get('groups')
+                first_name = request.data.get('first_name')
+                last_name = request.data.get('last_name')
+                sexo = request.data.get('sexo')
+                numero_celular = request.data.get('numero_celular')
+                data_nascimento = request.data.get('data_nascimento')
+                
+                if not Group.objects.get(id=id):
+                    raise serializer.ValidationError('Escolha um cargo!')
+                user = User.objects.create_user(cpf=cpf, email=email, first_name=first_name,last_name=last_name, sexo=sexo, numero_celular=numero_celular, data_nascimento=data_nascimento)
+                group = Group.objects.get(id=id)
+                group.user_set.add(user)
+                
+                permissions_by_group = group.permissions.all()
+                for permission in permissions_by_group:
+                    user.user_permissions.add(permission)
 
-            serializer = self.get_serializer(user)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+                serializer = self.get_serializer(user)
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response(status=status.HTTP_400_BAD_REQUEST)
             
+                
 
 
     def perform_update(self, serializer):

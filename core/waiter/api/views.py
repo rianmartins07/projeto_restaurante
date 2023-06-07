@@ -38,8 +38,7 @@ class CrudTable(viewsets.ModelViewSet):
     @action(detail=True, methods=['patch'], url_path='finish')
     def finish_table(self, request, pk=None):
         instance = self.get_object()
-        instance.finished = True
-        instance.save()
+        
         orders = Orders.objects.filter(table_id=instance.id)
         table = Table.objects.get(id=instance.id)
         print(table.finished)
@@ -55,4 +54,6 @@ class CrudTable(viewsets.ModelViewSet):
                 return Response(serializer.data)
         else:
              return Response({'error': 'A mesa ja está finalizada!'}, status=400)
+        instance.finished = True
+        instance.save()
         return Response(serializer.errors, status=400)
