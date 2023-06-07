@@ -23,7 +23,12 @@ function processOrder(id) {
             showConfirmButton: true,
             confirmButtonColor: '#b31616',
             timer: 2000
-        });
+        }).then((result) => {
+            if (result.isConfirmed) {
+              // Redirecionar para outra página
+              window.location.href = location.protocol + "//" + location.host + '/home/orders/list/requests_inprogress/';
+            }
+          });
     } else {
         $.ajax(settings).done(function (response) {
             Swal.fire({
@@ -33,7 +38,12 @@ function processOrder(id) {
                 showConfirmButton: true,
                 confirmButtonColor: '#b31616',
                 timer: 2000
-            });
+            }).then((result) => {
+                if (result.isConfirmed) {
+                  // Redirecionar para outra página
+                  window.location.href = location.protocol + "//" + location.host + '/home/orders/list/requests_inprogress/';
+                }
+              });
             response = JSON.parse(response)
             $('#status_order').html(response.status);
             
@@ -66,7 +76,12 @@ function finishOrder(id) {
             showConfirmButton: true,
             confirmButtonColor: '#b31616',
             timer: 2000
-        });
+        }).then((result) => {
+            if (result.isConfirmed) {
+              // Redirecionar para outra página
+              window.location.href = location.protocol + "//" + location.host + '/home/orders/list/requests_inprogress/';
+            }
+          });
     } else {
         $.ajax(settings).done(function (response) {
             Swal.fire({
@@ -76,7 +91,12 @@ function finishOrder(id) {
                 showConfirmButton: true,
                 confirmButtonColor: '#b31616',
                 timer: 2000
-            });
+            }).then((result) => {
+                if (result.isConfirmed) {
+                  // Redirecionar para outra página
+                  window.location.href = location.protocol + "//" + location.host + '/home/orders/list/requests_inprogress/';
+                }
+              });
             response = JSON.parse(response)
             $('#status_order').html(response.status);
             
