@@ -1,0 +1,46 @@
+{% load static %}
+<div class="main">
+    <div id="content">
+
+        <div class="box">
+
+            <h1>Cardápio</h1>
+
+            <div class="search-menu" id="formSearch">
+
+                <div class="input-menu">
+                    <input type="search" id="search" placeholder="Pesquise o nome do prato..." required>
+                    <!--<input type="submit" value="Procurar">-->
+                </div><!--input-menu-->
+
+                <div class="create-menu">
+                    <a href="{% url 'menu:create_menu' %}"><img src="{% static 'assets/images/mais.png' %}" alt="add"></a>
+                </div><!--create-menu-->
+
+            </div><!--search-menu-->
+
+            <div class="list-menu">
+
+                <div class="list-menu-wraper" >
+                    
+                    <div class="list-menu-wraper" id="list_menu">
+
+                       <!--<a href="../info-menu/info-menu.html" class="list-menu-single">
+                            <div class="info-menu">
+                                <!<img src="#" alt="img">
+                                <div class="img-menu"></div>
+                                <h2>Nome</h2>
+                            </div><!info-menu
+                            <h2>Status</h2>
+                        </a><!list-menu-single-->
+            
+
+                </div><!--list-menu-wraper-->
+
+            </div><!--list-menu-->
+
+        </div><!--box-->
+        
+    </div><!--content-->
+
+</div><!--main-->

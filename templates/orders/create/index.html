@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    {% include 'utils/head.html' %}
+{% endblock head %}
+
+{% block header_fixed %}
+    {% include 'utils/header_fixed.html' %}
+{% endblock header_fixed%}
+
+{% block content %}
+    {% include 'orders/create/main-content.html' %}
+{% endblock content %}
+
+{% block script %}
+    {% include 'orders/create/scripts.html' %}
+{% endblock script %}

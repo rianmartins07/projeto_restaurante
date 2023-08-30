@@ -1,0 +1,59 @@
+
+<form action="" id="formUser">
+  <div class="row gy-4">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.first_name.auto_id }}">Nome</label>
+        {{ form.first_name }}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.last_name.auto_id }}">Sobrenome</label>
+        {{ form.last_name }}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.sexo.auto_id }}">Sexo</label>
+        {{ form.sexo }}
+      </div>
+    </div><h1></h1>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.groups.auto_id }}">Cargo</label>
+        <div class="input-group">
+          <select name="{{ form.groups.html_name }}" 
+                    id="{{ form.groups.auto_id }}"
+                    class="form-control"  {% if not is_administrador %}disabled{% endif %}
+                    {% for key, value in form.groups.field.widget.attrs.items %}{{ key }}="{{ value }}" {% endfor %}>
+                {% for choice in form.groups.field.choices %}
+                    <option value="{{ choice.0 }}"
+                            {% if choice.0 == form.groups.value.0 %}selected{% endif %}>
+                        {{ choice.1 }}
+                    </option>
+                {% endfor %}
+            </select>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.numero_celular.auto_id }}">Telefone</label>
+        {{ form.numero_celular }}
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="{{ form.data_nascimento.auto_id }}">Data de nascimento</label>
+        {{ form.data_nascimento }}
+      </div>
+    </div>
+    
+      <!-- ... outros campos do formulário ... -->
+    
+      <form action="" id="formUser">
+      <!-- ... outros campos do formulário ... -->
+    </form>
+  </div>
+

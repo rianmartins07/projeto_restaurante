@@ -1,0 +1,50 @@
+<div class="main">
+    <div id="content">
+
+        <div class="box">
+            <h1 class="nMesa">Pedidos da mesa <span>{{order.table.id}}</span></h1>
+
+            <div class="name-waiter">
+                <h2>Garçom: {{order.waiter}}</h2>
+            </div><!--name-waiter-->
+
+            <div class="commands">
+                <table border="1">
+                    <tr class='legendCommands' style='background-color: rgb(179 22 22); color: #fff;'>
+                        <td>Nome</td>
+                        <td>Quantidade</td>
+                        <td>Status</td>
+                    </tr>
+                    <tr class="pedido">
+                        <td>{{order.dish.nome|upper }}</td>
+                        <td>{{order.quantity}}</td>
+                        <td id="status_order">{{order.status|upper}}</td>
+                    </tr>
+                </table>
+            </div><!--orders-placed-->
+
+
+            <div class="buttons-commands">
+                <input type="submit" class="cook-order red" value="Processar" onclick="processOrder('{{order.pk}}')">
+                <input type="submit" class="cook-order gray" value="Concluído" onclick="finishOrder('{{order.pk}}')">
+                <input type="submit" class="cook-order red" id="cancelOrder" value="Cancelar">
+            </div><!--buttons-commands-->
+
+        </div><!--box-->
+
+        <div class="cancel-order">
+            <div class="box-cancel-order">
+                <div class="close-window">
+                    <h2><i class="fa-solid fa-circle-xmark"></i></h2>
+                </div>
+
+                <textarea placeholder="Qual a razão do cancelamento?" id="text_canceled" maxlength="255"></textarea>
+
+                <div class="button-cancel">
+                    <button type="button" class="btn btn-danger" onclick="cancelOrder('{{order.pk}}')">Enviar</button>
+                </div><!--button-cancel-->
+            </div><!--box-cancel-order-->
+        </div><!--cancel-order-->
+
+    </div><!--content-->
+</div><!--main-->

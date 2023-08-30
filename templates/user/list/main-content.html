@@ -1,0 +1,65 @@
+{% load static %}
+<div class="container-fluid ">
+    <div class="card p-4 ">
+        <div class="card p-4">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-12" id="formSearch">
+                        <div class="row">
+                            <div class="col">
+                                <label for="optionSearch">Filtre por:</label>
+                            </div>
+                            <div class="col">
+                                <label for="search">Pesquise por nome ou usuário</label>
+                            </div>
+                            <div class="col d-flex justify-content-end flex-column align-items-lg-end ">
+                                <label for="img">Novo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select name="" id="optionSearch" class="form-control">
+                                    <option value="nome">Nome</option>
+                                    <option value="numero_celular">Telefone</option>
+                                    <option value="email">Email</option>
+                                    <option value="role">Cargo</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input type="search" class="form-control" placeholder="Procurar"
+                                    id="search">
+                            </div>
+                            <div class="col">
+                                <div class="d-flex justify-content-end flex-column align-items-lg-end">
+                                    <a href="{% url 'user:user_create' %}">
+                                        <img src="{% static 'assets/images/mais.png' %}" alt=""
+                                            style="height: 40px; width: 40px;" id="img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <card class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped border shadow p-3 mb-5 bg-body rounded">
+                        <thead style="background-color: rgb(179, 22, 22);">
+                            <tr class="text-white">
+                                <th scope="col" class="priority-1">Nome</th>
+                                <th scope="col" class="priority-3">Telefone</th>
+                                <th scope="col" class="priority-4">Email</th>
+                                <th scope="col" class="priority-2">Cargo</th>
+                                <th scope="col" class="priority-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="list_user">
+
+                        </tbody>
+                    </table>
+                </div>
+            </card>
+        </div>
+    </div>
+</div>

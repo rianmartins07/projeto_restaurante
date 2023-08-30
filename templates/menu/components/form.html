@@ -1,0 +1,66 @@
+<div class="main">
+    <div id="content" class="justify-content-center">
+
+        <div class="box">
+
+            
+                {% if is_create %}
+                <h1>
+                    Cadastrar prato
+                </h1>
+                {% else %}
+                <div>
+                    <img class="img-menu" src="{{ form.instance.foto.url }}" alt="img">
+                    <h1 class="pb-3">
+                        Editar prato
+                    </h1>
+                </div>
+                    {% endif %}
+            
+
+            
+                <div class="row mt-5">
+                    <div class="col-sm-6 mb-3">
+                        <div class="form-group">
+                            {{ form.nome }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="form-group">
+                            {{ form.valor }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            {{ form.descricao }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            {{ form.status }}
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group mt-3">
+                            {{ form.foto }}
+                        </div>
+                    </div>
+                </div>
+
+
+            
+
+            <div class="button-update-profile">
+                <input id="button-update-profile" type="submit" value="{% if is_create %} Cadastrar {% else %} Editar {% endif %}">
+                <div class="messageUpdateProfile">
+                    <p>Somente administrador</p>
+                </div>
+            </div><!--button-update-profile-->
+
+
+        </div><!--box-->
+
+    </div><!--content-->
+
+</div><!--main-->

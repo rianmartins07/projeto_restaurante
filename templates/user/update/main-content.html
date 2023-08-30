@@ -1,0 +1,61 @@
+{% load static %}
+
+<div class="container">
+  <div class="container-fluid">
+    <div class="card p-4">
+      <div class="card-title">
+        <h1>Editar usuário</h1>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="{{ form.cpf.auto_id }}">CPF</label>
+              <input type="text" value="{{form.cpf.value}}" disabled class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="{{ form.email.auto_id}}">Email</label>
+              <input type="text" value="{{form.email.value}}" disabled class="form-control">
+            </div>
+          </div>
+        </div>
+        
+        {% block form %}
+          {% include 'user/components/form.html' %}
+        {% endblock %}
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="id_senha_antiga">Senha Antiga</label>
+              <input type="password" name="senha_antiga" class="form-control" id="id_senha_antiga">
+            </div>
+          </div>
+        
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="id_nova_senha">Nova Senha</label>
+              <input type="password" name="nova_senha" class="form-control" id="id_nova_senha">
+            </div>
+          </div>
+        
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="id_confirmacao_senha">Confirme a Nova Senha</label>
+              <input type="password" name="confirmacao_senha" class="form-control" id="id_confirmacao_senha">
+            </div>
+          </div>
+        </div>
+          <!-- ESSE FORM COMEÇA EM COMPONENTS > FORM.html -->
+        
+        <div class="row mt-4">
+          <div class="col-sm-12 d-flex align-center justify-content-end">
+            <button type="submit" class="btn btn-danger btn-lg mr-3" onclick="updateUser('{{form.instance.id}}')">Editar</button>
+            <!-- <button type="submit" class="btn btn-danger btn-lg">Desativar</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="box">
+    <h1>Relatório de Vendas</h1>
+
+    <div class="statistics">
+
+
+
+        <table class="table table-responsive table-bordered table-striped" style="max-height: 400px !important;">
+            <tr><td style="background-color: rgb(179 22 22); color: #fff;" colspan="1000%">Todos os Pedidos</td></tr>
+
+            <tr>
+                <th>ID DO PEDIDO</th>
+                <th>PRATO</td>
+                <th>VALOR UNITÁRIO</th>
+                <th>QUANTIDADE</th>
+                <th>VALOR TOTAL PEDIDO</th>
+                <th>NUMERO DA MESA</th>
+                <th>NOME RESPONSÁVEL</th>
+                <th>HORARIO PEDIDO</th>
+                <th>NOME FUNCIONÁRIO</th>
+            </tr>
+
+            {% for order in orders%}
+                <tr>
+                    <td>{{order.id_order}}</td>
+                    <td>{{order.dish.nome}}</td>
+                    <td>R$ {{order.dish.valor}}</td>
+                    <td>{{order.quantity}}</td>
+                    <td>R$ {{order.total_value}}</td>
+                    <td>{{order.table.table_number}}</td>
+                    <td>{{order.table.responsible_name}}</td>
+                    <td>{{order.datetime|date:"d/m/Y"}}</td>
+                    <td>{{order.waiter.get_full_name}}</td>
+                    
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table>
+            <tr><td style="background-color: rgb(179 22 22); color: #fff;">Valor total vendido</td></tr>
+            <tr><td>R$ {{total_amount}}</td></tr>
+        </table>
+    </div><!--statistics-->
+    
+</div><!--box-->

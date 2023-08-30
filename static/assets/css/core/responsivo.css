@@ -1,0 +1,1063 @@
+
+@media screen and (max-width: 1280px){ 
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 35px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 170px;
+        height: 170px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 86px;
+        height: 73px;
+        top: 14px;
+    }
+
+    .sidebar nav ul li{
+        padding: 19px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 16px;
+    }
+
+    .sidebar nav .line-text{
+        width: 45px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 23px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 24px;
+        margin-bottom: -1px;
+    }
+
+    .exit-perfil a{
+        font-size: 24px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 12px 4px 8px 2px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 105px !important;
+        height: 90px !important;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin-left: 15px;
+    }
+
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 35px auto;
+    }
+
+    .sidebar .avatar-perfil .img-perfil{
+        width: 170px;
+        height: 170px;
+    }
+
+    .sidebar .avatar-perfil h2{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .sidebar .avatar-perfil h3{
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo-sidebar img{
+        width: 86px;
+        height: 73px;
+        top: 14px;
+    }
+
+    .sidebar nav ul li{
+        padding: 19px 0;
+        cursor: pointer;
+    }
+
+    .sidebar nav ul li a{
+        font-size: 16px;
+    }
+
+    .sidebar nav .line-text{
+        width: 45px;
+    }
+
+    .sidebar .exit-perfil a{
+        font-size: 23px;
+    }
+    
+    .sidebar .exit-perfil a:hover{
+        font-size: 24px;
+        margin-bottom: -1px;
+    }
+
+    .exit-perfil a{
+        font-size: 24px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .exit-perfil .logo-img{
+        padding: 12px 4px 8px 2px;
+        margin-left: 20px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 80px;
+        height: 55px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin-left: 15px;
+    }
+
+    .box h1{
+        font-size: 2.2rem;
+    }
+
+    .col-sm-4 label{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .sidebar .avatar-perfil{
+        left: 37%;
+    }
+    .col-sm-4 label{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .sidebar .avatar-perfil{
+        text-align: center;
+        margin: 110px auto 30px auto;
+        text-align: center;
+        margin: 110px auto 30px auto;
+        bottom: 26%;
+    }
+
+    .mesas-wraper a.mesa-single{
+        border-bottom: 12px solid rgb(179 22 22);
+        width: 125px;
+        height: 125px;
+        line-height: 125px;
+        font-size: 3rem;
+        margin: 15px 25px;
+    }
+
+    .mesas-wraper a.atendida{
+        background-color: rgb(179 22 22);
+        border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    /*CARDAPIO*/
+
+    .list-menu-wraper{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .list-menu-single{
+        width: 100%;
+        margin: 10px 1%;
+        padding: 17px 25px;
+    }
+
+    .input-menu{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .list-menu-single h2{
+        font-size: 17px;
+    }
+    
+    .list-menu-single .img-menu{
+        width: 80px;
+        height: 80px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 35px;
+        height: 35px;
+        margin: 25px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 73%;
+        margin-right: 2%;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .exit-perfil a{
+        font-size: 25px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 27px;
+        margin-right: -2px;
+    }
+
+    .exit-perfil .logo-img{
+        margin-left: 23px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 95px;
+        height: 80px;
+    }
+
+    .menu-perfil nav ul{
+        display: flex;
+        position: relative;
+        top: 7px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 75px;
+        height: 75px;
+        margin-left: 15px;
+    }
+
+    .box h1{
+        font-size: 1.9rem;
+    }
+
+    #content .box{
+        padding: 80px 40px;
+    }
+   
+    #content .box .statistics table{
+        margin: 30px auto 40px auto;
+    }
+    
+    #content .box .statistics table tr td{
+        padding: 5px 4px;
+        font-size: 0.8rem;
+        border: 1px solid #ccc;
+    }
+    
+    #content .box .statistics .time-course{
+        margin-top: 30px;
+    }
+    
+    #content .box .statistics .time-course span{
+        font-size: 18px;
+    }
+
+    #content .box-reports{
+        width: 80%;
+    }
+
+    .messageDate{
+        left: 50%;
+        bottom: 11%;
+    }
+
+    .messageSelect{
+        left: 50%;
+        bottom: 11%;
+    }
+
+    .mesas-wraper a.mesa-single{
+        border-bottom: 11px solid rgb(179 22 22);
+        width: 110px;
+        height: 110px;
+        line-height: 110px;
+        font-size: 2.5rem;
+        margin: 15px 25px;
+    }
+
+    .mesas-wraper a.atendida{
+        background-color: rgb(179 22 22);
+        border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    .pedidos-em-espera h2,.pedidos-entregue h2{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+
+    .menu-perfil .info-perfil{
+        margin-left: 12px;
+        margin-top: 10px;
+    }
+
+    .menu-perfil .info-perfil h2{
+        font-size: 12px;
+    }
+    
+    .menu-perfil .info-perfil h3{
+        font-size: 11px;
+    }
+
+    .messageOrderAll{
+        top: 57%;
+        left: 47%;
+    }
+
+    .priority-4{
+        display: none;
+    }
+
+
+    .priority-4{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    /*LOGIN*/
+
+    .box-login .img-perfil{
+        border-bottom: 11px solid rgb(53 53 53);
+        width: 105px;
+        height: 105px;
+        top: -55px;
+        transform: translateX(-50%);
+    }
+    
+    .img-perfil h2{
+        font-size: 40px;
+    }
+
+    .box-login{
+        max-width: 370px;
+        margin: 120px auto 0 auto;
+        padding: 80px 25px 35px 25px;
+        border-radius: 15px;
+    }
+    
+    .box-login form input[type=text],.box-login form input[type=password]{
+        height: 45px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .box-login form input[type=submit]{
+        height: 45px;
+        line-height: 42px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .box-login form input[type=submit]:hover{
+        line-height: 35px;
+    }
+
+    .options-login{
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    
+    .options-login .esqueci-codigo a{
+        color: rgb(179 22 22);
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .options-login .manter-conectado span{
+        font-size: 15px;
+        margin-left: 2px;
+    }
+
+    .cpfIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 34.5%;
+        display: none;
+    }
+    
+    .codigoIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 54%;
+        display: none;
+    }
+    
+    .login-incorrect{
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+
+    .messageCPF{
+        position: absolute;
+        left: 12%;
+        top: 17.5%;
+        display: none;
+    }
+    
+    .messageCodigo{
+        position: absolute;
+        left: 12%;
+        top: 35.8%;
+        display: none;
+    }
+    
+    .message-input{
+        padding: 3px 5px;
+        font-size: 12px;
+    }
+
+    /*-----------------*/
+
+    .exit-perfil a{
+        font-size: 23px;
+    }
+
+    .exit-perfil a:hover{
+        font-size: 25px;
+        margin-right: -2px;
+    }
+
+    .exit-perfil .logo-img{
+        margin-left: 21px;
+    }
+
+    .exit-perfil .logo-img img{
+        width: 85px;
+        height: 70px;
+    }
+
+    .menu-perfil nav ul{
+        top: 7px;
+    }
+
+    .menu-perfil nav ul li a{
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .menu-perfil .avatar-perfil{
+        width: 70px;
+        height: 70px;
+        margin-left: 15px;
+    }
+
+    /*---------------*/
+    #content .box{
+        padding: 70px 30px;
+    }
+
+    .messageDate{
+        left: 50%;
+        bottom: 6%;
+    }
+
+    .messageSelect{
+        left: 50%;
+        bottom: 6%;
+    }
+
+    .mesas-wraper a.mesa-single{
+        border-bottom: 10px solid rgb(179 22 22);
+        width: 105px;
+        height: 105px;
+        line-height: 105px;
+        font-size: 2.2rem;
+        margin: 15px 25px;
+    }
+    
+    .mesas-wraper a.atendida{
+        background-color: rgb(179 22 22);
+        border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    .pedidos-em-espera h2,.pedidos-entregue h2{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+
+    .messageOrder{
+        right: -25%;
+    }
+
+    .menu-perfil .info-perfil{
+        margin-left: 9px;
+        margin-top: 10px;
+    }
+
+    .menu-perfil .info-perfil h2{
+        font-size: 11px;
+    }
+    
+    .menu-perfil .info-perfil h3{
+        font-size: 10px;
+    }
+
+    .messageOrderAll{
+        top: 55%;
+        left: 47%;
+    }
+
+    .wraper-profile .profile-single{
+        width: 100%;
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    /*REPORTS*/
+
+    .box h1{
+        font-size: 1.8rem;
+    }
+
+    #content .box-reports{
+        width: 90%;
+    }
+
+    .pedidos-em-espera h2,.pedidos-entregue h2{
+        margin-top: 40px;
+        font-size: 22px;
+    }
+
+    .menu-perfil-mobile h2{
+        display: block;
+    }
+    
+    .menu-perfil-mobile nav{
+        display: none;
+    }
+
+    .menu-perfil{
+        display: none;
+    }
+
+    .menu-perfil-mobile{
+        display: block;
+    }
+
+    .messageDate{
+        left: 50%;
+        bottom: 25%;
+    }
+
+    .messageSelect{
+        left: 44%;
+        bottom: 6%;
+    }
+}
+
+@media screen and (max-width: 580px){
+    /*LOGIN*/
+    .logo{
+        width: 110px;
+        height: 90px;
+    }
+
+    .box-login{
+        max-width: 300px;
+        margin: 120px auto 0 auto;
+        padding: 70px 20px 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .box-login form input[type=text],.box-login form input[type=password]{
+        height: 40px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .box-login form input[type=submit]{
+        height: 40px;
+        line-height: 38px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .box-login form input[type=submit]:hover{
+        line-height: 35px;
+    }
+
+    .options-login{
+        justify-content: space-between;
+        margin-top: 3px;
+    }
+    
+    .options-login .esqueci-codigo a{
+        color: rgb(179 22 22);
+        font-size: 14px;
+        text-decoration: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .options-login .manter-conectado span{
+        font-size: 14px;
+        margin-left: 2px;
+    }
+
+    .cpfIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 34%;
+        display: none;
+    }
+    
+    .codigoIncorrect{
+        position: absolute;
+        left: 45%;
+        top: 54%;
+        display: none;
+    }
+    
+    .login-incorrect{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+
+    .messageCPF{
+        position: absolute;
+        left: 12%;
+        top: 17.3%;
+        display: none;
+    }
+    
+    .messageCodigo{
+        position: absolute;
+        left: 12%;
+        top: 36%;
+        display: none;
+    }
+    
+    .message-input{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+
+    .menu-perfil-mobile nav ul li{
+        list-style-type: none;
+        padding: 15px 0;
+    }
+
+    .menu-perfil-mobile nav ul li a{
+        font-size: 13px;
+    }
+
+    .menu-perfil-mobile nav .line-text{
+        width: 60px;
+    }
+
+    .menu-perfil-mobile .avatar-perfil{
+        width: 80px;
+        height: 80px;
+        margin: 25px auto 20px auto;
+    }
+
+    .messageDate{
+        left: 47%;
+        bottom: 2%;
+    }
+
+    .messageSelect{
+        left: 47%;
+        bottom: 2%;
+    }
+
+    .messageDate{
+        left: 50%;
+        bottom: 28%;
+    }
+
+    .messageSelect{
+        top: 36%;
+    }
+
+    .priority-3{
+        display: none;
+    }
+    .priority-3{
+        display: none;
+    }
+    
+    .card-body{
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .p-4{
+        padding: 10% !important;
+    }
+
+    .messageDate p, .messageSelect p{
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .mesas-wraper a.mesa-single{
+        border-bottom: 9px solid rgb(179 22 22);
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 2rem;
+        margin: 15px 25px;
+    }
+
+    .mesas-wraper a.atendida{
+        background-color: rgb(179 22 22);
+        border-bottom: 14px solid rgb(53 53 53);
+    }
+
+    .pedidos-em-espera h2,.pedidos-entregue h2{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    /*--------------------------*/
+
+    .search-order{
+        margin-top: 8px;
+    }
+
+    .search-order input[type=search], .search-order input[type=number]{
+        font-size: 13px;
+        width: 58%
+    }
+
+    .search-order input[type=number]{
+        width:17% !important;
+    }
+
+    .search-order input[type=button]{
+        font-size: 13px;
+        width: 21%;
+    }
+
+    .search-order input[type=button]:hover{
+        background-color: rgb(167, 19, 19);
+    }
+
+    .commands{
+        margin-top: 30px;
+    }
+
+    .amount-of-people input[type=number]{
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .buttons-commands input[type=submit],.buttons-commands a{
+        font-size: 14px;
+        margin: 20px 4px 0 5px;
+    }
+
+    .commands .content-commands h2{
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .commands .valueTotal h2{
+        font-weight: normal;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .messageOrder{
+        right: -30%;
+    }
+
+    .messageOrderAll{
+        top: 51%;
+        left: 47%;
+    }
+
+    .messageOrder p,.messageOrderAll p{
+        padding: 3px 5px;
+        font-size: 11px;
+    }
+
+    #content .box{
+        width:100%;
+        padding: 50px 30px;
+    }
+
+    .main #content{
+        padding: 0 5%;
+    }
+
+    .messageOrder{
+        right: 15%;
+    }
+
+    .messageOrder p{
+        padding: 4px 6px;
+        font-size: 10px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .commands table tr td{
+        font-size: 13px;
+    }
+
+    i.buttonRemoveOrder{
+        font-size: 13px;
+    }
+
+    .buttons-commands a#submit-commands,.buttons-commands a#update-order{
+        padding: 8px 18px !important;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-right: 6px;
+    }
+
+    .wraper-profile .profile-single input[type=text], .wraper-profile .profile-single p, .profile-single input[type=file], .profile-single textarea,.profile-single select{
+        font-size: 14px;
+    }
+
+    .wraper-profile .profile-single{
+        margin-top: 10px;
+    }
+
+    .button-update-profile input[type=button]{
+        padding: 8px 18px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .messageEndOrder{
+        top: 85%;
+    }
+
+    .button-update-profile .messageUpdateProfile p, .messageEndOrder p{
+        padding: 3px 5px;
+        font-size: 11px;
+    }
+
+    .priority-3{
+        display: none;
+    }
+
+    /*CARDAPIO*/
+
+    .list-menu-single h2{
+        font-size: 16px;
+    }
+    
+    .list-menu-single .img-menu{
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-menu, .list-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 24px 20px;
+    }
+
+    .create-menu img{
+        width: 30px;
+        height: 30px;
+        margin: 20px 0 0 0;
+    }
+
+    .search-menu{
+        margin-top: 20px !important;
+    }
+
+    .search-menu .input-menu input[type=search]{
+        width: 71%;
+        margin-right: 4%;
+        font-size: 14px;
+    }
+    
+    .search-menu .input-menu input[type=submit]{
+        width: 25%;
+        font-size: 13px;
+    }
+
+    .list-menu-single{
+        padding: 17px 13px;
+        margin: 10px 0;
+    }
+
+    .info-menu h2{
+        margin-left: 12px;
+    }
+    
+    .img-prato{
+        width: 80px;
+        height: 80px;
+        margin: 5px 0 15px 0;
+    }
+
+    .wraper-feedback .feedback-single{
+        font-size: 14px;
+    }
+
+    .wraper-feedback{
+        margin-top: 20px;
+    }
+
+    .wraper-button-feedback{
+        margin-top: 30px;
+    }
+    
+    .wraper-button-feedback input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    h2.title-feedback{
+        font-size: 16px;
+        margin: 17px 0;
+    }
+
+    .name-waiter h2{
+        font-size: 15px;
+        margin: 15px 0;
+        text-align: center
+    }
+    .close-window{
+        top: -7px;
+        right: -7px;
+    }
+    
+    .close-window h2{
+        font-size: 26px;
+    }
+
+    .box-cancel-order textarea{
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .button-cancel{
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .button-cancel input[type=submit]{
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .boxSenha{
+        padding: 30px 20px;
+        max-width: 400px;
+        border-radius: 7px;
+        border: 2px solid #ccc;
+    }
+    
+    .iconClose{
+        right: -10px;
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    
+    .boxSenha input[type=text]{
+        border-radius: 15px;
+        height: 35px;
+        font-size: 13px;
+        padding-left: 8px;
+    }
+    
+    .boxSenha input[type=submit]{
+        border-radius: 20px;
+        height: 35px;
+        max-width: 130px;
+        font-size: 13px;
+        border-bottom: 3px solid rgb(121, 13, 13) !important;
+        margin-top: 20px;
+    }
+    
+    .boxSenha input[type=submit]:hover{
+        background-color: rgb(255, 255, 255);
+        border-bottom: 3px solid rgb(121, 13, 13) !important;
+        color: rgb(179 22 22);
+        border: 1px solid rgb(179 22 22);
+    }
+    
+    .box-login .img-perfil{
+        border-bottom: 10px solid rgb(53 53 53);
+        width: 95px;
+        height: 95px;
+        top: -55px;
+        transform: translateX(-50%);
+    }
+    
+    .img-perfil h2{
+        font-size: 35px;
+        top: 52%;
+    }
+}

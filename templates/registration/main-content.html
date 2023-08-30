@@ -1,0 +1,60 @@
+<div class='logo'></div>
+
+<!---Formulário-de-Login-->
+<main class='loginBox'>
+    <div class="box-login">
+
+        <div class="img-perfil">
+            <h2><i class="fa-solid fa-user"></i></h2>
+        </div><!--img-perfil-->
+
+    <form method='POST' action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="w100">
+            <p class="userP">Digite seu usuário:</p>
+            {{ form.username }}
+        </div><!--w100-->
+
+            <div class="w100">
+                <p class="senhaP">Digite sua senha:</p>
+                {{ form.password }}
+            </div><!--w100-->
+
+            <div class="w100 options-login">
+                <div class="esqueci-codigo">
+                    <a href="#">Esqueci minha senha</a>
+                </div><!--esqueci-codigo-->
+            </div><!--w100-->
+
+            <div class="w100">
+                <input type="submit" value="Entrar"/>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div><!--w100-->
+
+            <!---Mensagens--->
+
+        {% if form.erros %}
+        <div class="cpfIncorrect login-incorrect codigoIncorrect">
+            <p>Digite seu dados corretamente!</p>
+        </div><!--cpfIncorrect-->
+        
+        {% endif %}
+        <!--<div class="messageCPF message-input">
+                <p>Digite apenas números</p>
+            </div><messageCPF
+
+                <div class="messageCodigo message-input">
+                    <p>Apenas números e letras</p>
+                </div>messageCPF-->
+        </form>
+
+    </div><!--box-login-->
+</main>
+
+<div class="esqueciSenha">
+    <div class="boxSenha">
+        <div class="iconClose">x</div>
+        <input type="text" placeholder="Digite seu e-mail..." required>
+        <input type="submit" value="Recuperar senha" />
+    </div><!--boxSenha-->
+</div><!--esqueciSenha-->
